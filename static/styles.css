@@ -1,3 +1,5 @@
+:root {
+}
 
 * {
     font-family: monospace;
@@ -15,12 +17,13 @@ body {
     margin: 0;
 }
 
-#head, footer {
+#head {
     background-color: #d0d0d0;
 }
 
 footer {
     height: 5em;
+    background-color: #d0d0d0;
 }
 
 #profile {
@@ -29,9 +32,55 @@ footer {
     padding: 1em;
 }
 
+.project-ico {
+    width: 4em;
+    height: 4em;
+    padding: 1em;
+}
+
 .cdiv {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 5em;
+}
+
+#sidebar {
+    width: 30vw;
+    min-width: 30vw;
+    height: inherit;
+    background-color: #a0a0a0;
+    margin-left: auto;
+    height: 100vh;
+}
+
+#main-content {
+    width: 65vw;
+}
+
+#wrapper { 
+    /* 
+    Main Content on the left & sidebar on the right.
+    Change flex-direction to row for "vice versa"
+    */
+    display: flex;
+    flex-direction: row-reverse;
+    padding-left: 4%;
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: row;
+}
+.section-heading:before, .section-heading:after{
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid;
+  margin: auto;
+}
+.section-heading:before {
+  margin-right: 10px
+}
+.section-heading:after {
+  margin-left: 10px
 }
