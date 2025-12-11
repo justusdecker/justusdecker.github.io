@@ -117,3 +117,31 @@ footer {
 .exp:hover {
     border-width: 2em;
 }
+
+#sidebar-spacing {
+    margin: 0 1em 0 1em;
+}
+
+.skill-container {
+    width: 100%;
+    background-color: #121212;
+    margin-bottom: 1em;
+}
+/* Skillbar fillings 
+TODO: Animate this later
+*/
+.sk-html { width: 100%; background-color: #E34C26;}
+.sk-python { width: 100%; background-color: #3572A5;}
+.sk-c { width: 5%; background-color: #555555;}
+.sk-css { width: 55%; background-color: #563D7C;}
+.sk-js { width: 20%; background-color: #F1E05A; color:#484848;}
+.sk-kotlin { width: 10%; background-color: #F18E33; color:#484848;}
+.sk-java { width: 10%; background-color: #B07219; }
+.sk-batch { width: 100%; background-color: #C1F12E; color:#484848;}
+.sk-n { width: 100%; background-color: #d212c6;}
+
+#head-img {
+    position: absolute;
+    object-fit: cover;
+    
+}
