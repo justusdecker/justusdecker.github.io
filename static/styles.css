@@ -37,11 +37,13 @@ body {
 
 #head {
     background-color: var(--bg-color-head-foot);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 footer {
     height: 5em;
     background-color: var(--bg-color-head-foot);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 #profile {
@@ -71,7 +73,7 @@ footer {
     height: auto;
     border: 5px  #484848;
     border-style: none none none solid;
-    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 #main-content {
@@ -113,6 +115,7 @@ footer {
     border-color: #969696;
     border-style: none none none solid;
     margin-bottom: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .exp:hover {
     border-width: 2em;
@@ -143,5 +146,33 @@ TODO: Animate this later
 #head-img {
     position: absolute;
     object-fit: cover;
-    
+
+}
+
+.skill {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill * {
+    background-color: #3572A5;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0.05em 0.25em 0.05em 0.25em;
+    margin-right: 0.5em;
+    line-height: 2em;
+    margin-bottom: 0.05em;
+}
+
+.skill *:nth-child(even) { background-color: #121212; }
+.skill *:nth-child(odd) { background-color: #181818; }
+
+.ralign {
+    margin-left: 100vw;
+    margin-right: 0;
+}
+
+.project-img {
+    margin-left: 3em;
+    width: 20em;
 }
