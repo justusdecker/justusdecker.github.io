@@ -1,0 +1,37 @@
+
+* {
+    font-family: monospace;
+}
+h1 {
+    font-size: 3em;
+    line-height: 0.5em;
+}
+
+.side-by-side {
+    display: flex;
+}
+
+body {
+    margin: 0;
+}
+
+#head, footer {
+    background-color: #d0d0d0;
+}
+
+footer {
+    height: 5em;
+}
+
+#profile {
+    width: 10em;
+    height: 10em;
+    padding: 1em;
+}
+
+.cdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5em;
+}
