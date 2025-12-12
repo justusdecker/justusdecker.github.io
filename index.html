@@ -166,7 +166,7 @@
             </div>
             <div class="exp">
                 <div class="side-by-side">
-                    <img class="project-ico" src="https://raw.githubusercontent.com/justusdecker/music-player-for-lets-plays/main/MPLP.png" alt="">
+                    <img class="project-ico" src="./static/img/noimg.png" alt="">
                     <div>
                         <h3>pycode-info</h3>
                         <p>2025</p>
@@ -297,21 +297,41 @@
             
             
             <h2 class="section-heading">Interests</h2>
-            <div class="side-by-side">
-                <img src="./static/img/outdoor.jpg" style="width:20em">
-                <div>
-                    <div>
-                        <h1>Outdoor</h1>
-                        <p></p>
-                    </div>
+
+            <div class="slideshow-container">
+
+                <div class="slide fade">
+                    <img src="./static/img/projects/music.png" style="width:100%">
                 </div>
+
+                <div class="slide fade">
+                    <img src="./static/img/projects/pixelart.png" style="width:100%">
+                </div>
+
+                <div class="slide fade">
+                    <img src="./static/img/projects/outdoor.png" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
             </div>
-            Art
+            <br>
+
+            <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+
+            <script src="./static/js/slides_.js"></script>
+        
             Music
             Woodworking
             Metalworking
             Electrical work
             Outdoor
+            3D-Design
         </div>
         
     </div>
