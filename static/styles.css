@@ -107,6 +107,16 @@ footer {
   margin-left: 10px
 }
 
+.exp-ext {
+    background-color: #363636;
+    width: 65vw - 1em; /* Removes the border overflow */
+    padding: 0 0 2em 0;
+    border-width: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
 .exp {
     background-color: #363636;
     width: 65vw - 1em; /* Removes the border overflow */
@@ -222,7 +232,7 @@ TODO: Animate this later
   background-color: rgba(0,0,0,0.8);
 }
 
-.dot {
+.dot .pdot {
   cursor: pointer;
   height: 15px;
   width: 15px;
