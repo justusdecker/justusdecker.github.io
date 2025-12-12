@@ -54,3 +54,7 @@ function showProjects(n) {
     projects[projectIndex-1].style.display = "block";
     pdots[projectIndex-1].className += " active";
 }
+
+setInterval(function () {
+    plusSlides(1)
+}, 10000)

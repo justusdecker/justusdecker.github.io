@@ -56,6 +56,13 @@ footer {
     width: 4em;
     height: 4em;
     padding: 1em;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.project-ico:hover {
+    width: 5em;
+    height: 5em;
 }
 
 .cdiv {
@@ -110,12 +117,14 @@ footer {
 .exp-ext {
     background-color: #363636;
     width: 65vw - 1em; /* Removes the border overflow */
-    padding: 0 0 2em 0;
+    padding: 0 3em 2em 4em;
     border-width: 1em;
     margin-bottom: 1em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
+    opacity: 0.7;
+    transition: 0.3s;
 }
+.exp-ext:hover { opacity: 1; }
 
 .exp {
     background-color: #363636;
@@ -126,10 +135,12 @@ footer {
     border-style: none none none solid;
     margin-bottom: 1em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+    transition: 0.3s;
+
 }
-.exp:hover {
-    border-width: 2em;
-}
+.exp:hover { opacity: 1; }
+
 
 #sidebar-spacing {
     margin: 0 1em 0 1em;
@@ -139,19 +150,24 @@ footer {
     width: 100%;
     background-color: #121212;
     margin-bottom: 1em;
+    
 }
 /* Skillbar fillings 
 TODO: Animate this later
 */
-.sk-html { width: 100%; background-color: #E34C26;}
-.sk-python { width: 100%; background-color: #3572A5;}
-.sk-c { width: 5%; background-color: #555555;}
-.sk-css { width: 55%; background-color: #563D7C;}
-.sk-js { width: 20%; background-color: #F1E05A; color:#484848;}
-.sk-kotlin { width: 10%; background-color: #F18E33; color:#484848;}
-.sk-java { width: 10%; background-color: #B07219; }
-.sk-batch { width: 100%; background-color: #C1F12E; color:#484848;}
-.sk-n { width: 100%; background-color: #d212c6;}
+.sk-html { width: 100%; background-color: #E34C26; animation-name: sk-anim; animation-duration: 1.5s;}
+.sk-python { width: 100%; background-color: #3572A5; animation-name: sk-anim; animation-duration: 1.5s;}
+.sk-c { width: 5%; background-color: #555555; animation-name: sk-anim; animation-duration: 1.5s;}
+.sk-css { width: 55%; background-color: #563D7C; animation-name: sk-anim; animation-duration: 1.5s;}
+.sk-js { width: 20%; background-color: #F1E05A; color:#484848; animation-name: sk-anim; animation-duration: 1.5s;}
+.sk-kotlin { width: 10%; background-color: #F18E33; color:#484848; animation-name: sk-anim; animation-duration: 1.5s;}
+.sk-java { width: 10%; background-color: #B07219;  animation-name: sk-anim; animation-duration: 1.5s;}
+.sk-batch { width: 100%; background-color: #C1F12E; color:#484848; animation-name: sk-anim; animation-duration: 1.5s;}
+.sk-n { width: 100%; background-color: #d212c6; animation-name: sk-anim; animation-duration: 1.5s;}
+
+@keyframes sk-anim {
+  from {width: 0%} 
+}
 
 #head-img {
     position: absolute;
@@ -172,10 +188,14 @@ TODO: Animate this later
     margin-right: 0.5em;
     line-height: 2em;
     margin-bottom: 0.05em;
+    transition: 0.5s;
 }
 
 .skill *:nth-child(even) { background-color: #121212; }
 .skill *:nth-child(odd) { background-color: #181818; }
+
+.skill *:nth-child(even):hover { background-color: #359ca5; }
+.skill *:nth-child(odd):hover { background-color: #a53535; }
 
 .ralign {
     margin-left: 100vw;
@@ -203,24 +223,28 @@ TODO: Animate this later
 
 
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+    max-width: 100%; /* Caps the size to */
+    position: relative;
+    margin: auto;
 }
 
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+    
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    width: auto;
+    height: calc(100% - 32px); /* By subtracting 32px(16px padding * 2) the bar will snap perfectly */
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #ffffff80;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 
 .next {
@@ -229,7 +253,7 @@ TODO: Animate this later
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.6);
 }
 
 .dot .pdot {
@@ -255,4 +279,25 @@ TODO: Animate this later
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+.slideshow-text {
+    padding: 8px 12px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 24px;
+  bottom: 1em;
+}
+
+.title-text {
+  color: #f2f2f2;
+  font-size: 32px;
+  font-weight: bold;
+  bottom: 3em;
+
 }
