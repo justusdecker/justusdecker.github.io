@@ -152,8 +152,19 @@ footer {
     width: 100%;
     background-color: #121212;
     margin-bottom: 1em;
+    cursor: pointer;
+}
+
+.skill-info {
+    height: 0px;
+    overflow: hidden;
+    transition: 1s;
+    margin-left:1em;
     
 }
+
+
+
 /* Skillbar fillings 
 TODO: Animate this later
 */
@@ -278,6 +289,14 @@ TODO: Animate this later
   animation-duration: 1.5s;
 }
 
+.slide img{
+    filter: brightness(40%);
+    transition: 1s;
+}
+.slide img:hover {
+    filter: brightness(80%);
+}
+
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
@@ -288,16 +307,17 @@ TODO: Animate this later
     position: absolute;
     width: 100%;
     text-align: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
 .text {
-  color: #f2f2f2;
+  color: #a0a0a0;
   font-size: 24px;
   bottom: 1em;
 }
 
 .title-text {
-  color: #f2f2f2;
+  color: #d0d0d0;
   font-size: 32px;
   font-weight: bold;
   bottom: 3em;
