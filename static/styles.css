@@ -4,6 +4,9 @@
     --bg-color-body: #252525;
     --bg-color-head-foot: #363636;
     --bg-color-sidebar: #484848;
+    
+
+    --shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -37,16 +40,13 @@ body {
     background-color: var(--bg-color-body);
 }
 
-#head {
+#head, footer {
     background-color: var(--bg-color-head-foot);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow);
 }
 
-footer {
-    height: 5em;
-    background-color: var(--bg-color-head-foot);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
+
+footer { box-shadow: var(--shadow); }
 
 #profile {
     width: 10em;
@@ -335,4 +335,21 @@ TODO: Animate this later
 .sm-btn {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
+}
+
+
+@media screen and (width < 900px) {
+    
+    * {font-size:small !important; line-height: 1em !important;}
+    h1 {font-size: xx-large;}
+    h2 {font-size: x-large;}
+    h3 {font-size: large;}
+    .skill-container {cursor: not-allowed;}
+    .skill-info {display: none;}
+    #profile {
+        display: none;
+    }
+    /*
+    Disable Project images
+    */
 }
