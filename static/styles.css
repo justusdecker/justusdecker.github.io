@@ -26,6 +26,8 @@ h3 {
     font-size: 1.5em;
 }
 
+p { font-size: 1.25em;}
+
 .side-by-side {
     display: flex;
 }
@@ -299,5 +301,18 @@ TODO: Animate this later
   font-size: 32px;
   font-weight: bold;
   bottom: 3em;
+
+}
+
+.info-links {
+    border-radius: 2px;
+    background-color: #3572A5;
+    text-decoration: none;
+    margin-right: 1em;
+    font-size: 0.9em;
+}
+
+.sm-btn {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 }
