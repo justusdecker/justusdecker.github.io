@@ -1,49 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justus Decker</title>
+    <title>Resume Version 2</title>
     <link rel="stylesheet" href="./static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
-    <div id="head">
-        <div class="side-by-side" style="margin-left: 5em;">
-
+        <div id="head">
             <img id="profile" src="https://avatars.githubusercontent.com/u/200506279?v=4">
-            <div class="side-by-side">
-                <div>
-                    <h1>Justus Decker</h1>
-                    <h2>Backend Developer</h2>
-                    <p>Emden, Germany</p>
-                    <p>A Python programmer with a passion for art, music, and more</p>
-                </div>
-                <div style="right:0; position:absolute; margin-right:5em;margin-top:1em">
-                    <a href="https://wakatime.com/@Justus_Decker"><img class="sm-btn"
+            <div id="head-text">
+                <h1>Justus Decker</h1>
+                <h2>Python, HTML, CSS & JavaScript Developer</h2>
+                <p>A Python programmer with a passion for art, music, and more.</p>
+                <a><img src="https://justusdecker.pythonanywhere.com/cvcounter" alt=""></a>
+                <a href="https://wakatime.com/@Justus_Decker"><img class="sm-btn"
                             src="https://wakatime.com/badge/user/e971c7f6-586b-4713-b710-561bca159241.svg"></a>
-                    <a href="mailto:justus.d2025@gmail.com"><img class="sm-btn"
-                            src="https://img.shields.io/badge/Mail-EA4335?logo=gmail&logoColor=white"></a>
-                    <a href="https://www.linkedin.com/in/justus-decker/"><img class="sm-btn"
-                            src="https://img.shields.io/badge/LinkedIn-1A73E8?logo=googlemessages&logoColor=white"></a>
-                    <a href="https://github.com/justusdecker"><img class="sm-btn"
-                            src="https://img.shields.io/badge/github-181717?logo=github&logoColor=white"></a>
-
-                    <a><img src="https://justusdecker.pythonanywhere.com/cvcounter" alt=""></a>
-
-
-                </div>
             </div>
-
+            
         </div>
-    </div>
 
-    <div id="wrapper">
-        <div id="sidebar">
-            <div id="sidebar-spacing">
+        <div id="main" style="margin-top: 1em;">
+            <div id="experience">
+                <h1 class="section-heading">Projects</h1>
+                <div class="experience-container">
+                    <h1>PyNodle - A Pygame Node-Editor(For Game Development)</h1>
+                    
+                    
+                    <div class="project-ico-align">
+                        <ul>
+                            <li>
+                                <p>
+                                    Developing a high-performance and modular visual Node Editor using Pygame, focusing
+                                    on refactoring the core architecture to establish a robust and extensible
+                                    foundation.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Architecture & UX: Implementing a specialized system for custom UI elements,
+                                    including a centralized InputManager with a blocking mechanism to prevent
+                                    overlapping input events and ensure a professional user experience.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Comprehensive UI Library: Building a full set of interactive components, such as
+                                    Nodes (with drag/drop), Buttons, SpinBoxes, Color Pickers, and complex Text Inputs,
+                                    all designed for seamless integration and visual feedback.
+                                </p>
+                            </li>
+                        </ul>
+                        <p>Nov. 2025 - present</p>
+                        <img class="project-ico" src="./static/img/noimg.png">
+                    </div>
+                </div>
+                <div class="experience-container">
+                    <h1>Justus Decker GitHub-Page</h1>
+                    
+                    
+                    <div class="project-ico-align">
+                        <ul>
+                            <li>
+                                <p>
+                                    Utilized the platform to effectively showcase diverse technical projects, providing
+                                    clear overviews of skills in backend development, UI/UX, and various programming
+                                    languages.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Emphasized attention to design detail by first creating wireframes on paper and
+                                    translating the concept into a custom, modern web layout.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Designed and developed a personal portfolio website from scratch using clean HTML,
+                                    CSS and Javascript, ensuring a responsive user experience.
+                                </p>
+                            </li>
+                        </ul>
+                        <p>Dec. 2025</p>
+                        <img class="project-ico" src="https://avatars.githubusercontent.com/u/200506279?v=4">
+                    </div>
+                </div>
+                <div class="experience-container">
+                    <h1>Automation-Manager</h1>
+                    
+                    
+                    <div class="project-ico-align">
+                        <ul>
+                            <li>
+                                <p>
+                                    Developed a Flask-based Application Manager for job applications, providing a
+                                    centralized system to manage job listings, application data, and statistics.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Implemented functionality to import jobs directly from LinkedIn via HTML parsing and
+                                    enabled easy creation and management of custom job titles/professions and
+                                    application records.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Features include a built-in CV creator that utilizes a Python class structure for
+                                    data storage, allowing users to generate and export customized CVs as PDF files.
+                                </p>
+                            </li>
+                        </ul>
+                        <p>Nov. 2025 - Dec. 2025</p>
+                        <img class="project-ico" src="https://raw.githubusercontent.com/justusdecker/Application-Manager/main/src/frontend/static/logo.png">
+                    </div>
+                </div>
 
-                <h3>Techstack</h3>
+                <div class="experience-container">
+                    <h1>pigUI / jmpUI</h1>
+                    
+                    
+                    <div class="project-ico-align">
+                        <ul>
+                            <li>
+                                <p>
+                                    Engineered a hierarchical UI Management system (UIManager) to control element layering, rendering order, and ensure input blocking focused only on active elements (e.g., dragged nodes, text inputs).
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Abstracted raw Pygame events (mouse, keyboard) into a clean Events class to provide intuitive and simplified event handling (including double-clicks, wheel scroll, and key repeats).
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Developed a suite of specialized, complex UI widgets, including UITextInput (featuring key repeat and validation), UIDropDown, UIMenuBar, and an UIColorPicker.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Enabled customizable aesthetics by strictly separating UI logic (UIElement) from visual representation (UXElement/UXWrapper), allowing for easy theme changes and custom component rendering.
+                                </p>
+                            </li>
+                        </ul>
+                        <p>Nov. 2025 - Dec. 2025</p>
+                        <img class="project-ico" src="https://raw.githubusercontent.com/justusdecker/pigUI/main/data/pigui_logo.png">
+                    </div>
+                </div>
+
+                <div class="experience-container">
+                    <h1>Nokiator</h1>
+                    
+                    
+                    <div class="project-ico-align">
+                        <ul>
+                            <li>
+                                <p>
+                                    Developed a specialized, FFmpeg-based Windows Batch script for the accurate and reliable conversion of MP3 audio files.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Optimized audio output to a Constant Bit Rate (CBR) of 128 kbps, specifically ensuring guaranteed compatibility and reliable playback on legacy hardware (e.g., Nokia RM 1190).
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Designed flexible utility supporting dual operating modes for batch folder processing or single-file conversion (using -f and -s flags).
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Implemented external control of encoding parameters via the %ENCODER_FLAGS% environment variable, enhancing script flexibility and maintainability.
+                                </p>
+                            </li>
+                        </ul>
+                        <p>Nov. 2025</p>
+                        <img class="project-ico" src="https://raw.githubusercontent.com/justusdecker/Nokiator/main/data/icon.png">
+                    </div>
+                </div>
+
+                <div class="experience-container">
+                    <h1>MPLP</h1>
+                    
+                    
+                    <div class="project-ico-align">
+                        <ul>
+                            <li>
+                                <p>
+                                    Developed a specialized, lightweight Python media player tailored for live streaming and Let's Plays, ensuring non-blocking, resource-efficient audio playback in live production environments.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Integrated an HTML export function (export.html) to facilitate seamless song title display and overlay for use with third-party streaming software (e.g., OBS Studio).
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Designed an intuitive GUI (Tkinter) for comprehensive playlist management, supporting adding files/folders, saving/loading playlists using the JSON format, and featuring standard controls (Shuffle, Skip, Volume).
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Utilized a dedicated threading model with native Python libraries (Tkinter, Pygame Mixer) to ensure stable and uninterrupted playback crucial for time-sensitive broadcasting.
+                                </p>
+                            </li>
+                        </ul>
+                        <p>Oct. 2025</p>
+                        <img class="project-ico" src="https://raw.githubusercontent.com/justusdecker/music-player-for-lets-plays/main/MPLP.png">
+                    </div>
+                </div>
+
+                <div class="experience-container">
+                    <h1>pycode-info</h1>
+                    
+                    
+                    <div class="project-ico-align">
+                        <ul>
+                            <li>
+                                <p>
+                                    Developed a tool to generate comprehensive language statistics, summarizing project usage by tracking file counts, total size, and lines of code per language, presented with a visual usage bar.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Implemented a Cyclomatic Complexity Viewer that analyzes Python files to measure function complexity, utilizing a heatmap visualization to highlight potential maintenance hotspots.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Integrated Flake8 linter functionality to execute automated static analysis on Python files, summarizing all generated errors and warnings into a clear, readable report format for quality assurance.
+                                </p>
+                            </li>
+                        </ul>
+                        <p>Sep. 2025</p>
+                        <img class="project-ico" src="./static/img/noimg.png">
+                    </div>
+                </div>
+
+                <div class="experience-container">
+                    <h1>LPRT</h1>
+                    
+                    
+                    <div class="project-ico-align">
+                        <ul>
+                            <li>
+                                <p>
+                                    Built a desktop-application tool for Let's Players to automate the recording,
+                                    editing, and management of video content, streamlining workflows through CSV/JSON
+                                    data handling.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Developed automation features including thumbnail generation, audio normalization and
+                                    video/audio merging—boosting editing efficiency.
+                                </p>
+                            </li>
+                        </ul>
+                        <p>Sep. 2023 - Sep. 2025</p>
+                        <img class="project-ico" src="https://raw.githubusercontent.com/justusdecker/Lets-play-recording-tool/main/bin/data/img/logo.png">
+                    </div>
+                </div>
+
+                <div class="experience-container">
+                    <h1>My Website</h1>
+                    
+                    
+                    <div class="project-ico-align">
+                        <ul>
+                            <li>
+                                <p>
+                                    Developed a personal web presence utilizing HTML, CSS, and WordPress.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Due to the limitations of WordPress: No iFrames, No real HTML, Awful Software, Slow Loading Times, Bad Support and more, i stopped working on this project.
+                                </p>
+                            </li>
+                        </ul>
+                        <p>Feb. 2025 - Mar. 2025</p>
+                        <img class="project-ico" src="https://avatars.githubusercontent.com/u/200506279?v=4">
+                    </div>
+                </div>
+
+                <div class="experience-container">
+                    <h1>pygame-engine</h1>
+                    
+                    
+                    <div class="project-ico-align">
+                        <ul>
+                            <li>
+                                <p>
+                                    Developed a lightweight Pygame engine designed to simplify the integration and
+                                    management of UI elements and 2D/3D functionalities.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Focused on creating an intuitive and accessible framework to streamline development
+                                    for various interactive applications.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    This project was discontinued due to technical challenges encountered during
+                                    development.
+                                </p>
+                            </li>
+                        </ul>
+                        <p>Apr. 2025 - May. 2025</p>
+                        <img class="project-ico" src="./static/img/projects/pe_logo.png">
+                    </div>
+                </div>
+
+                <div class="experience-container">
+                    <h1>WIN - A Hackathon Project</h1>
+                    
+                    
+                    <div class="project-ico-align">
+                        <ul>
+                            <li>
+                                <p>
+                                    Built a lightweight word count guessing game using Wikipedia content fetched by my
+                                    own API, offering a simple yet engaging point-based challenge.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Designed engaging gameplay mechanics, providing users with three attempts and
+                                    multiple-choice options per round.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    This project was discontinued due to technical challenges encountered during
+                                    development.
+                                </p>
+                            </li>
+                        </ul>
+                        <p>Feb. 2025 - Mar. 2025</p>
+                        <img class="project-ico" src="https://camo.githubusercontent.com/a6b4e28646292a1c7bcb7cfbfdde556c2fc03e5297fe2b1642dbed9cc27789b7/68747470733a2f2f6a75737475736465636b657264652e776f726470726573732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032352f30342f77696e2e706e67">
+                    </div>
+                </div>
+                <h1 class="section-heading">Education</h1>
+                <div class="experience-container">
+                    <h1>Masterschool</h1>
+                    
+                    
+                    <div class="project-ico-align">
+                        <ul>
+                            <li>
+                                <p>
+                                    Acquires hands-on experience through an immersive program, developing backend applications
+                            using Python & SQL.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Applies software engineering principles such as object-oriented programming (OOP),
+                            test-driven development (TDD), and version control (Git, GitHub) in real-world projects.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Builds and deployes scalable applications using HTML, CSS. JavaScript & the Flask Framework.
+                                </p>
+                            </li>
+                        </ul>
+                        <p>Feb. 2025 - present <br>Backend Developer <br>Training Program</p>
+                        <img class="project-ico" src="https://cdn-1.webcatalog.io/catalog/masterschool/masterschool-icon-filled-256.webp?v=1714781169632">
+                    </div>
+                </div>
+                <h1 class="section-heading">Experience</h1>
+
+                <div class="experience-container">
+                    <h1>Multiple Companys</h1>
+                    
+                    
+                    <div class="project-ico-align">
+                        <ul>
+                            <li>
+                                <p>
+                                    Operated forklifts to move and organize over 1,500 pallets per week, ensuring efficient
+                            warehouse flow and reducing loading times by 35%.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Maintained a 100% safety record while handling high-volume shipments and conducting daily
+                            equipment checks to prevent downtime and accidents.
+                                </p>
+                            </li>
+                        </ul>
+                        <p>Mar. 2021 - Sep. 2024 <br>Forklift Operator</p>
+                        <img class="project-ico" src="./static/img/multiple_companies.png">
+                    </div>
+                </div>
+
+                <div class="experience-container">
+                    <h1>Multiple Companys</h1>
+                    
+                    
+                    <div class="project-ico-align">
+                        <ul>
+                            <li>
+                                <p>
+                                    Assisted in receiving, sorting, and storing 2,000+ items weekly, ensuring accurate inventory
+                            and smooth daily operations.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Supported order picking and packing, helping reduce shipping errors by 20% through attention
+                            to detail and teamwork.
+                                </p>
+                            </li>
+                        </ul>
+                        <p>Feb. 2018 - Mar. 2021<br>Warehouse Helper</p>
+                        <img class="project-ico" src="./static/img/multiple_companies.png">
+                    </div>
+                </div>
+                <h1 class="section-heading">Interests</h1>
+                <p>Work in progress</p>
+            </div>
+            <div id="sidebar">
                 <div>
                     <h3 style="line-height: 1em">Programming Languages</h3>
                     <div class="skill-container" onclick="open_close('python-info')">
@@ -95,525 +479,73 @@
                             <p>Minimal experience, for python performance optimizations</p>
                         </div>
                     </div>
-
-
-                </div>
-                <h3>Frameworks / Libraries</h3>
-                <div class="skill">
-                    <p>requests</p>
-                    <p>Flask</p>
-                    <p>tkinter</p>
-                    <p>win32api</p>
-                    <p>ctypes</p>
-                    <p>selenium</p>
-                    <p>sqlite3</p>
-                    <p>sqlalchemy</p>
-                    <p>pytest</p>
-                    <p>pygame</p>
-                    <p>numba</p>
-                    <p>numpy</p>
-                    <p>jinja</p>
-                    <p>winmm</p>
-                    <p>obsws_python</p>
-                    <p>python-vlc</p>
-
-                </div>
-                <h3>Tools</h3>
-                <div class="skill">
-                    <p>GitHub</p>
-                    <p>GitHub Actions</p>
-                    <p>Git</p>
-                    <p>GitHub Pages</p>
                 </div>
 
-                <h3>OS</h3>
+                <div>
+                    <h3>Frameworks / Libraries</h3>
                 <div class="skill">
-                    <p>Windows</p>
-                    <p>Linux</p>
-                    <p>Mac OS X</p>
-                    <p>WSL Ubuntu</p>
-                </div>
+                    <span>requests</span>
+                    <span>Flask</span>
+                    <span>tkinter</span>
+                    <span>win32api</span>
+                    <span>ctypes</span>
+                    <span>selenium</span>
+                    <span>sqlite3</span>
+                    <span>sqlalchemy</span>
+                    <span>pytest</span>
+                    <span>pygame</span>
+                    <span>numba</span>
+                    <span>numpy</span>
+                    <span>jinja</span>
+                    <span>winmm</span>
+                    <span>obsws_python</span>
+                    <span>python-vlc</span>
 
-                <h3>Soft Skills</h3>
-                <div class="skill">
-                    <p>Problem-solving</p>
-                    <p>Teamwork</p>
-                    <p>Communication</p>
-                    <p>Analytical thinking</p>
-                    <p>Fast learner</p>
                 </div>
-                <h3>Languages</h3>
-                <div class="skill">
-                    <p>German - Native</p>
-                    <p>English - B2</p>
+                    <h3>Tools</h3>
+                    <div class="skill">
+                        <span>GitHub</span>
+                        <span>GitHub Actions</span>
+                        <span>Git</span>
+                        <span>GitHub Pages</span>
+                    </div>
+
+                    <h3>OS</h3>
+                    <div class="skill">
+                        <span>Windows</span>
+                        <span>Linux</span>
+                        <span>Mac OS X</span>
+                        <span>WSL Ubuntu</span>
+                    </div>
+
+                    <h3>Soft Skills</h3>
+                    <div class="skill">
+                        <span>Problem-solving</span>
+                        <span>Teamwork</span>
+                        <span>Communication</span>
+                        <span>Analytical thinking</span>
+                        <span>Fast learner</span>
+                    </div>
+                    <h3>Languages</h3>
+                    <div class="skill">
+                        <span>German - Native</span>
+                        <span>English - B2</span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="main-content">
-
-            <h2 class="section-heading">Projects</h2>
-            <div class="slideshow-container">
-                <div class="project fade">
-                    <div class="exp-ext">
-                        <div class="side-by-side">
-                            <img class="project-ico" src="./static/img/noimg.png" alt="">
-                            <div>
-                                <h3>PyNodle - A Pygame Node-Editor(For Game Development)</h3>
-                                <p>Nov. 2025 - present</p>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>
-                                <p>Developing a high-performance and modular visual Node Editor using Pygame, focusing
-                                    on refactoring the core architecture to establish a robust and extensible
-                                    foundation.</p>
-                            </li>
-                            <li>
-                                <p>Architecture & UX: Implementing a specialized system for custom UI elements,
-                                    including a centralized InputManager with a blocking mechanism to prevent
-                                    overlapping input events and ensure a professional user experience.</p>
-                            </li>
-                            <li>
-                                <p>Comprehensive UI Library: Building a full set of interactive components, such as
-                                    Nodes (with drag/drop), Buttons, SpinBoxes, Color Pickers, and complex Text Inputs,
-                                    all designed for seamless integration and visual feedback.</p>
-                            </li>
-                        </ul>
-                        <img src="./static/img/projects/pynodle_1.gif" class="project-img">
-                    </div>
-                </div>
-
-                <div class="project fade">
-
-                    <div class="exp-ext">
-                        <div class="side-by-side">
-                            <img class="project-ico" src="https://avatars.githubusercontent.com/u/200506279?v=4" alt="">
-                            <div>
-                                <h3>Justus Decker GitHub-Page</h3>
-                                <p>Dec. 2025</p>
-                            </div>
-                        </div>
-
-                        <ul>
-                            <li>
-                                <p>Designed and developed a personal portfolio website from scratch using clean HTML,
-                                    CSS and Javascript, ensuring a responsive user experience.</p>
-                            </li>
-                            <li>
-                                <p>Emphasized attention to design detail by first creating wireframes on paper and
-                                    translating the concept into a custom, modern web layout.</p>
-                            </li>
-                            <li>
-                                <p>Utilized the platform to effectively showcase diverse technical projects, providing
-                                    clear overviews of skills in backend development, UI/UX, and various programming
-                                    languages.</p>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="project fade">
-                    <div class="exp-ext">
-                        <div class="side-by-side">
-                            <img class="project-ico"
-                                src="https://raw.githubusercontent.com/justusdecker/Application-Manager/main/src/frontend/static/logo.png"
-                                alt="">
-                            <div>
-                                <h3>Automation-Manager</h3>
-                                <p>Nov. 2025 - Dec. 2025</p>
-                            </div>
-                        </div>
-
-                        <ul>
-                            <li>
-                                <p>Developed a Flask-based Application Manager for job applications, providing a
-                                    centralized system to manage job listings, application data, and statistics.</p>
-                            </li>
-                            <li>
-                                <p>Implemented functionality to import jobs directly from LinkedIn via HTML parsing and
-                                    enabled easy creation and management of custom job titles/professions and
-                                    application records.</p>
-                            </li>
-                            <li>
-                                <p>Features include a built-in CV creator that utilizes a Python class structure for
-                                    data storage, allowing users to generate and export customized CVs as PDF files.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="project fade">
-                    <div class="exp-ext">
-                        <div class="side-by-side">
-                            <img class="project-ico"
-                                src="https://raw.githubusercontent.com/justusdecker/pigUI/main/data/pigui_logo.png"
-                                alt="">
-                            <div>
-                                <h3>pigUI / jmpUI</h3>
-                                <p>Nov. 2025 - Dec. 2025</p>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>
-                                <p>Hierarchical UI Management: The UIManager handles element layering, rendering order,
-                                    and ensures input blocking (only the top/active element, like a dragged node or a
-                                    text input, receives events). Intuitive Event Handling: The Events class abstracts
-                                    raw Pygame events (mouse clicks, double-clicks, wheel scroll, keyboard input) into
-                                    simple, clean state variables.</p>
-                            </li>
-                            <li>
-                                <p>Specialized UI Widgets: Includes complex, ready-to-use components like UITextInput
-                                    (with key repeat and validation), UIDropDown, UIMenuBar, and an UIColorPicker.</p>
-                            </li>
-                            <li>
-                                <p>Customizable Aesthetics: The separation of logic (UIElement) and visuals
-                                    (UXElement/UXWrapper) allows for easy theme changes and custom component rendering.
-                                </p>
-                            </li>
-                        </ul>
-                        <img src="./static/img/projects/pynodle_2.png" class="project-img">
-                    </div>
-                </div>
-                <div class="project fade">
-                    <div class="exp-ext">
-                        <div class="side-by-side">
-                            <img class="project-ico"
-                                src="https://raw.githubusercontent.com/justusdecker/Nokiator/main/data/icon.png" alt="">
-                            <div>
-                                <h3>Nokiator</h3>
-                                <p>Nov. 2025</p>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>
-                                <p>Specialized Audio Converter: A Windows Batch script leveraging FFmpeg to accurately
-                                    convert MP3 files.</p>
-                            </li>
-                            <li>
-                                <p>Hardware Optimized: Ensures a Constant Bit Rate (CBR) of 128 kbps, specifically
-                                    optimized for reliable playback on older devices like the Nokia RM 1190.</p>
-                            </li>
-                            <li>
-                                <p>Flexible Usage: Supports two operating modes for converting a single file (-s) or an
-                                    entire folder (-f), with encoder parameters controlled via the %ENCODER_FLAGS%
-                                    environment variable.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="project fade">
-                    <div class="exp-ext">
-                        <div class="side-by-side">
-                            <img class="project-ico"
-                                src="https://raw.githubusercontent.com/justusdecker/music-player-for-lets-plays/main/MPLP.png"
-                                alt="">
-                            <div>
-                                <h3>MPLP</h3>
-                                <p>Oct. 2025</p>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>
-                                <p>Streaming Specialization: The player is specifically designed for live streams and
-                                    Lets Plays, featuring an HTML export function (export.html) to display the currently
-                                    playing song title in streaming software (e.g., OBS Studio).</p>
-                            </li>
-                            <li>
-                                <p>Intuitive GUI & Playlist Management: It features a graphical user interface (Tkinter)
-                                    for playlist management (adding folders/files), saving playlists in JSON format, and
-                                    offering essential controls like Shuffle, Skip, and Volume control.</p>
-                            </li>
-                            <li>
-                                <p>Lightweight & Dedicated Architecture: Built using native Python libraries like
-                                    Tkinter and Pygame Mixer with a dedicated threading model, the player ensures
-                                    non-blocking playback, making it stable for use in resource-sensitive live
-                                    production environments.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="project fade">
-                    <div class="exp-ext">
-                        <div class="side-by-side">
-                            <img class="project-ico" src="./static/img/noimg.png" alt="">
-                            <div>
-                                <h3>pycode-info</h3>
-                                <p>Sep. 2025</p>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>
-                                <p>Language Statistics: Summarizes the programming languages in your project, showing
-                                    file counts, total size, and line counts per language with a visual usage bar.</p>
-                            </li>
-                            <li>
-                                <p>Cyclomatic Complexity Viewer: Analyzes Python files for cyclomatic complexity,
-                                    highlighting complex functions and providing a heatmap of code complexity.</p>
-                            </li>
-                            <li>
-                                <p>Flake8 Integration: Runs Flake8 on all Python files and summarizes errors and
-                                    warnings in a readable format.</p>
-                            </li>
-                        </ul>
-                        <div class="side-by-side">
-                            <img src="./static/img/projects/pci_1.PNG" class="project-img">
-                            <img src="./static/img/projects/pci_2.PNG" class="project-img">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project fade">
-                    <div class="exp-ext">
-                        <div class="side-by-side">
-                            <img class="project-ico"
-                                src="https://raw.githubusercontent.com/justusdecker/Lets-play-recording-tool/main/bin/data/img/logo.png"
-                                alt="">
-                            <div>
-                                <h3>LPRT</h3>
-                                <p>Jul. 2025 - Sep. 2025</p>
-                                <p>Sep. 2023 - Jun. 2025(JRI - cancelled alpha)</p>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>
-                                <p>Built a desktop-application tool for Let's Players to automate the recording,
-                                    editing, and management of video content, streamlining workflows through CSV/JSON
-                                    data handling.</p>
-                            </li>
-                            <li>
-                                <p>Developed automation features including thumbnail generation, audio normalization and
-                                    video/audio merging—boosting editing efficiency.</p>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                <div class="project fade">
-                    <div class="exp-ext">
-                        <div class="side-by-side">
-                            <img class="project-ico" src="https://avatars.githubusercontent.com/u/200506279?v=4" alt="">
-                            <div>
-                                <h3>My Website</h3>
-                                <p>Feb. 2025 - Mar. 2025</p>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>
-                                <p>Developed a personal web presence utilizing HTML, CSS, and WordPress.</p>
-                            </li>
-                            <li>
-                                <p>Note: Project development was paused due to limitations encountered within the
-                                    WordPress platform.</p>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                <div class="project fade">
-                    <div class="exp-ext">
-                        <div class="side-by-side">
-                            <img class="project-ico" src="./static/img/projects/pe_logo.png" alt="">
-                            <div>
-                                <h3>pygame-engine</h3>
-                                <p>Apr. 2025 - May. 2025</p>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>
-                                <p>Developed a lightweight Pygame engine designed to simplify the integration and
-                                    management of UI elements and 2D/3D functionalities.</p>
-                            </li>
-                            <li>
-                                <p>Focused on creating an intuitive and accessible framework to streamline development
-                                    for various interactive applications.</p>
-                            </li>
-                            <li>
-                                <p>This project was discontinued due to technical challenges encountered during
-                                    development.</p>
-                            </li>
-                        </ul>
-                        <img src="https://camo.githubusercontent.com/dc098a00d32f0d18b5490e5b624d846600c3b34e9fcff56d3ca58281727889dc/68747470733a2f2f6a75737475736465636b657264652e776f726470726573732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032352f30342f636f6f6b69655f636c69636b65725f636c6f6e655f70726f6a6563742d312e706e67"
-                            class="project-img">
-                    </div>
-                </div>
-
-                <div class="project fade">
-                    <div class="exp-ext">
-                        <div class="side-by-side">
-                            <img class="project-ico"
-                                src="https://camo.githubusercontent.com/a6b4e28646292a1c7bcb7cfbfdde556c2fc03e5297fe2b1642dbed9cc27789b7/68747470733a2f2f6a75737475736465636b657264652e776f726470726573732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032352f30342f77696e2e706e67"
-                                alt="">
-                            <div>
-                                <h3>WIN - A Hackathon Project</h3>
-                                <p>Feb. 2025 - Mar. 2025</p>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>
-                                <p>Built a lightweight word count guessing game using Wikipedia content fetched by my
-                                    own API, offering a simple yet engaging point-based challenge.</p>
-                            </li>
-                            <li>
-                                <p>Designed engaging gameplay mechanics, providing users with three attempts and
-                                    multiple-choice options per round.</p>
-                            </li>
-                            <li>
-                                <p>Developed as part of Masterschool Hackathon, showcasing quick prototyping skills and
-                                    creative game mechanics.</p>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                <a class="prev" onclick="plusProjects(-1)">❮</a>
-                <a class="next" onclick="plusProjects(1)">❯</a>
-
-            </div>
-            <br>
-            <h2 class="section-heading">Education</h2>
-            <div class="exp">
-                <div class="side-by-side">
-                    <img class="project-ico"
-                        src="https://cdn-1.webcatalog.io/catalog/masterschool/masterschool-icon-filled-256.webp?v=1714781169632"
-                        alt="">
-                    <div>
-                        <h3>Masterschool</h3>
-                        <p>Backend Developer - Training Program</p>
-                        <p>Feb. 2025 - present</p>
-                    </div>
-                </div>
-                <ul>
-                    <li>
-                        <p>Acquires hands-on experience through an immersive program, developing backend applications
-                            using Python & SQL.</p>
-                    </li>
-                    <li>
-                        <p>Applies software engineering principles such as object-oriented programming (OOP),
-                            test-driven development (TDD), and version control (Git, GitHub) in real-world projects.</p>
-                    </li>
-                    <li>
-                        <p>Builds and deployes scalable applications using HTML, CSS. JavaScript & the Flask Framework.
-                        </p>
-                    </li>
-                </ul>
-            </div>
-
-            <h2 class="section-heading">Work Experience</h2>
-
-            <div class="exp">
-                <div class="side-by-side">
-                    <img class="project-ico" src="./static/img/multiple_companies.png" alt="">
-                    <div>
-                        <h3>Multiple Companys</h3>
-                        <p>Forklift Operator</p>
-                        <p>Mar. 2021 - Sep. 2024</p>
-                    </div>
-                </div>
-                <ul>
-                    <li>
-                        <p>Operated forklifts to move and organize over 1,500 pallets per week, ensuring efficient
-                            warehouse flow and reducing loading times by 35%.</p>
-                    </li>
-                    <li>
-                        <p>Maintained a 100% safety record while handling high-volume shipments and conducting daily
-                            equipment checks to prevent downtime and accidents.</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="exp">
-                <div class="side-by-side">
-                    <img class="project-ico" src="./static/img/multiple_companies.png" alt="">
-                    <div>
-                        <h3>Multiple Companys</h3>
-                        <p>Warehouse Helper</p>
-                        <p>Feb. 2018 - Mar. 2021</p>
-                    </div>
-                </div>
-                <ul>
-                    <li>
-                        <p>Assisted in receiving, sorting, and storing 2,000+ items weekly, ensuring accurate inventory
-                            and smooth daily operations.</p>
-                    </li>
-                    <li>
-                        <p>Supported order picking and packing, helping reduce shipping errors by 20% through attention
-                            to detail and teamwork.</p>
-                    </li>
-                </ul>
-            </div>
-
-
-
-            <h2 class="section-heading">Interests</h2>
-
-            <div class="slideshow-container">
-
-                <div class="slide fade">
-
-                    <img src="./static/img/projects/music.png" style="width:100%">
-                    <div class="slideshow-text title-text">Music</div>
-                    <div class="slideshow-text text">Music is a way for me to express myself and escape from everyday life. <br> Among other things, I create music for my video games.</div>
-                </div>
-
-                <div class="slide fade">
-                    <img src="./static/img/projects/pixelart.png" style="width:100%">
-                    <div class="slideshow-text title-text">Art</div>
-                    <div class="slideshow-text text">I've been drawing on and off for seven years now, <br>from fan art to my own projects like LPRT & MPLP.</div>
-                </div>
-
-                <div class="slide fade">
-                    <img src="./static/img/projects/outdoor.png" style="width:100%">
-                    <div class="slideshow-text title-text">Outdoor</div>
-                    <div class="slideshow-text text">---</div>
-                </div>
-
-                <div class="slide fade">
-                    <img src="https://images.pexels.com/photos/374861/pexels-photo-374861.jpeg" style="width:100%">
-                    <div class="slideshow-text title-text">Woodworking</div>
-                    <div class="slideshow-text text">Woodworking is also one of my skills, including carving and furniture making.</div>
-                </div>
-                <div class="slide fade">
-                    <img src="https://www.summer-breeze.de/wp-content/uploads/2020/10/09/exp__0018_Screenshots-1920x1080-0-01-06-26.psd.jpg" style="width:100%">
-                    <div class="slideshow-text title-text">DIY</div>
-                    <div class="slideshow-text text">Whether it's construction, maintenance or repair,<br> I always find something to keep me busy.</div>
-                </div>
-                <div class="slide fade">
-                    <img src="https://static.vecteezy.com/system/resources/thumbnails/008/718/632/original/machining-shaft-on-lathe-metalworking-turner-working-on-machine-lathe-work-metalworking-cutting-metal-modern-processing-technology-cnc-milling-machine-produces-metal-detail-on-factory-video.jpg" style="width:100%">
-                    <div class="slideshow-text title-text">Metalworking</div>
-                    <div class="slideshow-text text">---</div>
-                </div>
-                <div class="slide fade">
-                    <img src="https://dmsoundsandelectric.com/images/background/bg03.jpg" style="width:100%">
-                    <div class="slideshow-text title-text">Electrical Work</div>
-                    <div class="slideshow-text text">I also occasionally take on minor electrical work, such as laying electrical cables, <br>writing circuit diagrams, and troubleshooting according to DIN standards.</div>
-                </div>
-                <div class="slide fade">
-                    <img src="./static/img/projects/3d_design.png" style="width:100%">
-                    <div class="slideshow-text title-text">3D Design</div>
-                    <div class="slideshow-text text">To work with my 3D printers, I acquired this skill.</div>
-                </div>
-                
-                
-
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
-
-            </div>
-            <br>
-            <script src="./static/js/slides_.js"></script>
-            <script src="./static/js/skill_info.js"></script>
+        <div id="links">
+            
+            <a href="https://github.com/justusdecker" class="github"><i class="fa fa-github"></i></a> 
+            <a href="mailto:justus.d2025@gmail.com" class="google"><i class="fa fa-google"></i></a> 
+            <a href="https://www.linkedin.com/in/justus-decker/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/@team-space" class="youtube"><i class="fa fa-youtube"></i></a> 
         </div>
-
-    </div>
-    Work in progress
-    Created Dec 12th 2025 - Designed on paper, written in HTML, CSS & JS
-    <footer>
-        <div class="cdiv">© 2025 Justus Decker. All rights reserved.</div>
-    </footer>
+        <script src="./static/js/skill_info.js"></script>
+        <footer>
+            <p>Designed on paper, built in HTML, CSS & JavaScript</p>
+            
+            <p>© 2025 Justus Decker. All rights reserved.</p>
+        </footer>
 </body>
-
 </html>
