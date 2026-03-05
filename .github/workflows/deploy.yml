@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # "only: - main"
+      - main
 
 permissions:
   contents: read
@@ -11,33 +11,51 @@ permissions:
   id-token: write
 
 jobs:
-  build-and-deploy:
+  # 1. Job: Vorbereitung (Installation & Cache)
+  setup:
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js 20
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm' # faster builds in the future
+          cache: 'npm'
+      - run: npm install
+      # Wir speichern den node_modules Ordner, damit andere Jobs ihn nutzen können
+      - uses: actions/upload-artifact@v4
+        with:
+          name: node-modules
+          path: node_modules
 
-      - name: Install Dependencies
-        run: npm install
+  # 2. Job: Tests laufen lassen
+  test:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/download-artifact@v4
+        with:
+          name: node-modules
+      - run: npm test
 
-      - name: Build Project
-        run: npm run build
-
-      - name: Prepare for GitHub Pages
-        run: |
-          cp dist/index.html dist/404.html
-
-      - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v3
+  # 3. Job: Build & Deploy (startet nur, wenn 'test' erfolgreich war)
+  build-and-deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/download-artifact@v4
+        with:
+          name: node-modules
+      - run: npm run build
+      - run: cp dist/index.html dist/404.html
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@v4
