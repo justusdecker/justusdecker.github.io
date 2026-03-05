@@ -60,7 +60,7 @@ body {
     
     /* Dein Bild */
     background-image: 
-        url('./src/assets/outdoor.jpg'),
+        url('https://raw.githubusercontent.com/justusdecker/webpage-data/refs/heads/main/home/outdoor.jpg'),
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     background-size: cover;
     
