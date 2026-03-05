@@ -1,0 +1,46 @@
+#home-content {
+  display: flex;
+  gap: 40px;
+  padding: 40px 10%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.info-box {
+  flex: 2; /* Nimmt mehr Platz ein */
+}
+
+.status-box {
+  flex: 1; /* Schmalere Seitenspalte */
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: fit-content;
+}
+
+.topic-list {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.topic-item {
+  padding-left: 15px;
+  border-left: 3px solid #00ffcc;
+}
+
+.status-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 0.9rem;
+}
+
+/* Responsive für mobile Geräte */
+@media (max-width: 800px) {
+  #home-content {
+    flex-direction: column;
+    padding: 20px 5%;
+  }
+}
