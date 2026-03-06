@@ -10,6 +10,13 @@
   flex: 2; /* Nimmt mehr Platz ein */
 }
 
+.info-box-overwrite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .status-box {
   flex: 1; /* Schmalere Seitenspalte */
   background: rgba(255, 255, 255, 0.03);
@@ -28,6 +35,13 @@
 .topic-item {
   padding-left: 15px;
   border-left: 3px solid #00ffcc;
+}
+
+.topic-item:hover {
+  background-color: rgba(0, 255, 204, 0.1);
+  cursor: pointer;
+  transition: 0.2s;
+  border-left: 3px solid #ffffff;
 }
 
 .status-card {

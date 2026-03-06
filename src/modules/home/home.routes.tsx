@@ -1,45 +1,13 @@
 import { type RouteObject } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
 
-import './home-main.css'
+import Header from '../common/header';
+import '../common/ibox_and_topics.css'
 
 export const homeRoutes: RouteObject = {
   path: '/home',
   element: (
     <>
-        <div id="head">
-            <div className="head-bg"></div>
-
-            <img id="profile" src="https://avatars.githubusercontent.com/u/200506279?v=4" />
-            <div id="head-text">
-                <h1>Justus Decker</h1>
-                <h2>Handwerk, Programmierung, Kunst und bald auch Elektronik</h2>
-                <p>26 Jahre alt. Handwerklich und technisch versiert, bastelt gerne alles selber, just do it!</p>
-                
-                <nav className="nav-bar">
-                    <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>Start</NavLink>
-                    
-                    <div className="dropdown">
-                        <span className="dropbtn">Portfolio ▾</span>
-                        <div className="dropdown-content">
-                            <NavLink to="/portfolio/craft">Handwerk</NavLink>
-                            <NavLink to="">---</NavLink>
-                            <NavLink to="/portfolio/craft">Metall</NavLink>
-                            <NavLink to="/portfolio/craft">Holz</NavLink>
-                            <NavLink to="/portfolio/craft">Elektro</NavLink>
-                            <NavLink to="/portfolio/dev">Software</NavLink>
-                            <NavLink to="/portfolio/art">Kunst</NavLink>
-                        </div>
-                    </div>
-                    
-                    <NavLink to="/blog" className={({ isActive }) => isActive ? 'active' : ''}>Blog</NavLink>
-                    
-                    {/* Der CTA Button */}
-                    <NavLink to="mailto:deine@mail.de" className={({ isActive }) => isActive ? 'active' : ''}>Geschäftliche Anfragen</NavLink>
-                </nav>
-            </div>
-            
-        </div>
+        <Header />
         
 
         <main id="home-content">
