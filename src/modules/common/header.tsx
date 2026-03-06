@@ -45,7 +45,7 @@ const Header: React.FC = () => {
           </NavLink>
 
           
-          <NavLink to="mailto:deine@mail.de">Kontakt</NavLink>
+          <NavLink to="/contact">Kontakt</NavLink>
         </nav>
       </div>
     </header>
