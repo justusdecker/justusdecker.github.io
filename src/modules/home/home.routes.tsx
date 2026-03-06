@@ -1,8 +1,8 @@
 import { type RouteObject } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
-import './home.css'
+
 import './home-main.css'
-import './home-navbar.css'
+
 export const homeRoutes: RouteObject = {
   path: '/home',
   element: (
