@@ -2,13 +2,15 @@ import { createHashRouter, RouterProvider, Navigate } from 'react-router-dom'
 import './App.css'
 import { homeRoutes } from './modules/home/home.routes'
 import { blogRoutes } from './modules/blog/blog.routes'
+import { contactRoutes } from './modules/contact/contact.routes'
 const router = createHashRouter([
   {
     path: '/',
     element: <Navigate to= "/home" replace />,
   },
   homeRoutes,
-  blogRoutes
+  blogRoutes,
+  contactRoutes
 ]);
 
 function App() {
