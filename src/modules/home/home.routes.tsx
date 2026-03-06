@@ -1,7 +1,7 @@
 import { type RouteObject } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
+
 import Header from '../common/header';
-import './home-main.css'
+import '../common/ibox_and_topics.css'
 
 export const homeRoutes: RouteObject = {
   path: '/home',
