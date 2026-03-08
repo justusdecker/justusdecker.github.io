@@ -15,4 +15,16 @@ describe('GET /portfolio', () => {
     expect(portfolioRoutes.element).toBeDefined();
     expect(portfolioRoutes.element).not.toBeNull();
   });
+  const paths = ['art', 'craft', 'dev']
+  for (const id in paths) {
+    it(`Webpage-data ACCESS for portfolio:  /${paths[id]}`, async () => {
+      const result = await fetch(`https://raw.githubusercontent.com/justusdecker/webpage-data/main/portfolio/${paths[id]}/index.json`)
+      
+      expect(result.status).toBe(200);
+    });
+  }
+  
+
+  
+
 });
