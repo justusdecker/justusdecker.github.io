@@ -4,10 +4,12 @@ import { homeRoutes } from './modules/home/home.routes'
 import { blogRoutes } from './modules/blog/blog.routes'
 import { contactRoutes } from './modules/contact/contact.routes'
 import { portfolioRoutes } from './modules/portfolio/portfolio.routes'
+import ErrorPage from './modules/error/error.routes'
 const router = createHashRouter([
   {
     path: '/',
     element: <Navigate to= "/home" replace />,
+    errorElement: <ErrorPage/>
   },
   homeRoutes,
   blogRoutes,
