@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { type BlogPostMetadata } from './blog.types';
-
+import '../common/ibox_and_topics.css'
 export default function BlogIndex() {
   const [posts, setPosts] = useState<BlogPostMetadata[]>([]);
 
@@ -15,16 +15,18 @@ export default function BlogIndex() {
   return (
     <div className="blog-list">
       <h1>Blog Übersicht</h1>
-      <ul className='blog-item'>
+      
         {posts.map((post) => (
-          <li key={post.id}>
-            <Link to={`/blog/${post.id}`}>
-              <h2>{post.title}</h2>
-              <p>{post.date}</p>
-            </Link>
-          </li>
+          <div className='topic-item'>
+            <div key={post.id}>
+              <Link to={`/blog/${post.id}`}>
+                <h2>{post.title}</h2>
+                <p>{post.date}</p>
+              </Link>
+            </div>
+          </div>
         ))}
-      </ul>
+      
     </div>
   );
 }

@@ -23,7 +23,7 @@ export default function BlogPostDetail() {
   }, [id]);
 
   return (
-    <div className="blog-detail">
+    <div className="blog-detail topic-item">
       <ReactMarkdown>{content}</ReactMarkdown>
     </div>
   );
