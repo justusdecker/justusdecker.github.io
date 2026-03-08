@@ -3,7 +3,7 @@ import type { PortfolioMetadata } from "./portfolio.types";
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
-
+import '../../common/ibox_and_topics.css'
 function PortfolioDetail(attr: { category: string, id: string }) {
   const [content, setContent] = useState<string>('');
     console.log(attr.id);
@@ -39,17 +39,19 @@ export default function PortfolioIndex({ category }: { category: string }) {
   return (
     <div className="portfolio-list">
       <h1>Portfolio: {category} Übersicht</h1>
-      <ul className='portfolio-item'>
+      
         {posts.map((post) => (
-          <li key={post.id}>
-            <Link to={`/portfolio/${post.id}`}>
-              <h2>{post.title}</h2>
-              <p>{post.timespan}</p>
-              <PortfolioDetail category={category} id={post.id}/>
-            </Link>
-          </li>
+            <div className='topic-item'>
+            <div key={post.id}>
+                <Link to={`/portfolio/${post.id}`}>
+                <h2>{post.title}</h2>
+                <p>{post.timespan}</p>
+                <PortfolioDetail category={category} id={post.id}/>
+                </Link>
+            </div>
+            </div>
         ))}
-      </ul>
+      
     </div>
   );
 }
