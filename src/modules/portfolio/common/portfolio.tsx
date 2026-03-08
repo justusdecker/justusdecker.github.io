@@ -23,7 +23,7 @@ function PortfolioDetail(attr: { category: string, id: string }) {
   }, [attr.id]);
 
   return (
-      <ReactMarkdown>{content}</ReactMarkdown>
+      <div className="portfolio-detail "><ReactMarkdown>{content}</ReactMarkdown></div>
   );
 }
 
