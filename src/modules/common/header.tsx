@@ -29,9 +29,6 @@ const Header: React.FC = () => {
             <span className="dropbtn">Portfolio ▾</span>
             <div className="dropdown-content">
               <NavLink to="/portfolio/craft">Handwerk</NavLink>
-              <NavLink to="/portfolio/metal">Metall</NavLink>
-              <NavLink to="/portfolio/wood">Holz</NavLink>
-              <NavLink to="/portfolio/electronics">Elektro</NavLink>
               <NavLink to="/portfolio/dev">Software</NavLink>
               <NavLink to="/portfolio/art">Kunst</NavLink>
             </div>
