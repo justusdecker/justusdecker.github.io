@@ -1,0 +1,37 @@
+/* --- Listenansicht (blog.tsx) --- */
+.portfolio-list {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.portfolio-item {
+    display: block;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: #111;
+    margin-bottom: 1rem;
+    transition: 0.3s;
+}
+
+.portfolio-item:hover {
+    background: #1a1a1a;
+    border-left: 4px solid var(--accent-color);
+}
+
+/* --- Detailansicht (blog.$id.tsx) --- */
+.portfolio-detail {
+    max-width: 700px;
+    margin: 3rem auto;
+}
+
+.portfolio-detail pre {
+    background: var(--code-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.portfolio-detail code {
+    color: var(--accent-color);
+    font-family: 'Fira Code', monospace;
+}
