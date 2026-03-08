@@ -25,6 +25,11 @@
     margin: 3rem auto;
 }
 
+.blog-detail img {
+    max-width: 100%;
+    max-height: 350px;
+}
+
 .blog-detail pre {
     background: var(--code-bg);
     padding: 1rem;
