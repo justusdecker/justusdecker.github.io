@@ -15,11 +15,11 @@ describe('GET /training-electrician', () => {
     expect(trainingElectricianRoutes.element).toBeDefined();
     expect(trainingElectricianRoutes.element).not.toBeNull();
   });
-  const paths = ['art', 'craft', 'dev']
+  const paths = ['weekly-summary', 'monthly-summary', 'quarterly-summary', 'exam-preperation', 'formulars-math', 'laws']
   for (const id in paths) {
     it(`Webpage-data ACCESS for training-electrician:  /${paths[id]}`, async () => {
       const result = await fetch(`https://raw.githubusercontent.com/justusdecker/webpage-data/main/portfolio/${paths[id]}/index.json`)
-      
+      //! The Backend URL is wrong - The Electrician Stuff will be in justusdecker/Elekro-Ausbildung-Lernstoff
       expect(result.status).toBe(200);
     });
   }
