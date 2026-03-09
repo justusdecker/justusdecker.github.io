@@ -1,6 +1,7 @@
 
 import { type RouteObject, Outlet } from 'react-router-dom';
 import Header from '../common/header';
+import Laws from './laws/laws';
 
 function Temp() {
   return (
@@ -27,6 +28,6 @@ export const trainingElectricianRoutes: RouteObject = {
         { path: "quarterly-summary", element: <Temp /> },
         { path: "exam-preperation", element: <Temp /> },
         { path: "formulars-math", element: <Temp /> },
-        { path: "laws", element: <Temp /> }
+        { path: "laws", element: <Laws /> }
     ]
 };
