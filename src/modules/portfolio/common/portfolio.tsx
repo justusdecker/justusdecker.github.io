@@ -43,7 +43,7 @@ export default function PortfolioIndex({ category }: { category: string }) {
         {posts.map((post) => (
             <div className='topic-item'>
             <div key={post.id}>
-                <Link to={`/portfolio/${post.id}`}>
+                <Link to={`/portfolio/${category}/${post.id}`}>
                 <h2>{post.title}</h2>
                 <p>{post.timespan}</p>
                 <PortfolioDetail category={category} id={post.id}/>
