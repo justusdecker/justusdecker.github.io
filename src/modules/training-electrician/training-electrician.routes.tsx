@@ -4,7 +4,11 @@ import Header from '../common/header';
 
 function Temp() {
   return (
-    <div>Dies ist ein temporärer Text!</div>
+    <>
+        <h1>Hier ist was schiefgelaufen!</h1>
+        <div>Diese Route wurde bis jetzt nicht verändert</div>
+    </>
+
   );
 }
 
@@ -18,8 +22,11 @@ export const trainingElectricianRoutes: RouteObject = {
     ),
     children: [
         {index: true, element: <Temp />},
-        { path: "art", element: <Temp /> },
-        { path: "craft", element: <Temp /> },
-        { path: "dev", element: <Temp /> }
+        { path: "weekly-summary", element: <Temp /> },
+        { path: "monthly-summary", element: <Temp /> },
+        { path: "quarterly-summary", element: <Temp /> },
+        { path: "exam-preperation", element: <Temp /> },
+        { path: "formulars-math", element: <Temp /> },
+        { path: "laws", element: <Temp /> }
     ]
 };
