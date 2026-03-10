@@ -16,7 +16,7 @@ describe('GET /training-electrician', () => {
     expect(trainingElectricianRoutes.element).toBeDefined();
     expect(trainingElectricianRoutes.element).not.toBeNull();
   });
-  const paths = ['weekly', 'monthly', 'quarterly', 'exam-preperation']
+  const paths = ['weekly', 'monthly', 'quarterly', 'exam']
   for (const id in paths) {
     it(`data ACCESS for training-electrician:  /${paths[id]}`, async () => {
       const result = await fetch(`${electricianRepo}${paths[id]}/index.json`)
