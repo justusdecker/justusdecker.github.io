@@ -25,7 +25,7 @@ export default function BlogIndex() {
       <h1>Blog Übersicht</h1>
       
       {currentPosts.map((post) => (
-        <div className='topic-item' key={post.id}>
+        <div className='topic' key={post.id}>
           <Link to={`/blog/${post.id}`}>
             <h2>{post.title}</h2>
             <p>{post.date}</p>
