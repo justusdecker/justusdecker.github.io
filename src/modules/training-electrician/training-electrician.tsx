@@ -13,6 +13,8 @@ export function TrainingElecticianMain() {
                 <br />
                 <NavLink to="/training-electrician/quarterly-summary">Quartal Zusammenfassung</NavLink>
                 <br />
+                <NavLink to="/training-electrician/exam-preperation">Prüfungsvorbereitung</NavLink>
+                <br />
                 <NavLink to="/training-electrician/laws">Wichtige Gesetze</NavLink>
                 <br />
                 <NavLink to="/training-electrician/glossar">Glossar</NavLink>
