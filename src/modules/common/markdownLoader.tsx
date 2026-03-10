@@ -28,6 +28,8 @@ export function MarkdownLoader({ url }: {url: string}) {
   );
 }
 
+/* 
+
 function MarkdownBuilder({ shortUrl }: { shortUrl: string}) {
     
   const posts = MarkdownGetJsonIndex({shortUrl});
@@ -49,6 +51,7 @@ function MarkdownBuilder({ shortUrl }: { shortUrl: string}) {
     );
   }
 }
+*/
 
 
 export function MarkdownGetJsonIndex({ shortUrl }: { shortUrl: string }) {
