@@ -6,6 +6,7 @@ import Glossar from './glossar/glossar';
 import { WeeklySummaryOverview } from './weekly-summary/weekly-summary';
 import { SummaryA4Page } from './common/summary';
 import { TrainingElecticianMain } from './training-electrician';
+import { MonthlySummaryOverview } from './monthly-summary/monthly-summary';
 
 function Temp() {
   return (
@@ -29,10 +30,14 @@ export const trainingElectricianRoutes: RouteObject = {
         {index: true, element: <TrainingElecticianMain />},
         { path: "weekly-summary", 
           children: [
-              { index: true, element: <WeeklySummaryOverview /> }, // Die Übersicht
-              { path: ":id", element: <SummaryA4Page /> }         // Die DIN A4 Detailansicht
+              { index: true, element: <WeeklySummaryOverview /> }, 
+              { path: ":id", element: <SummaryA4Page category='weekly' /> }
           ] },
-        { path: "monthly-summary", element: <Temp /> },
+        { path: "monthly-summary", 
+          children: [
+              { index: true, element: <MonthlySummaryOverview /> },
+              { path: ":id", element: <SummaryA4Page category='monthly' /> }
+          ] },
         { path: "quarterly-summary", element: <Temp /> },
         { path: "exam-preperation", element: <Temp /> },
         { path: "formulars-math", element: <Temp /> },
