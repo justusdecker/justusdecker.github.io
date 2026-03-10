@@ -1,0 +1,19 @@
+
+.neo-btn {
+  background: transparent;
+  border: 1px solid #00ffcc;
+  color: #00ffcc;
+  padding: 4px 12px;
+  border-radius: 4px; /* Eher kantig passend zum Stil */
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.neo-btn:hover {
+  background: #00ffcc;
+  color: #000000;
+  box-shadow: 0 0 8px #00ffcc;
+  border: 1px solid #00ffcc;
+}
