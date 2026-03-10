@@ -43,6 +43,7 @@ const Header: React.FC = () => {
 
           
           <NavLink to="/contact">Kontakt</NavLink>
+          <NavLink to="/training-electrician">Umschulung Elektroniker</NavLink>
         </nav>
       </div>
     </header>
