@@ -9,6 +9,7 @@ import { TrainingElecticianMain } from './training-electrician';
 import { MonthlySummaryOverview } from './monthly-summary/monthly-summary';
 import { QuarterlySummaryOverview } from './quarterly-summary/quarterly-summary';
 import { ExamPreperationOverview } from './exam-preperation/exam-preperation';
+import FormularsMathOverview from './formulars-math/fomulars-math';
 
 function Temp() {
   return (
@@ -33,24 +34,28 @@ export const trainingElectricianRoutes: RouteObject = {
         { path: "weekly-summary", 
           children: [
               { index: true, element: <WeeklySummaryOverview /> }, 
-              { path: ":id", element: <SummaryA4Page category='weekly' /> }
+              { path: ":id", element: <SummaryA4Page category='summary/weekly' /> }
           ] },
         { path: "monthly-summary", 
           children: [
               { index: true, element: <MonthlySummaryOverview /> },
-              { path: ":id", element: <SummaryA4Page category='monthly' /> }
+              { path: ":id", element: <SummaryA4Page category='summary/monthly' /> }
           ] },
         { path: "quarterly-summary", 
           children: [
               { index: true, element: <QuarterlySummaryOverview /> },
-              { path: ":id", element: <SummaryA4Page category='quarterly' /> }
+              { path: ":id", element: <SummaryA4Page category='summary/quarterly' /> }
           ] },
         { path: "exam-preperation", 
           children: [
               { index: true, element: <ExamPreperationOverview /> },
-              { path: ":id", element: <SummaryA4Page category='exam' /> }
+              { path: ":id", element: <SummaryA4Page category='summary/exam' /> }
           ] },
-        { path: "formulars-math", element: <Temp /> },
+        { path: "formulars-math", 
+          children: [
+              { index: true, element: <FormularsMathOverview /> },
+              { path: ":id", element: <SummaryA4Page category='math/formulars' /> }
+          ] },
         { path: "laws", element: <Laws /> },
         { path: "glossar", element: <Glossar /> }
     ]
