@@ -44,6 +44,18 @@ const Header: React.FC = () => {
           
           <NavLink to="/contact">Kontakt</NavLink>
           <NavLink to="/training-electrician">Umschulung Elektroniker</NavLink>
+          <div className="dropdown">
+            <span className="dropbtn">Umschulung Elektroniker ▾</span>
+            <div className="dropdown-content">
+              <NavLink to="/training-electrician/weekly-summary">Wochen-Zusammenfassung</NavLink>
+              <NavLink to="/training-electrician/monthly-summary">Monat-Zusammenfassung</NavLink>
+              <NavLink to="/training-electrician/quarterly-summary">Quartal Zusammenfassung</NavLink>
+              <NavLink to="/training-electrician/exam-preperation">Prüfungsvorbereitung</NavLink>
+              <NavLink to="/training-electrician/glossar">Glossar</NavLink>
+              <NavLink to="/training-electrician/laws">Gesetze</NavLink>
+              <NavLink to="/training-electrician/formulars-math">Matheformeln</NavLink>
+            </div>
+          </div>
         </nav>
       </div>
     </header>
