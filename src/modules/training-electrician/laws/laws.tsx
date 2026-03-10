@@ -7,9 +7,9 @@ export interface PortfolioEntryContent {
 export default function Laws() {
 
   return (
-    <>
+    <div className='topic'>
         <MarkdownLoader url = {`${GitHubRawBaseUrl}Elekro-Ausbildung-Lernstoff/main/laws.md`}/>
-    </>
+    </div>
     
 );
 }
