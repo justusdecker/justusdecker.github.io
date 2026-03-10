@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import ReactMarkdown from "react-markdown";
 import { GitHubRawBaseUrl } from './constants';
-import { Link } from 'react-router-dom';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
