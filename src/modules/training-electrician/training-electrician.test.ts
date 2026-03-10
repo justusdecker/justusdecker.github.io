@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { trainingElectricianRoutes } from './training-electrician.routes';
-
+import { GitHubRawBaseUrl } from '../common/constants';
+const electricianRepo: string = `${GitHubRawBaseUrl}Elekro-Ausbildung-Lernstoff/main/summary/`;
 describe('GET /training-electrician', () => {
   it('Enpoint (/training-electrician) - register check', () => {
     expect(trainingElectricianRoutes.path).toBe('/training-electrician');
@@ -15,15 +16,15 @@ describe('GET /training-electrician', () => {
     expect(trainingElectricianRoutes.element).toBeDefined();
     expect(trainingElectricianRoutes.element).not.toBeNull();
   });
-  const paths = ['weekly-summary', 'monthly-summary', 'quarterly-summary', 'exam-preperation', 'formulars-math', 'laws']
+  const paths = ['weekly', 'monthly', 'quarterly', 'exam-preperation']
   for (const id in paths) {
-    it(`Webpage-data ACCESS for training-electrician:  /${paths[id]}`, async () => {
-      const result = await fetch(`https://raw.githubusercontent.com/justusdecker/webpage-data/main/portfolio/${paths[id]}/index.json`)
-      //! The Backend URL is wrong - The Electrician Stuff will be in justusdecker/Elekro-Ausbildung-Lernstoff
+    it(`data ACCESS for training-electrician:  /${paths[id]}`, async () => {
+      const result = await fetch(`${electricianRepo}${paths[id]}/index.json`)
+      
       expect(result.status).toBe(200);
     });
   }
-  
+  ""
 
   
 
