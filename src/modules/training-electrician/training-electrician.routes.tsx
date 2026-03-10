@@ -11,16 +11,6 @@ import { QuarterlySummaryOverview } from './quarterly-summary/quarterly-summary'
 import { ExamPreperationOverview } from './exam-preperation/exam-preperation';
 import FormularsMathOverview from './formulars-math/fomulars-math';
 
-function Temp() {
-  return (
-    <>
-        <h1>Hier ist was schiefgelaufen!</h1>
-        <div>Diese Route wurde bis jetzt nicht verändert</div>
-    </>
-
-  );
-}
-
 export const trainingElectricianRoutes: RouteObject = {
     path: "/training-electrician",
     element: (
