@@ -17,3 +17,7 @@
   box-shadow: 0 0 8px #00ffcc;
   border: 1px solid #00ffcc;
 }
+
+.neo-btn:active {
+  background: #defff8;
+}
