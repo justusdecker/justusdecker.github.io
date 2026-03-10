@@ -5,6 +5,7 @@ import { blogRoutes } from './modules/blog/blog.routes'
 import { contactRoutes } from './modules/contact/contact.routes'
 import { portfolioRoutes } from './modules/portfolio/portfolio.routes'
 import ErrorPage from './modules/error/error.routes'
+import { trainingElectricianRoutes } from './modules/training-electrician/training-electrician.routes'
 const router = createHashRouter([
   {
     path: '/',
@@ -14,7 +15,8 @@ const router = createHashRouter([
   homeRoutes,
   blogRoutes,
   contactRoutes,
-  portfolioRoutes
+  portfolioRoutes,
+  trainingElectricianRoutes
 ]);
 
 function App() {
