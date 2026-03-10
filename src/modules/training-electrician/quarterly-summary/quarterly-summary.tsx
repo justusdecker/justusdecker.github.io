@@ -33,7 +33,7 @@ export function QuarterlySummaryOverview() {
   if (shortUrl) {
     return (
     <div className="portfolio-list">
-      <h1>Monatliche Zusammenfassungen</h1>
+      <h1>Quartal Zusammenfassungen</h1>
 
       <div className="search-container no-print">
         <input
