@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { type BlogPostMetadata } from './blog.types';
 import '../common/ibox_and_topics.css'
+import '../common/neo-btn.css'
 const POSTS_PER_PAGE = 5;
 
 export default function BlogIndex() {
@@ -38,15 +39,17 @@ export default function BlogIndex() {
         <button 
           disabled={currentPage === 1} 
           onClick={() => setCurrentPage(prev => prev - 1)}
+          className='neo-btn'
         >
           Zurück
         </button>
         
-        <span>Seite {currentPage} von {totalPages || 1}</span>
+        <span style={{paddingLeft:"1rem", paddingRight:"1rem"}}>Seite {currentPage} von {totalPages || 1}</span>
         
         <button 
           disabled={currentPage >= totalPages} 
           onClick={() => setCurrentPage(prev => prev + 1)}
+          className='neo-btn'
         >
           Weiter
         </button>
