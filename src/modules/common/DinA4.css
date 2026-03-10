@@ -1,0 +1,71 @@
+/* 1. Die Anzeige auf dem Bildschirm */
+.a4-page-wrapper {
+  background-color: #e0e0e0; /* Grauer Hintergrund, um das Blatt abzuheben */
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* 2. Die A4-Seite: Das Herzstück */
+.a4-page {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 20mm; /* Standard-DIN-A4 Seitenrand */
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  
+  /* Typografie für sauberen Textfluss */
+  font-family: monospace; /* Typischer Look für Dokumente */
+  font-size: 12pt;
+  line-height: 1.5;
+  text-align: justify;
+  hyphens: auto; /* Automatische Silbentrennung */
+  word-wrap: break-word;
+}
+
+/* 3. Schutz vor schlechten Umbrüchen */
+.a4-page * {color: black;}
+.a4-page h1 {color: black; font-size: x-large;}
+.a4-page h2 {color: rgb(39, 39, 39); font-size: large;}
+.a4-page h3 {color: rgb(63, 63, 63); font-size: medium;}
+
+.a4-page h1, 
+.a4-page h2, 
+.a4-page h3 {
+  break-after: avoid; /* Kein Umbruch direkt nach einer Überschrift */
+  break-inside: avoid; /* Überschrift nicht zerreißen */
+}
+
+/* 4. Support für manuellen Seitenumbruch im Markdown */
+/* Schreibe dazu einfach <div class="page-break"></div> in dein Markdown */
+.page-break {
+  page-break-after: always;
+  break-after: page;
+}
+
+/* 5. Druck-Optimierung: "What you see is what you print" */
+@media print {
+  body {
+    background: none;
+    margin: 0;
+  }
+  #head {
+    display:none;
+  }
+  
+  .a4-page-wrapper {
+    padding: 0;
+    background: none;
+    display: block;
+  }
+  
+  .a4-page {
+    box-shadow: none; /* Kein Schatten beim Drucken */
+    margin: 2rem;
+    width: calc(210mm - 4rem);
+    /* Verhindert Ränder-Probleme im Browser-Druckdialog */
+    padding: 0; 
+  }
+}
