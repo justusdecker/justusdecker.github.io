@@ -6,10 +6,10 @@ import '../../common/ibox_and_topics.css'
 import '../common/search_and_tags.css'
 import { useState } from 'react';
 
-export function QuarterlySummaryOverview() {
+export function ExamPreperationOverview() {
   const [searchTerm, setSearchTerm] = useState('');
 
-  const shortUrl = "Elekro-Ausbildung-Lernstoff/main/summary/quarterly/index.json";
+  const shortUrl = "Elekro-Ausbildung-Lernstoff/main/summary/exam/index.json";
   const posts = MarkdownGetJsonIndex({shortUrl:shortUrl});
     
   const filteredPosts = posts.filter((post) => {
@@ -33,7 +33,7 @@ export function QuarterlySummaryOverview() {
   if (shortUrl) {
     return (
     <div className="portfolio-list">
-      <h1>Quartal Zusammenfassungen</h1>
+      <h1>Prüfungsvorbereitung</h1>
 
       <div className="search-container no-print">
         <input
@@ -52,10 +52,10 @@ export function QuarterlySummaryOverview() {
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post) => (
             <div key={post.id} className="topic">
-              <Link to={`/training-electrician/quarterly-summary/${post.id}`}>
+              <Link to={`/training-electrician/exam-preperation/${post.id}`}>
                 <div className="preview-box">
                   <MarkdownLoader 
-                    url={`https://raw.githubusercontent.com/justusdecker/Elekro-Ausbildung-Lernstoff/main/summary/quarterly/${post.id}.md`} 
+                    url={`https://raw.githubusercontent.com/justusdecker/Elekro-Ausbildung-Lernstoff/main/summary/exam/${post.id}.md`} 
                   />
                 </div>
               </Link>

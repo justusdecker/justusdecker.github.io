@@ -8,6 +8,7 @@ import { SummaryA4Page } from './common/summary';
 import { TrainingElecticianMain } from './training-electrician';
 import { MonthlySummaryOverview } from './monthly-summary/monthly-summary';
 import { QuarterlySummaryOverview } from './quarterly-summary/quarterly-summary';
+import { ExamPreperationOverview } from './exam-preperation/exam-preperation';
 
 function Temp() {
   return (
@@ -44,7 +45,11 @@ export const trainingElectricianRoutes: RouteObject = {
               { index: true, element: <QuarterlySummaryOverview /> },
               { path: ":id", element: <SummaryA4Page category='quarterly' /> }
           ] },
-        { path: "exam-preperation", element: <Temp /> },
+        { path: "exam-preperation", 
+          children: [
+              { index: true, element: <ExamPreperationOverview /> },
+              { path: ":id", element: <SummaryA4Page category='exam' /> }
+          ] },
         { path: "formulars-math", element: <Temp /> },
         { path: "laws", element: <Laws /> },
         { path: "glossar", element: <Glossar /> }
