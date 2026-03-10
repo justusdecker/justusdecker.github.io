@@ -9,7 +9,7 @@ export function SummaryA4Page({category}:  {category: string}) {
     return (
         <div className="portfolio-list">
             <div className='a4-page'>
-                <MarkdownLoader url={`https://raw.githubusercontent.com/justusdecker/Elekro-Ausbildung-Lernstoff/main/summary/${category}/${id}.md`} />
+                <MarkdownLoader url={`https://raw.githubusercontent.com/justusdecker/Elekro-Ausbildung-Lernstoff/main/${category}/${id}.md`} />
             </div>
         </div>
     )
