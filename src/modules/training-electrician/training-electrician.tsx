@@ -9,6 +9,8 @@ export function TrainingElecticianMain() {
             <div className='topic'>
                 <NavLink to="/training-electrician/weekly-summary">Wöchentliche Zusammenfassung</NavLink>
                 <br />
+                <NavLink to="/training-electrician/monthly-summary">Monatliche Zusammenfassung</NavLink>
+                <br />
                 <NavLink to="/training-electrician/laws">Wichtige Gesetze</NavLink>
                 <br />
                 <NavLink to="/training-electrician/glossar">Glossar</NavLink>
