@@ -5,6 +5,7 @@ import Laws from './laws/laws';
 import Glossar from './glossar/glossar';
 import { WeeklySummaryOverview } from './weekly-summary/weekly-summary';
 import { SummaryA4Page } from './common/summary';
+import { TrainingElecticianMain } from './training-electrician';
 
 function Temp() {
   return (
@@ -25,7 +26,7 @@ export const trainingElectricianRoutes: RouteObject = {
        </> 
     ),
     children: [
-        {index: true, element: <Temp />},
+        {index: true, element: <TrainingElecticianMain />},
         { path: "weekly-summary", 
           children: [
               { index: true, element: <WeeklySummaryOverview /> }, // Die Übersicht
