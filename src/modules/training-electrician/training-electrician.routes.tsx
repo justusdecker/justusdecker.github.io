@@ -3,6 +3,8 @@ import { type RouteObject, Outlet } from 'react-router-dom';
 import Header from '../common/header';
 import Laws from './laws/laws';
 import Glossar from './glossar/glossar';
+import { WeeklySummaryOverview } from './weekly-summary/weekly-summary';
+import { SummaryA4Page } from './common/summary';
 
 function Temp() {
   return (
@@ -24,7 +26,11 @@ export const trainingElectricianRoutes: RouteObject = {
     ),
     children: [
         {index: true, element: <Temp />},
-        { path: "weekly-summary", element: <Temp /> },
+        { path: "weekly-summary", 
+          children: [
+              { index: true, element: <WeeklySummaryOverview /> }, // Die Übersicht
+              { path: ":id", element: <SummaryA4Page /> }         // Die DIN A4 Detailansicht
+          ] },
         { path: "monthly-summary", element: <Temp /> },
         { path: "quarterly-summary", element: <Temp /> },
         { path: "exam-preperation", element: <Temp /> },
