@@ -33,7 +33,7 @@ export default function FormularsMathOverview() {
   if (shortUrl) {
     return (
     <div className="portfolio-list">
-      <h1>Prüfungsvorbereitung</h1>
+      <h1>Matheformeln</h1>
 
       <div className="search-container no-print">
         <input
