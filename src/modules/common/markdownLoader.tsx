@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import ReactMarkdown from "react-markdown";
 import { GitHubRawBaseUrl } from './constants';
-import type { JsonObject } from './types';
 import { Link } from 'react-router-dom';
-
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css';
 export function MarkdownLoader({ url }: {url: string}) {
   const [content, setContent] = useState<string>('');
     console.log(url);
@@ -20,20 +22,22 @@ export function MarkdownLoader({ url }: {url: string}) {
   }, [url]);
 
   return (
-      <ReactMarkdown>{content}</ReactMarkdown>
+      <ReactMarkdown
+      remarkPlugins={[remarkGfm, remarkMath]} 
+      rehypePlugins={[rehypeKatex]}>{content}</ReactMarkdown>
   );
 }
 
-function MarkdownBuilder({ shortUrl, metadata }: { shortUrl: string, metadata: JsonObject }) {
+function MarkdownBuilder({ shortUrl }: { shortUrl: string}) {
     
-  const posts = MarkdownGetJsonIndex({shortUrl, metadata});
+  const posts = MarkdownGetJsonIndex({shortUrl});
     
   if (shortUrl) {
     return (
       <div className="portfolio-list">
         <h1>Portfolio Übersicht</h1>
         {posts.map((post) => (
-          <div key={post.id} className="topic-item">
+          <div key={post.id} className="topic">
             <Link to={`/portfolio/${post.id}`}>
               <h2>{post.title}</h2>
               <p>{post.timespan}</p>
@@ -47,8 +51,8 @@ function MarkdownBuilder({ shortUrl, metadata }: { shortUrl: string, metadata: J
 }
 
 
-export function MarkdownGetJsonIndex({ shortUrl, metadata }: { shortUrl: string, metadata: JsonObject }) {
-  const [posts, setPosts] = useState<typeof metadata[]>([]);
+export function MarkdownGetJsonIndex({ shortUrl }: { shortUrl: string }) {
+  const [posts, setPosts] = useState<any[]>([]);
     
   useEffect(() => {
     fetch(`${GitHubRawBaseUrl}${shortUrl}`)
