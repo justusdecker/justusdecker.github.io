@@ -1,6 +1,7 @@
 export interface BlogPostMetadata {
     id: string;
     title: string;
+    tags: Array<string>;
     date: string;
 }
 
