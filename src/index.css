@@ -24,6 +24,11 @@ footer:hover p {
   color: #00ffcc;
 }
 
+.footer-div {
+  display: flex;
+  justify-content: space-around;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
