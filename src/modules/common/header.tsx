@@ -14,8 +14,7 @@ const Header: React.FC = () => {
       
       <div id="head-text">
         <h1>Justus Decker</h1>
-        <h2>Handwerk, Programmierung, Kunst und bald auch Elektronik</h2>
-        <p>26 Jahre alt. Handwerklich und technisch versiert, bastelt gerne alles selber, just do it!</p>
+        <h2>Handwerker & Techniker</h2>
 
         <nav className="nav-bar">
           <NavLink 
