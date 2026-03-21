@@ -7,6 +7,7 @@ import { portfolioRoutes } from './modules/portfolio/portfolio.routes'
 import ErrorPage from './modules/error/error.routes'
 import { trainingElectricianRoutes } from './modules/training-electrician/training-electrician.routes'
 import { datenschutzRoutes } from './modules/datenschutz/datenschutz.routes'
+import { cvRoutes } from './modules/cv/cv.routes'
 
 const router = createHashRouter([
   {
@@ -19,7 +20,8 @@ const router = createHashRouter([
   contactRoutes,
   portfolioRoutes,
   trainingElectricianRoutes,
-  datenschutzRoutes
+  datenschutzRoutes,
+  cvRoutes
 ]);
 
 function App() {

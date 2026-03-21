@@ -1,0 +1,131 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: #0a0a0a; /* Tiefschwarz */
+            color: #e0e0e0;
+            padding: 2rem;
+        }
+
+        /* Container für den CV-Eintrag */
+        .cv-entry {
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+            border: 1px solid #333;
+            background: #111;
+            position: relative;
+            transition: border-color 0.3s ease;
+        }
+
+        .cv-entry:hover {
+            border-color: #00ffcc;
+        }
+
+        /* Header Bereich */
+        .company-head {
+            background-color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            gap: 1.5rem;
+            border-bottom: 2px solid #00ffcc;
+        }
+
+        .company-logo {
+            height: 4rem;
+            width: 4rem;
+            filter: grayscale(1) brightness(1.2);
+            border: 1px solid #00ffcc;
+            padding: 2px;
+            object-fit: cover;
+        }
+
+        .company-info h2 {
+            color: #00ffcc;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-shadow: 0 0 5px rgba(0, 255, 204, 0.3);
+        }
+
+        .job-title {
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 2px;
+        }
+
+        /* Content Bereich */
+        .entry-body {
+            padding: 1.5rem;
+        }
+
+        .meta-data {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: #00ffcc;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+
+        .task-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .task-list li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .task-list li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: #00ffcc;
+            font-weight: bold;
+        }
+
+        /* Dein Neo-Button Style für die Tags */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .neo-btn {
+            background: transparent;
+            border: 1px solid #00ffcc;
+            color: #00ffcc;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .neo-btn:hover {
+            background: #00ffcc;
+            color: #000000;
+            box-shadow: 0 0 8px #00ffcc;
+            border: 1px solid #00ffcc;
+        }
+
+        .neo-btn:active {
+            background: #defff8;
+        }
