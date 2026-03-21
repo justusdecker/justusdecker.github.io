@@ -1,6 +1,4 @@
 
-import { MarkdownGetJsonIndex, MarkdownLoader } from '../common/markdownLoader';
-import { Link } from 'react-router-dom';
 
 import '../common/ibox_and_topics.css'
 
