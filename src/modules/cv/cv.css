@@ -1,7 +1,8 @@
 
 /* Container für den CV-Eintrag */
 .cv-entry {
-    max-width: 800px;
+    
+    max-width: 700px;
     margin: 0 auto 2rem auto;
     border: 1px solid #333;
     background: #111;
