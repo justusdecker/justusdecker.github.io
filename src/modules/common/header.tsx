@@ -41,7 +41,13 @@ const Header: React.FC = () => {
           </NavLink>
 
           
-          <NavLink to="/contact">Kontakt</NavLink>
+          <div className="dropdown">
+            <span className="dropbtn">Über ▾</span>
+            <div className="dropdown-content">
+              <NavLink to="/contact">Kontakt</NavLink>
+              <NavLink to="/cv">CV</NavLink>
+            </div>
+          </div>
           <div className="dropdown">
             <span className="dropbtn">Umschulung Elektroniker ▾</span>
             <div className="dropdown-content">
