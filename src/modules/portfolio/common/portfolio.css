@@ -40,3 +40,89 @@
     color: var(--accent-color);
     font-family: 'Fira Code', monospace;
 }
+.langs {
+    margin: 2rem auto;
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+/* 1. Der neue Span-Stil (Glas-Effekt & Ausrichtung) */
+.langs span {
+    width: 100%;
+    max-width: 8rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    
+    /* Flexbox für Inhalt (beibehalten) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+
+    /* --- DER GLAS-EFFEKT --- */
+    /* Transparenter Hintergrund (weiß mit geringer Deckkraft) */
+    background: rgba(0, 255, 192, 0.1); 
+    /* Der Unschärfe-Effekt für den Hintergrund dahinter */
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); /* Für Safari Support */
+    
+    /* Feiner weißer Rand für den 'Glaskanten'-Look */
+    border: 1px solid rgba(0, 255, 192, 0.2); 
+    
+    /* Dezenter Schatten für Tiefe */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    /* --- DIE VORBEREITUNG FÜR DEN HOVER --- */
+    /* Weicher Übergang für alle Änderungen */
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    
+    /* WICHTIG FÜR DIE AUSRICHTUNG: Transform-Origin */
+    /* Setzt den Dreh/Skalierungspunkt in die Mitte */
+    transform-origin: center center; 
+}
+
+/* 2. Der Hover-Effekt */
+.langs span:hover {
+
+    /* Optional: Glas-Effekt beim Hover verstärken */
+    background: rgba(0, 255, 192, 0.2); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.1s ease-out; /* Kurze Zeit für flüssiges Folgen */
+    transform-style: preserve-3d;
+    /* Zeiger-Cursor beim Hover */
+    cursor: pointer;
+}
+
+/* Icons (beibehalten) */
+.langs span img {
+    width: 45%;
+    height: auto;
+    margin-bottom: 8px;
+}
+.centered {
+    display: flex;
+    justify-content: center;
+}
+.toggle-langs-btn {
+  margin-bottom: 3rem;
+  padding: 0.6rem 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-langs-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
