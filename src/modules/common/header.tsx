@@ -46,6 +46,7 @@ const Header: React.FC = () => {
             <div className="dropdown-content">
               <NavLink to="/contact">Kontakt</NavLink>
               <NavLink to="/cv">CV</NavLink>
+              <NavLink to="/certificates">Zertifikate</NavLink>
             </div>
           </div>
           <div className="dropdown">

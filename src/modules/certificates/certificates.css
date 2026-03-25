@@ -1,0 +1,96 @@
+/* Das Grid-System */
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.certificate-link {
+  text-decoration: none;
+  width: 100%;
+  max-width: 350px; /* Verhindert, dass A4-Karten zu breit werden */
+}
+
+.certificate-card {
+  position: relative;
+  background: #1a1a1a;
+  padding: 8px; /* Der Abstand für den sichtbaren Rahmen */
+  border-radius: 4px;
+
+  /* Der spiegelnde "Metallic" Rahmen */
+  background-size: 400% 400%;
+  animation: shine-border 8s linear infinite;
+  
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  align-content: center;
+}
+
+.grey {
+    background: linear-gradient(135deg, 
+    #a1a1a1 0%, 
+    #ffffff 25%, 
+    #a1a1a1 50%, 
+    #ffffff 75%, 
+    #a1a1a1 100%);
+}
+
+.gold {
+  background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fcf6ba 75%, #aa771c 100%);
+}
+
+.silver {
+  background: linear-gradient(135deg, #7d7d7d 0%, #ffffff 25%, #9e9e9e 50%, #ffffff 75%, #707070 100%);
+}
+
+.black {
+  background: linear-gradient(135deg, #000000 0%, #434343 25%, #1a1a1a 50%, #434343 75%, #000000 100%);
+}
+
+.copper {
+  background: linear-gradient(135deg, #b87333 0%, #f2c091 25%, #a0522d 50%, #f2c091 75%, #8b4513 100%);
+}
+/* A4-Proportionen erzwingen */
+.image-wrapper {
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.certificate-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Zeigt das Zertifikat sauber an */
+  aspect-ratio: 1 / 1.414;
+  flex: 1;
+}
+
+/* Animation für den spiegelnden Rahmen */
+@keyframes shine-border {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Hover-Effekt */
+.certificate-card:hover {
+  transform: scale(1.03) translateY(-10px);
+  box-shadow: 0 15px 45px rgba(0, 255, 204, 0.3);
+}
+
+/* Simulierter "Mehrseiten-Stapel" Effekt */
+.certificate-card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #444;
+  border-radius: 4px;
+  
+}
