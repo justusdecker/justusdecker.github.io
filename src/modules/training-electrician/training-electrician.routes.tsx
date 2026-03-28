@@ -3,12 +3,8 @@ import { type RouteObject, Outlet } from 'react-router-dom';
 import Header from '../common/header';
 import Laws from './laws/laws';
 import Glossar from './glossar/glossar';
-import { WeeklySummaryOverview } from './weekly-summary/weekly-summary';
-import { SummaryA4Page } from './common/summary';
+import { Summary, SummaryA4Page } from './common/summary';
 import { TrainingElecticianMain } from './training-electrician';
-import { MonthlySummaryOverview } from './monthly-summary/monthly-summary';
-import { QuarterlySummaryOverview } from './quarterly-summary/quarterly-summary';
-import { ExamPreperationOverview } from './exam-preperation/exam-preperation';
 import FormularsMathOverview from './formulars-math/fomulars-math';
 
 export const trainingElectricianRoutes: RouteObject = {
@@ -23,22 +19,22 @@ export const trainingElectricianRoutes: RouteObject = {
         {index: true, element: <TrainingElecticianMain />},
         { path: "weekly-summary", 
           children: [
-              { index: true, element: <WeeklySummaryOverview /> }, 
+              { index: true, element: <Summary shortUrl='Elekro-Ausbildung-Lernstoff/main/summary/weekly/' title='Woche'/> }, 
               { path: ":id", element: <SummaryA4Page category='summary/weekly' /> }
           ] },
         { path: "monthly-summary", 
           children: [
-              { index: true, element: <MonthlySummaryOverview /> },
+              { index: true, element: <Summary shortUrl='Elekro-Ausbildung-Lernstoff/main/summary/monthly/' title='Monat'/> },
               { path: ":id", element: <SummaryA4Page category='summary/monthly' /> }
           ] },
         { path: "quarterly-summary", 
           children: [
-              { index: true, element: <QuarterlySummaryOverview /> },
+              { index: true, element: <Summary shortUrl='Elekro-Ausbildung-Lernstoff/main/summary/quarterly/' title='Quartal'/> },
               { path: ":id", element: <SummaryA4Page category='summary/quarterly' /> }
           ] },
         { path: "exam-preperation", 
           children: [
-              { index: true, element: <ExamPreperationOverview /> },
+              { index: true, element: <Summary shortUrl='Elekro-Ausbildung-Lernstoff/main/summary/exam/' title='Prüfung'/> },
               { path: ":id", element: <SummaryA4Page category='summary/exam' /> }
           ] },
         { path: "formulars-math", 
