@@ -1,13 +1,13 @@
 import { type RouteObject } from 'react-router-dom';
 import Header from '../common/header';
-import '../common/ibox_and_topics.css';
+import '../common/listed-items-blog-style.css';
 export const contactRoutes: RouteObject = {
     path: "/contact",
     element: (
        <>
             <Header />
             <section>
-                <div className="topic">
+                <div className="tile-entry">
                     
                     <h2>Impressum</h2>
                     

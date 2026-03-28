@@ -1,7 +1,7 @@
 import { type RouteObject } from 'react-router-dom';
 
 import Header from '../common/header';
-import '../common/ibox_and_topics.css'
+import '../common/listed-items-blog-style.css'
 import { CVOverview } from './cv';
 
 export const cvRoutes: RouteObject = {

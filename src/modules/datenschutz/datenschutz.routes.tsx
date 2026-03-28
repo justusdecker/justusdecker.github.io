@@ -1,6 +1,6 @@
 import { type RouteObject } from 'react-router-dom';
 import Header from '../common/header';
-import '../common/ibox_and_topics.css'
+import '../common/listed-items-blog-style.css'
 import ReactMarkdown from 'react-markdown';
 import { useState } from 'react';
 
@@ -13,7 +13,7 @@ function Datenschutz() {
     .catch((err) => setContent(`# Fehler\nDer Artikel konnte nicht geladen werden: ${err.message}`));
     return (
         <section>
-            <div className="topic">
+            <div className="tile-entry">
 
                 <ReactMarkdown>
                     {content}

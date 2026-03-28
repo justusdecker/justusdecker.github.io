@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import '../common/ibox_and_topics.css'
+import '../common/listed-items-blog-style.css'
 import { GitHubRawBaseUrl } from "../common/constants";
 
 const certificates = {

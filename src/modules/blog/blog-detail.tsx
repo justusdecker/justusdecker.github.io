@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
-
+import '../common/listed-items-blog-style.css';
 export default function BlogPostDetail() {
   const { id } = useParams<{ id: string }>(); // Holt :id aus der URL
   const [content, setContent] = useState<string>('');
@@ -23,7 +23,7 @@ export default function BlogPostDetail() {
   }, [id]);
 
   return (
-    <div className="topic">
+    <div className="tile-entry">
       <ReactMarkdown>{content}</ReactMarkdown>
     </div>
   );

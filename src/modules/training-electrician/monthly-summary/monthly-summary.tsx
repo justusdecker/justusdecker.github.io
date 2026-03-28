@@ -1,8 +1,6 @@
-import '../../common/ibox_and_topics.css';
+import '../../common/listed-items-blog-style.css';
 import { MarkdownGetJsonIndex, MarkdownLoader } from '../../common/markdownLoader';
 import { Link } from 'react-router-dom';
-
-import '../../common/ibox_and_topics.css'
 import '../common/search_and_tags.css'
 import { useState } from 'react';
 
@@ -48,10 +46,10 @@ export function MonthlySummaryOverview() {
         )}
       </div>
 
-      <div className="topics-grid">
+      <div>
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post) => (
-            <div key={post.id} className="topic">
+            <div key={post.id} className="tile-entry">
               <Link to={`/training-electrician/monthly-summary/${post.id}`}>
                 <div className="preview-box">
                   <MarkdownLoader 

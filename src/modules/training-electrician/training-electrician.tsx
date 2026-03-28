@@ -1,12 +1,12 @@
 
 import { NavLink } from 'react-router-dom';
 
-import '../common/ibox_and_topics.css'
+import '../common/listed-items-blog-style.css'
 import '../common/neo-btn.css'
 export function TrainingElecticianMain() {
     return (
         <div className="portfolio-list">
-            <div className='topic'>
+            <div className='tile-entry'>
                 <NavLink className='neo-btn' to="/training-electrician/weekly-summary">Wöchentliche Zusammenfassung</NavLink>
                 <br /><br />
                 <NavLink className='neo-btn' to="/training-electrician/monthly-summary">Monatliche Zusammenfassung</NavLink>

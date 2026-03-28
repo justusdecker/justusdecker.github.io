@@ -1,6 +1,6 @@
 
 
-import '../common/ibox_and_topics.css'
+import '../common/listed-items-blog-style.css'
 
 import '../common/search_and_tags.css'
 import { useEffect, useState } from 'react';
@@ -56,7 +56,7 @@ export function CVOverview() {
         )}
       </div>
 
-      <div className="topics-grid">
+      <div>
         {filteredCVEntrys.length > 0 ? (
           filteredCVEntrys.map((cvEntry) => (
             <div className="cv-entry">

@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { type BlogPostMetadata } from './blog.types';
-import '../common/ibox_and_topics.css'
+import '../common/listed-items-blog-style.css'
 import '../common/neo-btn.css'
 const POSTS_PER_PAGE = 5;
 
@@ -62,7 +62,7 @@ export default function BlogIndex() {
       </div>
       
       {filtered2Posts.map((post) => (
-        <div className='topic' key={post.id}>
+        <div className='tile-entry' key={post.id}>
           <Link to={`/blog/${post.id}`}>
             <h2>{post.title}</h2>
             <p>{post.date}</p>

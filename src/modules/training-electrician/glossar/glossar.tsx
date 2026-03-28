@@ -1,15 +1,14 @@
-import '../../common/ibox_and_topics.css';
+import '../../common/listed-items-blog-style.css';
 import { MarkdownLoader } from '../../common/markdownLoader';
 import { GitHubRawBaseUrl } from '../../common/constants';
 export interface PortfolioEntryContent {
     body: string;
 }
-import '../../common/ibox_and_topics.css'
 export default function Glossar() {
 
   return (
 
-    <div className='topic'>
+    <div className='tile-entry'>
         <MarkdownLoader url = {`${GitHubRawBaseUrl}Elekro-Ausbildung-Lernstoff/main/glossar.md`}/>
     </div>
 

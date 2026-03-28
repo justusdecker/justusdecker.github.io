@@ -1,7 +1,7 @@
 import { Link, type RouteObject } from 'react-router-dom';
 
 import Header from '../common/header';
-import '../common/ibox_and_topics.css'
+import '../common/listed-items-blog-style.css'
 import './home.css';
 import '../common/msgbox.css';
 
@@ -88,7 +88,7 @@ export const homeRoutes: RouteObject = {
             Zusammengefasst könnte man mich als technischer Hausmeister bezeichnen.
         </div>
         <div className='experience'>
-            {skills.map((lang, i) => (
+            {skills.map((lang) => (
             <span>
                 <div className="front"><h1 id='new-font-size'>{lang.content}</h1></div>
                 <div className="back"><h1>{getExperience(lang.content)}</h1></div>
@@ -98,46 +98,30 @@ export const homeRoutes: RouteObject = {
             
         </div>
         <p>* Alle Angaben in Jahren</p>
+        
+        
 
-        <main id="home-content">
             {/* Linke Spalte: Wer ich bin & was ich mache */}
-            <section className="info-box">
-                <h3>Schwerpunkte</h3>
-                <div className="topic-list">
+            <div className="tile-list">
                 <Link to={'/portfolio/dev'}>
-                    <div className="topic-item">
+                    <div className="tile-entry">
                         <strong>💻 Programmierung</strong>
                         <p>Fullstack-Entwicklung mit Fokus auf React, Python und TDD.</p>
                     </div>
                 </Link>
                 <Link to={'/portfolio/craft'}>
-                    <div className="topic-item">
+                    <div className="tile-entry">
                         <strong>🔨 Handwerk</strong>
                         <p>Holzbau, Metallverarbeitung und Automation im Niedervoltbereich.</p>
                     </div>
                 </Link>
                 <Link to={'/portfolio/art'}>
-                    <div className="topic-item">
+                    <div className="tile-entry">
                         <strong>🎨 Kunst</strong>
                         <p>Digital Art, Zeichnen & Musik – wenn die Technik auf Ästhetik trifft.</p>
                     </div>
                 </Link>
                 </div>
-            </section>
-
-            {/* Rechte Spalte: Aktueller Status / Stats */}
-            
-                <aside className="status-box">
-                    <Link to={'/contact'}>
-                    <h3>Aktueller Status</h3>
-                    <div className="status-card">
-                    <span>📍 Standort: Emden, Deutschland</span>
-                    <span>🛠️ Projekt: Portfolio-Rewrite (React + Vite)</span>
-                    <span>⚡ Fokus: Ausbildung / Umschulung - Elektroniker</span>
-                    </div>
-                    </Link>
-                </aside>
-        </main>
     </>
   ),
 };

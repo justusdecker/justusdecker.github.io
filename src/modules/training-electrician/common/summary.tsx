@@ -1,4 +1,4 @@
-import '../../common/ibox_and_topics.css';
+import '../../common/DinA4.css';
 import { MarkdownLoader } from '../../common/markdownLoader';
 import { useParams } from 'react-router-dom';
 

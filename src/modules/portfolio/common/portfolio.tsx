@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import type { PortfolioMetadata } from "./portfolio.types";
 import ReactMarkdown from "react-markdown";
 
-import '../../common/ibox_and_topics.css'
+import '../../common/listed-items-blog-style.css'
 function PortfolioDetail(attr: { category: string, id: string }) {
   const [content, setContent] = useState<string>('');
     console.log(attr.id);
@@ -50,7 +50,7 @@ export default function PortfolioIndex({ category }: { category: string }) {
       <h1>Portfolio: {category_head} Übersicht</h1>
       
         {filteredPosts.map((post) => (
-            <div className='topic-item'>
+            <div className='tile-entry'>
             <div key={post.id}>
                 <h2>{post.title}</h2>
                 <p>{post.timespan}</p>
