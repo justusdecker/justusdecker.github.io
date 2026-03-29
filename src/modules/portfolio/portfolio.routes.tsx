@@ -3,12 +3,11 @@ import { type RouteObject, Outlet } from 'react-router-dom';
 import Header from '../common/header';
 
 
-import PortfolioArtDetail from './art/art-subportfolio.tsx';
-
 
 import './common/portfolio.css'
-import PortfolioCraftDetail from './craft/craft-subportfolio.tsx';
-import PortfolioDevDetail from './dev/dev-subportfolio.tsx';
+import PortfolioIndex from './common/portfolio.tsx';
+
+
 export const portfolioRoutes: RouteObject = {
     path: "/portfolio",
     element: (
@@ -18,9 +17,9 @@ export const portfolioRoutes: RouteObject = {
        </> 
     ),
     children: [
-        {index: true, element: <PortfolioArtDetail />},
-        { path: "art", element: <PortfolioArtDetail /> },
-        { path: "craft", element: <PortfolioCraftDetail /> },
-        { path: "dev", element: <PortfolioDevDetail /> }
+        {index: true, element: <PortfolioIndex category='art' />},
+        { path: "art", element: <PortfolioIndex category='art' /> },
+        { path: "craft", element: <PortfolioIndex category='craft' /> },
+        { path: "dev", element: <PortfolioIndex category='dev' /> }
     ]
 };

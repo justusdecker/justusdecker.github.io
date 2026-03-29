@@ -4,20 +4,21 @@ import { useParams, Link } from 'react-router-dom';
 import { useState } from 'react';
 
 import '../../common/DinA4.css'
+import { GitHubRawBaseUrl } from '../../common/constants';
 
 export function SummaryA4Page({category}:  {category: string}) {
   const { id } = useParams<{ id: string }>();
     return (
         <div className="portfolio-list">
             <div className='a4-page'>
-                <MarkdownLoader url={`https://raw.githubusercontent.com/justusdecker/Elekro-Ausbildung-Lernstoff/main/${category}/${id}.md`} />
+                <MarkdownLoader url={`${GitHubRawBaseUrl}Elekro-Ausbildung-Lernstoff/main/${category}/${id}.md`} />
             </div>
         </div>
     )
 
 }
 
-export function Summary( {shortUrl, title}: {shortUrl: string, title: string} ){
+export function Summary( {shortUrl, title, subdir}: {shortUrl: string, title: string, subdir: string} ){
     // ShortUrl Format: Elekro-Ausbildung-Lernstoff/main/summary/monthly/
     const [searchTerm, setSearchTerm] = useState('');
     
@@ -42,7 +43,7 @@ export function Summary( {shortUrl, title}: {shortUrl: string, title: string} ){
 
     return (
     <div className="portfolio-list">
-      <h1>{title} Zusammenfassungen</h1>
+      <h1>{title}</h1>
 
       <div className="search-container no-print">
         <input
@@ -61,10 +62,10 @@ export function Summary( {shortUrl, title}: {shortUrl: string, title: string} ){
         {filteredPosts.length > 0 ? (
           filteredPosts.map((summary) => (
             <div key={summary.id} className="tile-entry">
-              <Link to={`/training-electrician/monthly-summary/${summary.id}`}>
+              <Link to={`/training-electrician/${subdir}/${summary.id}`}>
                 <div className="preview-box">
                   <MarkdownLoader 
-                    url={`https://raw.githubusercontent.com/justusdecker/${shortUrl}/${summary.id}.md`} 
+                    url={`${GitHubRawBaseUrl}${shortUrl}/${summary.id}.md`} 
                   />
                 </div>
               </Link>

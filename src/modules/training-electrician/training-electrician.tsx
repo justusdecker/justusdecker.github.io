@@ -3,6 +3,9 @@ import { NavLink } from 'react-router-dom';
 
 import '../common/listed-items-blog-style.css'
 import '../common/neo-btn.css'
+import { GitHubRawBaseUrl } from '../common/constants';
+import { MarkdownLoader } from '../common/markdownLoader';
+
 export function TrainingElecticianMain() {
     return (
         <div className="portfolio-list">
@@ -23,3 +26,11 @@ export function TrainingElecticianMain() {
     )
 
 }
+
+export function TileEntryBuilder({shortUrl}: {shortUrl: string}) {
+    return (
+        <div className='tile-entry'>
+            <MarkdownLoader url = {`${GitHubRawBaseUrl}${shortUrl}`}/>
+        </div>
+    )
+};

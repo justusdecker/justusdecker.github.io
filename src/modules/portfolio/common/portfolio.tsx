@@ -3,6 +3,7 @@ import type { PortfolioMetadata } from "./portfolio.types";
 import ReactMarkdown from "react-markdown";
 
 import '../../common/listed-items-blog-style.css'
+
 function PortfolioDetail(attr: { category: string, id: string }) {
   const [content, setContent] = useState<string>('');
     console.log(attr.id);
@@ -26,6 +27,7 @@ function PortfolioDetail(attr: { category: string, id: string }) {
   );
 }
 const POSTS_PER_PAGE = 10;
+
 export default function PortfolioIndex({ category }: { category: string }) {
   const [posts, setPosts] = useState<PortfolioMetadata[]>([]);
   const [currentPage, setCurrentPage] = useState(1);

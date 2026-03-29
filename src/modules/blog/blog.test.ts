@@ -1,14 +1,15 @@
 import { describe, it, expect } from 'vitest';
 import { blogRoutes } from './blog.routes';
 import { type BlogPostMetadata } from './blog.types';
+import { getBlogIndexUrl } from './blog.constants';
 describe('GET /blog', () => {
   it('Webpage-data ACCESS', async () => {
-    const result = await fetch('https://raw.githubusercontent.com/justusdecker/webpage-data/main/posts/index.json')
+    const result = await fetch(getBlogIndexUrl())
     
     expect(result.status).toBe(200);
   });
   it('Webpage-data SCHEMA VALIDATION', async () => {
-    const response = await fetch('https://raw.githubusercontent.com/justusdecker/webpage-data/main/posts/index.json');
+    const response = await fetch(getBlogIndexUrl());
     expect(response.status).toBe(200);
     
     const data = (await response.json()) as BlogPostMetadata[];
@@ -26,12 +27,12 @@ describe('GET /blog', () => {
       
       // Optional: Sicherstellen, dass keine zusätzlichen unerwarteten Felder existieren
       const keys = Object.keys(post);
-      expect(keys.length).toBe(3);
-      expect(keys).toEqual(expect.arrayContaining(['id', 'title', 'date']));
+      expect(keys.length).toBe(4);
+      expect(keys).toEqual(expect.arrayContaining(['id', 'title', 'date', 'tags']));
     });
   });
   it('Webpage-data ACCESS', async () => {
-    const result = await fetch('https://raw.githubusercontent.com/justusdecker/webpage-data/main/posts/index.json')
+    const result = await fetch(getBlogIndexUrl())
     result.body
     expect(result.status).toBe(200);
   });

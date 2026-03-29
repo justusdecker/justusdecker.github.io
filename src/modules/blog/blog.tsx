@@ -1,10 +1,39 @@
 // modules/blog/blog.tsx
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { type BlogPostMetadata } from './blog.types';
+import ReactMarkdown from 'react-markdown';
 import '../common/listed-items-blog-style.css'
 import '../common/neo-btn.css'
+import './blog.css'
+import { getBlogIndexUrl, getBlogPostUrl } from './blog.constants';
 const POSTS_PER_PAGE = 5;
+
+export function BlogPostDetail() {
+  const { id } = useParams<{ id: string }>(); // Holt :id aus der URL
+  const [content, setContent] = useState<string>('');
+
+  useEffect(() => {
+    if (!id) return;
+    
+    // Wir bauen den Pfad dynamisch zusammen
+    const url = getBlogPostUrl(id);
+    
+    fetch(url)
+      .then((res) => {
+        if (!res.ok) throw new Error("Artikel nicht gefunden");
+        return res.text();
+      })
+      .then((text) => setContent(text))
+      .catch((err) => setContent(`# Fehler\nDer Artikel konnte nicht geladen werden: ${err.message}`));
+  }, [id]);
+
+  return (
+    <div className="tile-entry">
+      <ReactMarkdown>{content}</ReactMarkdown>
+    </div>
+  );
+}
 
 export default function BlogIndex() {
   const [posts, setPosts] = useState<BlogPostMetadata[]>([]);
@@ -13,7 +42,7 @@ export default function BlogIndex() {
 
 
   useEffect(() => {
-    fetch('https://raw.githubusercontent.com/justusdecker/webpage-data/main/posts/index.json')
+    fetch(getBlogIndexUrl())
       .then((res) => res.json())
       .then((data) => setPosts(data));
   }, []);
