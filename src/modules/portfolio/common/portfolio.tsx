@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import '../../common/listed-items-blog-style.css'
 
 function PortfolioDetail(attr: { category: string, id: string }) {
+  const [isLoading, setIsLoading] = useState(true);
   const [content, setContent] = useState<string>('');
     console.log(attr.id);
   useEffect(() => {
@@ -19,9 +20,19 @@ function PortfolioDetail(attr: { category: string, id: string }) {
         return res.text();
       })
       .then((text) => setContent(text))
-      .catch((err) => setContent(`# Fehler\nDer Artikel konnte nicht geladen werden: ${err.message}`));
+      .catch((err) => setContent(`# Fehler\nDer Artikel konnte nicht geladen werden: ${err.message}`))
+      .finally(() => setIsLoading(false));
   }, [attr.id]);
-
+  if (isLoading) {
+    return (
+      <>
+        <div className="loading-container">
+          <div className="spinner"></div>
+          <p>Lade Markdown-Inhalte...</p>
+        </div>
+      </>
+    );
+  }
   return (
       <div className="portfolio-detail "><ReactMarkdown>{content}</ReactMarkdown></div>
   );
@@ -31,6 +42,7 @@ const POSTS_PER_PAGE = 10;
 export default function PortfolioIndex({ category }: { category: string }) {
   const [posts, setPosts] = useState<PortfolioMetadata[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
+  
   useEffect(() => {
     fetch(`https://raw.githubusercontent.com/justusdecker/webpage-data/main/portfolio/${category}/index.json`)
       .then((res) => res.json())

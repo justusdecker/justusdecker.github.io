@@ -6,6 +6,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 export function MarkdownLoader({ url }: {url: string}) {
+  const [isLoading, setIsLoading] = useState(true);
   const [content, setContent] = useState<string>('');
     console.log(url);
   useEffect(() => {
@@ -17,9 +18,21 @@ export function MarkdownLoader({ url }: {url: string}) {
         return res.text();
       })
       .then((text) => setContent(text))
-      .catch((err) => setContent(`# Fehler\nDer Artikel konnte nicht geladen werden: ${err.message}`));
+      .catch((err) => setContent(`# Fehler\nDer Artikel konnte nicht geladen werden: ${err.message}`))
+      .finally(() => setIsLoading(false));
+
   }, [url]);
 
+  if (isLoading) {
+    return (
+      <>
+        <div className="loading-container">
+          <div className="spinner"></div>
+          <p>Lade Markdown-Inhalte...</p>
+        </div>
+      </>
+    );
+  }
   return (
       <ReactMarkdown
       remarkPlugins={[remarkGfm, remarkMath]} 

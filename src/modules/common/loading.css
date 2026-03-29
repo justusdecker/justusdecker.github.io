@@ -1,0 +1,41 @@
+/* Container, der den Spinner zentriert */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Füllt die verfügbare Höhe aus minus Header-Höhe, passe dies ggf. an */
+  min-height: calc(100vh - 100px); 
+  width: 100%;
+  text-align: center;
+  color: #555; /* Farbe für den Ladetext, passe sie an dein Design an */
+  font-family: sans-serif; /* Stelle sicher, dass die Schriftart passt */
+}
+
+/* Der eigentliche Spinner */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(0, 0, 0, 0.1); /* Hellgrauer Hintergrund-Ring */
+  border-top: 5px solid #3498db; /* Die Farbe des sich drehenden Teils, passe sie an dein Farbschema an */
+  border-radius: 50%;
+  animation: spin 1s linear infinite; /* Unendliche Drehung */
+  margin-bottom: 15px; /* Abstand zum Text */
+}
+
+/* Text unter dem Spinner */
+.loading-container p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Die Drehanimation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
