@@ -4,8 +4,7 @@ import Header from '../common/header';
 import '../common/listed-items-blog-style.css';
 import './home.css';
 import '../common/msgbox.css';
-import '../common/loading.css'
-import { LoadingComponent } from '../common/load-component';
+import '../common/loading.css';
 
 const skills = [
   { startdate: "01.01.2013", content: "🖥️" },
@@ -43,10 +42,10 @@ const HomeComponent = () => {
   return (
     <>
       <Header />
-      <div className="warn">
+      <div className="msgb-default msgb-warn">
         Aktuell wird hier noch umgebaut, daher sind einige Seiten möglicherweise unvollständig oder nicht erreichbar! <br />
       </div>
-      <div className="default">
+      <div className="msgb-default msgb-inf">
         <h1>Moin,</h1>
         <h2>ich heiße Justus</h2>
 
@@ -65,15 +64,23 @@ const HomeComponent = () => {
       
         Zusammengefasst könnte man mich als technischer Hausmeister bezeichnen.
       </div>
-      <div className='experience'>
-        {skills.map((lang, index) => (
-          <span key={index}>
-            <div className="front"><h1 id='new-font-size'>{lang.content}</h1></div>
-            <div className="back"><h1>{getExperience(lang.content)}</h1></div>
-          </span>
-        ))}
+        <div className='experience'>
+          {skills.map((lang, index) => (
+            <span className='msgb-default msgb-inf' key={index}>
+              
+              <h1 id='new-font-size'>{lang.content}</h1>
+              <div>
+                <h1>{getExperience(lang.content)}</h1>
+                <p>Ich bin jemand der gerne anpackt wo es gerade Bedarf gibt. 
+        Handwerk, Programmierung und Künstlerei sind meine Leidenschaft.
+        Mit über zehn Jahren IT Erfahrung, 5 Jahre Python und andere Programmiersprachen sowie meiner Weiterbildung bei der Masterschool, bin ich technisch </p>
+              </div>
+            </span>
+          ))}
       </div>
-      <p>* Alle Angaben in Jahren</p>
+        
+
+      
 
       <div className="tile-list">
         <Link to={'/portfolio/dev'}>
@@ -102,9 +109,5 @@ const HomeComponent = () => {
 // 2. Deine Route bleibt sauber und nutzt einfach die neue Komponente
 export const homeRoutes: RouteObject = {
   path: '/home',
-  element: (
-    <LoadingComponent timeOut={200}>
-        <HomeComponent />
-    </LoadingComponent>
-  ),
+  element: <HomeComponent />,
 };

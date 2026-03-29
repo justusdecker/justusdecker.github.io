@@ -16,7 +16,7 @@
 .tile-entry:hover {
   background-color: rgba(0, 255, 204, 0.1);
   cursor: pointer;
-  transition: 0.2s;
+  transition: var(--default-transition);
   border-left: 3px solid #ffffff;
 }
 

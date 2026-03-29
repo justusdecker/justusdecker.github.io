@@ -1,84 +1,10 @@
-.summary {
-    max-width: 700px;
-    margin: 1rem auto 2rem auto;
-
-    border: 1px solid rgba(0, 255, 192, 0.1); 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-    background: rgba(0, 255, 192, 0.1);
-    padding: 1rem;
-}
-
-.summary:hover {
-    border: 1px solid rgba(0, 255, 192, 0.2); 
-    background: rgba(0, 255, 192, 0.2); 
-}
-.experience {
-    margin: 1rem auto;
-    max-width: 800px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); 
-    gap: 1.5rem;
-    justify-items: center;
-    /* Verhindert, dass die Karten beim Drehen abgeschnitten werden */
-    padding: 20px; 
-}
-
+.experience { gap: 0.5rem; }
 .experience span {
-    display: block; /* Zwingt das Span, sich wie ein Container zu verhalten */
-    width: 12rem;
-    height: 12rem;
-    position: relative;
-    
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Der Hover-Effekt: Nur die Drehung, keine Positionsänderung */
-.experience span:hover {
-    transform: rotateY(180deg);
-}
-
-.experience span .front, 
-.experience span .back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    /* WICHTIG: Verhindert das "Durchscheinen" */
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 12px;
-
-    /* Dein Glas-Design */
-    background: rgba(0, 255, 192, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 255, 192, 0.2);
-    color: white;
-}
-
-.experience span .front {
-    z-index: 2;
-    transform: rotateY(0deg) translateZ(1px);
-}
-
-/* Die Rückseite muss VOR dem Hover schon umgedreht sein */
-.experience span .back {
-    transform: rotateY(180deg);
-    background: rgba(0, 255, 192, 0.2); /* Etwas deutlicherer Kontrast */
+    flex-direction: row;
 }
 
 #new-font-size {
     font-size: 8rem;
 }
+
