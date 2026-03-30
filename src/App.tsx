@@ -11,6 +11,7 @@ import { trainingElectricianRoutes } from './modules/training-electrician/traini
 import { datenschutzRoutes } from './modules/datenschutz/datenschutz.routes'
 import { cvRoutes } from './modules/cv/cv.routes'
 import { certificatesRoutes } from './modules/certificates/certificates.routes'
+import { toolsRoutes } from './modules/tools/tools.routes';
 
 
 const router = createHashRouter([
@@ -26,7 +27,8 @@ const router = createHashRouter([
   trainingElectricianRoutes,
   datenschutzRoutes,
   cvRoutes,
-  certificatesRoutes
+  certificatesRoutes,
+  toolsRoutes
 ]);
 
 function App() {

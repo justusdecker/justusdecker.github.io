@@ -1,0 +1,114 @@
+
+main { 
+    display: flex; 
+    height: 100vh;
+    flex: 1; 
+    overflow: hidden; 
+    background: #fafaf6;
+}
+/* Split Screen */
+#editor-container, #preview-container { 
+    width: 50%; 
+    display: flex; 
+    flex-direction: column; 
+    
+}
+#editor { 
+    flex: 1; 
+    padding: 20px; 
+    border: none; 
+    border-right: 1px solid #ddded0; 
+    outline: none; 
+    font-family: monospace; 
+    font-size: 14px; 
+    line-height: 1.5; resize: none; 
+    background-color: #d3ccbf;
+    color: black;
+}
+
+#preview { 
+    flex: 1; 
+    padding: 40px; 
+    overflow-y: auto; 
+    background: #24292f; 
+}
+
+/* GitHub Alert Styles */
+.markdown-alert { 
+    background: #727272; 
+    padding: 0.5rem 1rem; 
+    margin-bottom: 16px; 
+    color: inherit; 
+    border-left: .25em solid #575757; }
+.markdown-alert p {
+    color: #fff; 
+}
+.markdown-alert-note { border-left-color: #0969da; background: #f0f7ff; }
+.markdown-alert-note .alert-title { color: #0969da; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.markdown-alert-caution { border-left-color: #da3a09; background: #f0f7ff; }
+.markdown-alert-caution .alert-title { color: #da3a09; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.markdown-alert-important { border-left-color: #8250df; background: #fbefff; }
+.markdown-alert-important .alert-title { color: #8250df; font-weight: 600; }
+.markdown-alert-warning { border-left-color: #9a6700; background: #fff8c5; }
+.markdown-alert-warning .alert-title { color: #9a6700; font-weight: 600; }
+.markdown-alert-warning p { color:#9a6700; }
+.markdown-alert-note p { color:#0969da; }
+.markdown-alert-important p { color:#8250df; }
+.markdown-alert-caution p { color:#da3a09; }
+@media print {
+
+* {color: black !important;}
+
+/* 1. Layout-Fesseln lösen */
+html, body {
+height: auto !important;
+overflow: visible !important;
+background: white !important;
+}
+
+/* 2. Alles ausblenden, was nicht Text ist */
+header, #editor-container, .btn, .file-info, #head, footer {
+display: none !important;
+}
+
+/* 3. Container für den Druck optimieren */
+main {
+display: block !important; /* Flexbox beim Drucken oft problematisch */
+height: auto !important;
+}
+
+#preview-container {
+width: 100% !important;
+height: auto !important;
+}
+
+#preview {
+width: 100% !important;
+height: auto !important;
+padding: 0 !important;
+margin: 0 !important;
+overflow: visible !important;
+background: white !important;
+color: black !important;
+}
+
+/* 4. Sanfte Seitenumbrüche erzwingen (Optional) */
+h1, h2, h3 {
+page-break-after: avoid;
+}
+
+p, img {
+page-break-inside: avoid;
+}
+#title {
+    display: none;
+}
+* {
+-webkit-print-color-adjust: exact !important;
+print-color-adjust: exact !important;
+}
+}
+@page {
+size: A4;
+padding: 20mm; /* Das ist dein echter Seitenabstand zum Rand */
+}
