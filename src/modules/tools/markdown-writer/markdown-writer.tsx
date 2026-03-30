@@ -89,7 +89,9 @@ export function MarkdownWriter() {
         if (savedDraft) {
         setContent(savedDraft);
         
-        } 
+        } else {
+            setContent(LOREM_IPSUM_TEST_DOCUMENT)
+        }
     }, []);
 
     useEffect(() => {
