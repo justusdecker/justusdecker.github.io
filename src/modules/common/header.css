@@ -5,6 +5,15 @@
   display: inline-block;
 }
 
+/* Anzeigen beim Hover */
+.dropdown:hover span {
+  color: #00ffcc;
+}
+
+.nav-bar a:hover {
+  color: #00ffcc;
+}
+
 /* Der Button/Link selbst */
 .dropbtn {
   cursor: pointer;
@@ -101,4 +110,96 @@
 #profile, #head-text {
     position: relative;   /* Damit sie ÜBER dem Hintergrund liegen */
     z-index: 1;           /* Höherer Index als .head-bg */
+}
+
+@media (max-width: 800px) {
+  /* 1. Header-Elemente untereinander stapeln und zentrieren */
+  #head {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 15px; /* Genug Abstand zu den Bildschirmrändern */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* 2. Text-Container auf volle Breite bringen */
+  #head-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* 3. Navigation als vertikale Liste */
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 320px; /* Begrenzt die Breite für eine schöne Handy-Optik */
+    margin: 15px auto 0 auto;
+    padding: 0;
+  }
+
+  /* 4. Alle Links und Dropdowns auf volle Breite für saubere Zentrierung */
+  .nav-bar a, 
+  .dropdown {
+    width: 100%;
+    margin: 5px 0;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* 5. Dropdown-Buttons zentrieren */
+  .dropbtn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    cursor: default; /* Mobil kein Klicken nötig */
+    opacity: 0.8;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* Hover-Verhalten im CSS für Mobilgeräte deaktivieren */
+  .dropdown:hover .dropdown-content {
+    display: flex;
+  }
+
+  .dropdown-content a:hover {
+    background: none;
+    color: #00ffcc;
+  }
+
+  /* 6. Die ausgeklappten Listen stylen */
+  .dropdown-content {
+    display: flex;      
+    flex-direction: column;
+    position: relative; /* Schiebt das Layout nach unten, statt zu überlagern */
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05); /* Schöner, dezenter Kontrast */
+    border: none;
+    border-radius: 6px;
+    margin-top: 2px;
+    box-shadow: none;
+    box-sizing: border-box;
+  }
+
+  /* 7. Die Links in den Untermenüs perfekt zentrieren */
+  .dropdown-content a {
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 0.95em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .dropdown-content a:last-child {
+    border-bottom: none;
+  }
 }

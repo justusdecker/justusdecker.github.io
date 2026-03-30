@@ -5,20 +5,22 @@ import '../common/listed-items-blog-style.css';
 import './home.css';
 import '../common/msgbox.css';
 import '../common/loading.css';
+import { FileLoader } from '../common/fileLoader';
+import { GitHubRawBaseUrl } from '../common/constants';
 
 const skills = [
-  { startdate: "01.01.2013", content: "🖥️" },
-  { startdate: "01.05.2021", content: "⌨️" },
-  { startdate: "01.05.2016", content: "✒️​" },
-  { startdate: "01.08.2021", content: "🎵​" },
-  { startdate: "01.08.2012", content: "🔨​" },
-  { startdate: "01.08.2012", content: "🪵" },
-  { startdate: "01.08.2018", content: "🪨" },
-  { startdate: "01.08.2012", content: "🗜️" }
+  { startdate: "01.01.2013", icon: "🖥️", id: "it.txt" },
+  { startdate: "01.05.2021", icon: "⌨️", id: "code.txt" },
+  { startdate: "01.05.2016", icon: "✒️​", id: "art.txt" },
+  { startdate: "01.08.2021", icon: "🎵​", id: "music.txt" },
+  { startdate: "01.08.2012", icon: "🔨​", id: "craft.txt" },
+  { startdate: "01.08.2012", icon: "🪵", id: "wood.txt" },
+  { startdate: "01.08.2018", icon: "🪨", id: "....txt" },
+  { startdate: "01.08.2012", icon: "🗜️", id: "metal.txt" }
 ];
 
 const getExperience = (contentName: string) => {
-  const skill = skills.find(s => s.content === contentName);
+  const skill = skills.find(s => s.icon === contentName);
   if (!skill) return "";
 
   const [day, month, year] = skill.startdate.split('.').map(Number);
@@ -32,7 +34,7 @@ const getExperience = (contentName: string) => {
     years--;
   }
 
-  return years > 0 ? `${years}` : `${years}`;
+  return years > 0 ? `${years} Jahre` : `${years} Jahr`;
 };
 
 // 1. NEU: Die ausgelagerte Komponente für die Home-Seite
@@ -66,17 +68,17 @@ const HomeComponent = () => {
       </div>
         <div className='experience'>
           {skills.map((lang, index) => (
-            <span className='msgb-default msgb-inf' key={index}>
+            <span className={`msgb-default msgb-inf ${(index % 2) ? 'left-rot' : 'right-rot'}`} key={index}>
+
+              <h1 id='new-font-size'>{lang.icon}</h1>
               
-              <h1 id='new-font-size'>{lang.content}</h1>
               <div>
-                <h1>{getExperience(lang.content)}</h1>
-                <p>Ich bin jemand der gerne anpackt wo es gerade Bedarf gibt. 
-        Handwerk, Programmierung und Künstlerei sind meine Leidenschaft.
-        Mit über zehn Jahren IT Erfahrung, 5 Jahre Python und andere Programmiersprachen sowie meiner Weiterbildung bei der Masterschool, bin ich technisch </p>
+                <h1>{getExperience(lang.icon)}</h1>
+                <FileLoader url={`${GitHubRawBaseUrl}webpage-data/main/home/${lang.id}`}/>
               </div>
             </span>
           ))}
+
       </div>
         
 

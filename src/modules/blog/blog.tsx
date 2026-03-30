@@ -96,7 +96,7 @@ export default function BlogIndex() {
             <h2>{post.title}</h2>
             <p>{post.date}</p>
           </Link>
-
+          <span className='splitline-horizontal' />
           <div className="tag-container">
             {post.tags?.map((tag: string) => (
               <span 

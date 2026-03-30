@@ -24,3 +24,11 @@
     max-width: calc(100% - 0.25rem);
     max-height: 350px;
 }
+
+.splitline-horizontal {
+    display: block;
+    margin: 0.5rem;
+    height: 0.25rem;
+    width: auto;
+    background-color: rgba(0, 255, 204, 0.1);
+}
