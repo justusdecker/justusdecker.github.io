@@ -2,3 +2,23 @@
     --content-width-max: 700px;
     --default-transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.8); /* Schwarz mit 80% Deckkraft */
+    backdrop-filter: blur(5px); /* Optional: Macht den Hintergrund schick unscharf! */
+}
+
+dialog {
+    border: 0 !important;          /* Entfernt den Rahmen komplett */
+    outline: none !important;       /* Entfernt den Fokus-Ring bei Klick */
+    padding: 0 !important;         /* Verhindert weiße Ränder ums Bild */
+    background: transparent !important; /* Macht den Hintergrund des Dialogs unsichtbar */
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+dialog img {
+    max-width: 90vw;
+    max-height: 90vh;
+    display: block;
+}
