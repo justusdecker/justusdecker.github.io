@@ -1,10 +1,7 @@
 import { useState, useEffect } from 'react';
-import ReactMarkdown from "react-markdown";
 import { GitHubRawBaseUrl } from './constants';
-import remarkGfm from 'remark-gfm';
-import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
+import MarkdownRedefined from './markdownRedefined';
 export function MarkdownLoader({ url }: {url: string}) {
   const [isLoading, setIsLoading] = useState(true);
   const [content, setContent] = useState<string>('');
@@ -34,9 +31,7 @@ export function MarkdownLoader({ url }: {url: string}) {
     );
   }
   return (
-      <ReactMarkdown
-      remarkPlugins={[remarkGfm, remarkMath]} 
-      rehypePlugins={[rehypeKatex]}>{content}</ReactMarkdown>
+      <MarkdownRedefined>{content}</MarkdownRedefined>
   );
 }
 

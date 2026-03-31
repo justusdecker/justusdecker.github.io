@@ -1,0 +1,27 @@
+/* Tabellen im gesamten Markdown */
+.markdown-body table {
+  border-collapse: collapse;
+  border-left: 4px #252525 solid;
+}
+.markdown-body th {
+  background-color: #000000;
+  font-weight: 600;
+}
+.markdown-body tbody tr:nth-child(even) {
+  background-color: #252525;
+}
+.markdown-body tbody tr:nth-child(odd) {
+  background-color: #121212;
+}
+
+.markdown-body td, .markdown-body th {
+  border: 1px solid #484848; /* Hellgrauer, deutlicher Rahmen */
+  padding: 8px 12px;
+}
+
+
+.markdown-body img {
+    width: 100% ;
+    height: 100vh; /* Jetzt zieht das Bild sauber mit! */
+
+}

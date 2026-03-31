@@ -1,0 +1,21 @@
+.markdown-alert { 
+    background: #727272; 
+    padding: 0.5rem 1rem; 
+    margin-bottom: 16px; 
+    color: inherit; 
+    border-left: .25em solid #575757; }
+.markdown-alert p {
+    color: #fff; 
+}
+.markdown-alert-note { border-left-color: #0969da; background: #f0f7ff; }
+.markdown-alert-note .alert-title { color: #0969da; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.markdown-alert-caution { border-left-color: #da3a09; background: #f0f7ff; }
+.markdown-alert-caution .alert-title { color: #da3a09; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.markdown-alert-important { border-left-color: #8250df; background: #fbefff; }
+.markdown-alert-important .alert-title { color: #8250df; font-weight: 600; }
+.markdown-alert-warning { border-left-color: #9a6700; background: #fff8c5; }
+.markdown-alert-warning .alert-title { color: #9a6700; font-weight: 600; }
+.markdown-alert-warning p { color:#9a6700; }
+.markdown-alert-note p { color:#0969da; }
+.markdown-alert-important p { color:#8250df; }
+.markdown-alert-caution p { color:#da3a09; }
