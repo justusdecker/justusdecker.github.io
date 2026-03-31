@@ -24,10 +24,6 @@
     margin: 3rem auto;
 }
 
-.portfolio-detail img {
-    max-width: 100%;
-    max-height: 350px;
-}
 
 .portfolio-detail pre {
     background: var(--code-bg);

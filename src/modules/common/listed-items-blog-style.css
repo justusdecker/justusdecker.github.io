@@ -20,11 +20,6 @@
   border-left: 3px solid #ffffff;
 }
 
-.tile-entry img {
-    max-width: calc(100% - 0.25rem);
-    max-height: 350px;
-}
-
 .splitline-horizontal {
     display: block;
     margin: 0.5rem;
