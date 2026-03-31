@@ -2,11 +2,11 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { type BlogPostMetadata } from './blog.types';
-import ReactMarkdown from 'react-markdown';
 import '../common/listed-items-blog-style.css'
 import '../common/neo-btn.css'
 import './blog.css'
 import { getBlogIndexUrl, getBlogPostUrl } from './blog.constants';
+import MarkdownRedefined from '../common/markdownRedefined';
 const POSTS_PER_PAGE = 5;
 
 export function BlogPostDetail() {
@@ -30,7 +30,7 @@ export function BlogPostDetail() {
 
   return (
     <div className="tile-entry">
-      <ReactMarkdown>{content}</ReactMarkdown>
+      <MarkdownRedefined>{content}</MarkdownRedefined>
     </div>
   );
 }

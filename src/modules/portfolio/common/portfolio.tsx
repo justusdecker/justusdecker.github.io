@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import type { PortfolioMetadata } from "./portfolio.types";
-import ReactMarkdown from "react-markdown";
 
 import '../../common/listed-items-blog-style.css'
+import MarkdownRedefined from "../../common/markdownRedefined";
 
 function PortfolioDetail(attr: { category: string, id: string }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,7 +34,7 @@ function PortfolioDetail(attr: { category: string, id: string }) {
     );
   }
   return (
-      <div className="portfolio-detail "><ReactMarkdown>{content}</ReactMarkdown></div>
+      <div className="portfolio-detail "><MarkdownRedefined>{content}</MarkdownRedefined></div>
   );
 }
 const POSTS_PER_PAGE = 10;
