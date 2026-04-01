@@ -83,7 +83,7 @@ export default function MarkdownRedefined({ children }: Props) {
               onClick={() => dialogRef.current?.close()} // Schließt bei Klick auf den Hintergrund
              
             >
-              <img src={props.src} alt={props.alt} style={{ maxWidth: '90vw', maxHeight: '90vh' }} />
+              <img src={props.src} alt={props.alt} />
             </dialog>
           </>
         );
