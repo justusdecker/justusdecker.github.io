@@ -19,6 +19,16 @@
   padding: 8px 12px;
 }
 
+.markdown-body pre:has(code) {
+  background-color: #252525;
+  
+  margin: auto 1rem auto 1rem;
+}
+
+.markdown-body pre:has(code) code {
+  color: greenyellow;
+}
+
 
 .markdown-body img {
     width: auto;
