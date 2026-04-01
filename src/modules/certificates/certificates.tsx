@@ -1,6 +1,6 @@
-import { Link, useParams } from "react-router-dom";
 import '../common/listed-items-blog-style.css'
 import { GitHubRawBaseUrl } from "../common/constants";
+import { useRef } from "react";
 
 const certificates = {
   masterschool: {
@@ -28,41 +28,42 @@ const certificates = {
     ]
   }
 };
+function CertificateImage({src, index, alt}: {src: string, index: number, alt: string}) {
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  return (
+    <>
+      <img 
+        key={index} 
+        src={src} 
+        alt={alt}
+        onClick={() => dialogRef.current?.showModal()}
+      />
+      <dialog 
+        ref={dialogRef} 
+        onClick={() => dialogRef.current?.close()} >
+        <img src={src} />
+      </dialog>
+    </>
+  )
+}
 
-
-function CertificateOverview() {
-  Object.keys(certificates);
+export function CertificateOverview() {
+  
   return (
     <>
     {/* Ein 3 x X Grid */}
     <div className="certificate-grid">
     {Object.entries(certificates).map(([key, cert]) => (
-        <Link to={`/certificates/${key}`} key={key} className="certificate-link">
+        
           <div className={`certificate-card ${cert.color}`}>
             <div className="image-wrapper carousel">
               {cert.pages.map((page, index) => (
-                <img 
-                  key={index} 
-                  src={`${GitHubRawBaseUrl}webpage-data/main/certificates/${page}.jpg`} 
-                />
+                <CertificateImage src={`${GitHubRawBaseUrl}webpage-data/main/certificates/${page}.jpg`} alt={key} index={index} />
               ))}
             </div>
           </div>
-        </Link>
     ))}
     </div>
     </>
   );
 }
-
-function CertificateDetail() {
-  const { id } = useParams<{ id: string }>();
-  return (
-    <>
-    {/* Ein 3 x X Grid */}
-    Details for : {id}
-    </>
-  );
-}
-
-export {CertificateDetail, CertificateOverview};

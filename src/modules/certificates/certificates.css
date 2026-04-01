@@ -28,6 +28,10 @@
   align-content: center;
 }
 
+.certificate-card:hover {
+  cursor: pointer
+}
+
 .grey {
     background: linear-gradient(135deg, 
     #a1a1a1 0%, 

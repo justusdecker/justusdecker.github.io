@@ -4,7 +4,7 @@ import Header from '../common/header';
 
 
 import './certificates.css';
-import { CertificateDetail, CertificateOverview } from './certificates';
+import { CertificateOverview } from './certificates';
 
 export const certificatesRoutes: RouteObject = {
     path: "/certificates",
@@ -16,6 +16,5 @@ export const certificatesRoutes: RouteObject = {
     ),
     children: [
         {index: true, element: <CertificateOverview />},
-        { path: ":id", element: <CertificateDetail /> }
     ]
 };
