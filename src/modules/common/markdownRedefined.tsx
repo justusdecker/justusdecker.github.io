@@ -87,7 +87,20 @@ export default function MarkdownRedefined({ children }: Props) {
             </dialog>
           </>
         );
-      }
+      },
+      pre: ({ children }) =>{
+        return (<>
+        <div className="code-head">
+          <span>Code</span>
+          <div className="code-nav">
+            <span id='minimize'>_</span>
+            <span id='maximize'>⛶</span>
+            <span id='close'>✕</span>
+          </div>
+        </div>
+        <pre>{children}</pre>
+        </>)
+      },
           }}>{children}</ReactMarkdown>
       </div>
     )

@@ -23,10 +23,58 @@
   background-color: #252525;
   
   margin: auto 1rem auto 1rem;
+  overflow-x: auto;
+  white-space: pre;
 }
 
 .markdown-body pre:has(code) code {
   color: greenyellow;
+  display: block; 
+  word-wrap: normal;
+}
+
+.markdown-body .code-head {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem 0 1rem;
+  background-color: #484848;
+  align-items: center;
+}
+.markdown-body .code-head span {
+  text-align: center;
+}
+.markdown-body .code-nav span:hover {
+  background-color: #757575; /* Ein kleiner Hover-Effekt */
+}
+
+.markdown-body #close:hover {
+  background-color: #ff5555;
+}
+
+.markdown-body .code-nav {
+  display: flex;
+  height: 2rem;
+  padding: 0;
+}
+
+.markdown-body .code-nav span {
+  background-color: #656565;
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
+}
+
+.markdown-body #close {
+  background-color: #ff7777;
+  font-size: 1.2rem;
+  font-weight: bold;
+  
+}
+
+.markdown-body #maximize {
+  font-size: 1.2rem;
+  font-weight: bold;
+  
 }
 
 

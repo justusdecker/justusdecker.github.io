@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import MarkdownRedefined from '../../common/markdownRedefined';
-
+import './markdown-writer.css'
 export const LOREM_IPSUM_TEST_DOCUMENT = `# 🖋️ Lorem Ipsum Testdokument
 Dieses Dokument dient dazu, alle Features deines **MD Data Writer** zu testen. Es enthält *kursiven*, **fetten** und ~~durchgestrichenen~~ Text sowie \`Inline-Code\`.
 
