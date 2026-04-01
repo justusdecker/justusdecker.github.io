@@ -39,6 +39,20 @@ main {
 
 * {color: black !important;}
 
+.markdown-body tbody tr, .markdown-body th, .markdown-body td {
+  background-color: #ffffff !important;
+}
+.markdown-body pre:has(code) {
+  background-color: #eeeeee !important;
+  border-left: 4px #252525 solid;
+  padding-left: 4px;
+}
+
+.markdown-body .code-head {
+    display: none;
+}
+
+
 /* 1. Layout-Fesseln lösen */
 html, body {
 height: auto !important;
