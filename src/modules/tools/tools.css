@@ -1,0 +1,41 @@
+.tools-list {
+    width: var(--content-width-max);
+    margin: 1rem auto 1rem auto;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 2rem;
+}
+
+.tools-list h1 {
+    text-align: center;
+}
+.tools-list span {
+    display: flex;
+    min-width: 100%;
+    height: 4rem;
+    padding: 1rem;
+
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background: transparent;
+    border: 1px solid #00ffcc;
+    color: #00ffcc;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    overflow: hidden;
+    flex-wrap: nowrap;
+}
+
+.tools-list span:hover {
+    background: #00ffcc;
+    color: #000000;
+    box-shadow: 0 0 8px #00ffcc;
+    border: 1px solid #00ffcc;
+}
+.tools-list span:active {
+    background: #defff8;
+}

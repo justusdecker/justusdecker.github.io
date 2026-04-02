@@ -61,6 +61,11 @@ const Header: React.FC = () => {
               <NavLink to="/training-electrician/formulars-math">Matheformeln</NavLink>
             </div>
           </div>
+          <NavLink 
+            to="/tools"
+          >
+            Tools
+          </NavLink>
         </nav>
       </div>
     </header>
