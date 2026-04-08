@@ -5,7 +5,7 @@ import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import './markdown-alerts.css';
 import './markdown-body.css'
-import { useRef } from "react";
+import React, { useRef, type ReactNode, type ReactElement } from 'react';
 
 interface Props {
   children: string;
@@ -19,12 +19,28 @@ const extractText = (node: any): string => {
     return '';
 };
 
-const cleanUp = (node: any, type: string) => {
-    if (typeof node[1].props.children === 'string') {
-        return node[1].props.children.replace(`[!${type}]`, '').trimStart();
-        }
-    console.log('Something went wrong in the markdown cleanUp:', node);
-    return 'Something went wrong in the markdown cleanUp!'
+const cleanUp = (children: ReactNode, type: string): ReactNode => {
+  const target = `[!${type}]`;
+
+  return React.Children.map(children, (child) => {
+    // 1. String-Check
+    if (typeof child === 'string') {
+      return child.includes(target) ? child.replace(target, '').trimStart() : child;
+    }
+
+    // 2. React-Element-Check mit Type-Assertion
+    if (React.isValidElement(child)) {
+      const element = child as ReactElement<{ children?: ReactNode }>;
+
+      if (element.props.children) {
+        return React.cloneElement(element, {
+          children: cleanUp(element.props.children, type),
+        });
+      }
+    }
+
+    return child;
+  });
 };
 
 export default function MarkdownRedefined({ children }: Props) {
