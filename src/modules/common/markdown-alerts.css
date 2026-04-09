@@ -1,21 +1,43 @@
+#root {
+    --alert-default-background: #727272;
+    --alert-default-color: #ffffff;
+
+    --alert-background-overwrite: #f0f7ff;
+
+    --note-color: #0969da;
+    --caution-color: #da3a09;
+    --warning-color: #9a6700;
+    --important-color: #8250df;
+
+}
+
 .markdown-alert { 
-    background: #727272; 
+    background: var(--alert-default-background); 
     padding: 0.5rem 1rem; 
     margin-bottom: 16px; 
     color: inherit; 
-    border-left: .25em solid #575757; }
-.markdown-alert p {
-    color: #fff; 
-}
-.markdown-alert-note { border-left-color: #0969da; background: #f0f7ff; }
-.markdown-alert-note .alert-title { color: #0969da; font-weight: 600; display: flex; align-items: center; gap: 8px; }
-.markdown-alert-caution { border-left-color: #da3a09; background: #f0f7ff; }
-.markdown-alert-caution .alert-title { color: #da3a09; font-weight: 600; display: flex; align-items: center; gap: 8px; }
-.markdown-alert-important { border-left-color: #8250df; background: #fbefff; }
-.markdown-alert-important .alert-title { color: #8250df; font-weight: 600; }
-.markdown-alert-warning { border-left-color: #9a6700; background: #fff8c5; }
-.markdown-alert-warning .alert-title { color: #9a6700; font-weight: 600; }
-.markdown-alert-warning p { color:#9a6700; }
-.markdown-alert-note p { color:#0969da; }
-.markdown-alert-important p { color:#8250df; }
-.markdown-alert-caution p { color:#da3a09; }
+    border-left: .25em solid var(--alert-default-color); }
+.markdown-alert p { color: var(--alert-default-color); }
+
+.markdown-alert p * { color: var(--alert-default-color); }
+
+.markdown-alert-note { border-left-color: var(--note-color); background: var(--alert-background-overwrite); }
+.markdown-alert-note .alert-title { color: var(--note-color); font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.markdown-alert-note p * { color: var(--note-color); }
+
+.markdown-alert-caution { border-left-color: var(--caution-color); background: var(--alert-background-overwrite); }
+.markdown-alert-caution .alert-title { color: var(--caution-color); font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.markdown-alert-caution p * { color: var(--caution-color); }
+
+.markdown-alert-important { border-left-color: var(--important-color); background: var(--alert-background-overwrite); }
+.markdown-alert-important .alert-title { color: var(--important-color); font-weight: 600; }
+.markdown-alert-important p * { color: var(--important-color); }
+
+.markdown-alert-warning { border-left-color: var(--warning-color); background: var(--alert-background-overwrite); }
+.markdown-alert-warning .alert-title { color: var(--warning-color); font-weight: 600; }
+.markdown-alert-warning p * { color: var(--caution-color); }
+
+.markdown-alert-warning p { color:var(--warning-color); }
+.markdown-alert-note p { color:var(--note-color); }
+.markdown-alert-important p { color:var(--important-color); }
+.markdown-alert-caution p { color:var(--caution-color); }
