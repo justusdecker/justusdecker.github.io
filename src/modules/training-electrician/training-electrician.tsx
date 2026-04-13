@@ -27,6 +27,16 @@ export function TrainingElecticianMain() {
 
 }
 
+export function TimeTable() {
+    const shortUrl = "Elekro-Ausbildung-Lernstoff/refs/heads/main/timetable.md"
+    return (
+        <div className='tile-entry'>
+            <MarkdownLoader url = {`${GitHubRawBaseUrl}${shortUrl}`}/>
+        </div>
+        
+    )
+}
+
 export function TileEntryBuilder({shortUrl}: {shortUrl: string}) {
     return (
         <div className='tile-entry'>

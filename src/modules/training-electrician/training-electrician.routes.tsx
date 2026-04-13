@@ -2,7 +2,7 @@
 import { type RouteObject, Outlet } from 'react-router-dom';
 import Header from '../common/header';
 import { Summary, SummaryA4Page } from './common/summary';
-import { TrainingElecticianMain, TileEntryBuilder } from './training-electrician';
+import { TrainingElecticianMain, TileEntryBuilder, TimeTable } from './training-electrician';
 
 export const trainingElectricianRoutes: RouteObject = {
     path: "/training-electrician",
@@ -39,6 +39,7 @@ export const trainingElectricianRoutes: RouteObject = {
               { index: true, element: <Summary shortUrl='Elekro-Ausbildung-Lernstoff/main/math/formulars/' title='Matheformeln' subdir='formulars-math'/> },
               { path: ":id", element: <SummaryA4Page category='math/formulars' /> }
           ] },
+        { path: "timetable", element: <TimeTable/> },
         { path: "laws", element: <TileEntryBuilder shortUrl='Elekro-Ausbildung-Lernstoff/main/laws.md' /> },
         { path: "glossar", element: <TileEntryBuilder shortUrl='Elekro-Ausbildung-Lernstoff/main/glossar.md'/> }
     ]
