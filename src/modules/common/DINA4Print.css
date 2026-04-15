@@ -1,0 +1,26 @@
+@media print {
+  body {
+    background: none;
+    margin: 0;
+  }
+  #head {
+    display:none;
+  }
+  
+  .a4-page-wrapper {
+    padding: 0;
+    background: none;
+    display: block;
+  }
+  
+  .a4-page {
+    box-shadow: none; /* Kein Schatten beim Drucken */
+    margin: 2rem;
+    width: calc(210mm - 4rem);
+    /* Verhindert Ränder-Probleme im Browser-Druckdialog */
+    padding: 0; 
+  }
+  .a4-page .katex {background-color:white;}
+  .a4-page table strong {background-color: white;}
+  .a4-page table em {background-color:white;}
+}

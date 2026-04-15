@@ -21,16 +21,22 @@
   font-size: 12pt;
   line-height: 1.5;
   text-align: justify;
-  hyphens: auto; /* Automatische Silbentrennung */
   word-wrap: break-word;
 }
 
 /* 3. Schutz vor schlechten Umbrüchen */
-.a4-page * {color: black;}
+.a4-page * {color: black; background-color: white;}
 .a4-page h1 {color: black; font-size: x-large;}
 .a4-page h2 {color: rgb(39, 39, 39); font-size: large;}
 .a4-page h3 {color: rgb(63, 63, 63); font-size: medium;}
 
+.a4-page th {background-color: white;}
+.a4-page th, .a4-page td {border: none;}
+.a4-page th, .a4-page td {background-color: #cccccc;}
+.a4-page .katex * {color: black; background-color: transparent;}
+.a4-page .katex {background-color:rgb(108, 253, 193); border-radius: 10px; }
+.a4-page table strong {background-color:rgb(253, 108, 108); border-radius: 10px; }
+.a4-page table em {background-color:rgb(149, 253, 108); border-radius: 10px; }
 .a4-page h1, 
 .a4-page h2, 
 .a4-page h3 {
@@ -45,27 +51,3 @@
   break-after: page;
 }
 
-/* 5. Druck-Optimierung: "What you see is what you print" */
-@media print {
-  body {
-    background: none;
-    margin: 0;
-  }
-  #head {
-    display:none;
-  }
-  
-  .a4-page-wrapper {
-    padding: 0;
-    background: none;
-    display: block;
-  }
-  
-  .a4-page {
-    box-shadow: none; /* Kein Schatten beim Drucken */
-    margin: 2rem;
-    width: calc(210mm - 4rem);
-    /* Verhindert Ränder-Probleme im Browser-Druckdialog */
-    padding: 0; 
-  }
-}

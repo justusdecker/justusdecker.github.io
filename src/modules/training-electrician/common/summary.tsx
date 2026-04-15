@@ -1,9 +1,9 @@
 import '../../common/DinA4.css';
+import '../../common/DINA4Print.css';
 import { MarkdownGetJsonIndex, MarkdownLoader } from '../../common/markdownLoader';
 import { useParams, Link } from 'react-router-dom';
 import { useState } from 'react';
 
-import '../../common/DinA4.css'
 import { GitHubRawBaseUrl } from '../../common/constants';
 
 export function SummaryA4Page({category}:  {category: string}) {
