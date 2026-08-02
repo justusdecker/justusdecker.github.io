@@ -7,6 +7,9 @@ import '../common/msgbox.css';
 import '../common/loading.css';
 import { FileLoader } from '../common/fileLoader';
 import { GitHubRawBaseUrl } from '../common/constants';
+import { MsgBox } from '../common/msgbox';
+import PortfolioIndex from '../portfolio/common/portfolio';
+import { Canvas } from '../common/canvas';
 
 const skills = [
   { startdate: "01.01.2013", icon: "🖥️", id: "it.txt" },
@@ -44,28 +47,31 @@ const HomeComponent = () => {
   return (
     <>
       <Header />
-      <div className="msgb-default msgb-warn">
-        Aktuell wird hier noch umgebaut, daher sind einige Seiten möglicherweise unvollständig oder nicht erreichbar! <br />
-      </div>
-      <div className="msgb-default msgb-inf">
-        <h1>Moin,</h1>
+      <MsgBox type='build' text = 'Aktuell wird hier noch umgebaut, daher sind einige Seiten möglicherweise unvollständig oder nicht erreichbar! '></MsgBox>
+      <Canvas>
+        <>
+          <h1>Moin,</h1>
         <h2>ich heiße Justus</h2>
 
-        <div>
-          <h3>Prorammierer</h3>
-          <h3>Handwerker</h3>
-          <h3>Zeichner</h3>
-          <h3>Musiker</h3>
-          <h3></h3>
-        </div>
-        Ich bin jemand der gerne anpackt wo es gerade Bedarf gibt. 
+        <p>
+          Ich bin jemand der gerne anpackt wo es gerade Bedarf gibt. 
         Handwerk, Programmierung und Künstlerei sind meine Leidenschaft.
         Mit über zehn Jahren IT Erfahrung, 5 Jahre Python und andere Programmiersprachen sowie meiner Weiterbildung bei der Masterschool, bin ich technisch gerüstet für jede Aufgabe im Softwarebereich.
         Seit dem ich denken kann bastle, zerlege und schraube an allem möglichen herum.
         Schlussendlich noch meine "künstlerische Ader", die ich gerne für Karikaturen und Beispielszeichnungen verwende.
       
         Zusammengefasst könnte man mich als technischer Hausmeister bezeichnen.
-      </div>
+        </p>
+        <img 
+          id="profile" 
+          src="https://avatars.githubusercontent.com/u/200506279?v=4" 
+          alt="Justus Decker Profilbild" 
+        />
+        </>
+      </Canvas>
+
+      <Canvas>
+
         <div className='experience'>
           {skills.map((lang, index) => (
             <span className={`msgb-default msgb-inf ${(index % 2) ? 'left-rot' : 'right-rot'}`} key={index}>
@@ -80,30 +86,17 @@ const HomeComponent = () => {
           ))}
 
       </div>
+      </Canvas>
+
         
+        
+      <Canvas>
+        <PortfolioIndex category='art'></PortfolioIndex>
+        <PortfolioIndex category='craft'></PortfolioIndex>
+        <PortfolioIndex category='dev'></PortfolioIndex>
+      </Canvas>
 
       
-
-      <div className="tile-list">
-        <Link to={'/portfolio/dev'}>
-          <div className="tile-entry">
-            <strong>💻 Programmierung</strong>
-            <p>Fullstack-Entwicklung mit Fokus auf React, Python und TDD.</p>
-          </div>
-        </Link>
-        <Link to={'/portfolio/craft'}>
-          <div className="tile-entry">
-            <strong>🔨 Handwerk</strong>
-            <p>Holzbau, Metallverarbeitung und Automation im Niedervoltbereich.</p>
-          </div>
-        </Link>
-        <Link to={'/portfolio/art'}>
-          <div className="tile-entry">
-            <strong>🎨 Kunst</strong>
-            <p>Digital Art, Zeichnen & Musik – wenn die Technik auf Ästhetik trifft.</p>
-          </div>
-        </Link>
-      </div>
     </>
   );
 };
