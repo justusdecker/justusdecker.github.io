@@ -5,6 +5,9 @@
     padding: 1rem;
     border: 1px solid #ff000050; 
     transition: var(--default-transition);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .msgb-inf { border-color: #00f7ff25; background: #00f7ff25; }
