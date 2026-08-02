@@ -3,11 +3,9 @@ import './modules/common/globals.css';
 import './App.css';
 
 import { homeRoutes } from './modules/home/home.routes'
-import { blogRoutes } from './modules/blog/blog.routes'
 import { contactRoutes } from './modules/contact/contact.routes'
 import { portfolioRoutes } from './modules/portfolio/portfolio.routes'
 import ErrorPage from './modules/error/error.routes'
-import { trainingElectricianRoutes } from './modules/training-electrician/training-electrician.routes'
 import { datenschutzRoutes } from './modules/datenschutz/datenschutz.routes'
 import { cvRoutes } from './modules/cv/cv.routes'
 import { certificatesRoutes } from './modules/certificates/certificates.routes'
@@ -21,10 +19,8 @@ const router = createHashRouter([
     errorElement: <ErrorPage/>
   },
   homeRoutes,
-  blogRoutes,
   contactRoutes,
   portfolioRoutes,
-  trainingElectricianRoutes,
   datenschutzRoutes,
   cvRoutes,
   certificatesRoutes,
