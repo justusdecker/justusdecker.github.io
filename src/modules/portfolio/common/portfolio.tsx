@@ -37,7 +37,7 @@ function PortfolioDetail(attr: { category: string, id: string }) {
       <div className="portfolio-detail "><MarkdownRedefined>{content}</MarkdownRedefined></div>
   );
 }
-const POSTS_PER_PAGE = 10;
+const POSTS_PER_PAGE = 1;
 
 export default function PortfolioIndex({ category }: { category: string }) {
   const [posts, setPosts] = useState<PortfolioMetadata[]>([]);
