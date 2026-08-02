@@ -1,4 +1,4 @@
-import { Link, type RouteObject } from 'react-router-dom';
+import { type RouteObject } from 'react-router-dom';
 
 import Header from '../common/header';
 import '../common/listed-items-blog-style.css';
