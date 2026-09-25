@@ -1,11 +1,10 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
-import './header.css'
-import { Canvas } from "./canvas";
+import './header.css';
 const Header: React.FC = () => {
   return (
     <header id="head">
-      <div className="head-bg"></div>
+      
       <div id="head-text">
         <h1>Justus Decker</h1>
         <h2>Handwerker & Techniker</h2>
