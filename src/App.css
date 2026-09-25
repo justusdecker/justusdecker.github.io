@@ -4,8 +4,8 @@
 }
 
 :root {
-    --background-color: #242424;
-    --accent-color: rgb(195, 0, 42);
+    --background-color: #a0a0a0;
+    --accent-color: black;
     --title-color: white;
     --text-color: #d0d0d0;    
     --shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -24,7 +24,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-color: var(--background-color); 
+    background-color: transparent; 
     background-attachment: fixed;
     display: flex;
     flex-direction: column;

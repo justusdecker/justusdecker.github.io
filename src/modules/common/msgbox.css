@@ -9,14 +9,20 @@
     justify-content: center;
     align-items: center;
 }
+.msgb-default h1 {
+    font-size: 7em;
+}
+.msgb-default p {
+    font-size: 2em;
+}
 
 .msgb-inf { border-color: #00f7ff25; background: #00f7ff25; }
 
 .msgb-inf:hover { border-color: #00f7ff50; background: #00f7ff50; }
 
-.msgb-warn { border-color: #ffc40025; background: #ffc40025; }
+.msgb-build { border-color: #ffc40025; background: #ffc40025; }
 
-.msgb-warn:hover { border-color: #ffc40050; background: #ffc40050; }
+.msgb-build:hover { border-color: #ffc40050; background: #ffc40050; }
 
 .msgb-err { border-color: #ff000025; background: #ff000025; }
 
