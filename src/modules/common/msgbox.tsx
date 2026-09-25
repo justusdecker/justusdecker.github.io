@@ -1,12 +1,13 @@
 
-export function MsgBox({type, text}: {type: string, text: string}) {
+export function MsgBox({type, children}: {type: string, children: React.ReactNode}) {
     const icons = ["⨻", "🤷‍♂️", "👷‍♂️"];
     const titleIcons = ["err", "inf", "build"];
     const iid = titleIcons.indexOf(type);
     const selectedIcon = icons[iid];
+    const classNameMsgb = `msgb-default msgb-${titleIcons[iid]}`
     return (
-        <div className="msgb-default msgb-warn">
-            <h1>{selectedIcon}</h1>{text} <br />
+        <div className={classNameMsgb}>
+            <h1>{selectedIcon}</h1>{children} <br />
         </div>
     )
 }
