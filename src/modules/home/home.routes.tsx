@@ -9,7 +9,9 @@ import { FileLoader } from '../common/fileLoader';
 import { GitHubRawBaseUrl } from '../common/constants';
 import { MsgBox } from '../common/msgbox';
 import PortfolioIndex from '../portfolio/common/portfolio';
-import { Canvas } from '../common/canvas';
+import { Canvas } from '../common/code/canvas';
+import { CertificateOverview } from '../certificates/certificates';
+import { BackgroundShader } from '../components/BackgroundShader';
 
 const skills = [
   { startdate: "01.01.2013", icon: "🖥️", id: "it.txt" },
@@ -47,7 +49,12 @@ const HomeComponent = () => {
   return (
     <>
       <Header />
-      <MsgBox type='build' text = 'Aktuell wird hier noch umgebaut, daher sind einige Seiten möglicherweise unvollständig oder nicht erreichbar! '></MsgBox>
+
+      <BackgroundShader></BackgroundShader>
+
+      <MsgBox type='build'>
+        <p>Aktuell wird hier noch umgebaut, daher sind einige Seiten möglicherweise unvollständig oder nicht erreichbar! </p>
+      </MsgBox>
       <Canvas>
         <>
           <h1>Moin,</h1>
@@ -67,14 +74,10 @@ const HomeComponent = () => {
           src="https://avatars.githubusercontent.com/u/200506279?v=4" 
           alt="Justus Decker Profilbild" 
         />
-        </>
-      </Canvas>
-
-      <Canvas>
 
         <div className='experience'>
           {skills.map((lang, index) => (
-            <span className={`msgb-default msgb-inf ${(index % 2) ? 'left-rot' : 'right-rot'}`} key={index}>
+            <span className={`${(index % 2) ? 'left-rot' : 'right-rot'}`} key={index}>
 
               <h1 id='new-font-size'>{lang.icon}</h1>
               
@@ -86,16 +89,20 @@ const HomeComponent = () => {
           ))}
 
       </div>
-      </Canvas>
 
-        
+        </>
+      </Canvas>        
         
       <Canvas>
         <PortfolioIndex category='art'></PortfolioIndex>
         <PortfolioIndex category='craft'></PortfolioIndex>
         <PortfolioIndex category='dev'></PortfolioIndex>
       </Canvas>
-
+      
+      <Canvas>
+        
+        <CertificateOverview />
+      </Canvas>
       
     </>
   );
