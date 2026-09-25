@@ -1,5 +1,5 @@
 // src/modules/components/BackgroundShader.tsx
-import { useRef, type HTMLAttributes } from 'react';
+import { useRef, type CSSProperties } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 
@@ -11,7 +11,7 @@ interface ShaderPlaneProps {
 interface ShaderProps {
   vertexShader: string;
   fragmentShader: string;
-  styles: HTMLAttributes<HTMLDivElement>;
+  styles: CSSProperties;
 }
 
 function ShaderPlane({vertexShader, fragmentShader} : ShaderPlaneProps) {
