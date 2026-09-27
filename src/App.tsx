@@ -1,7 +1,7 @@
 import { createHashRouter, RouterProvider, Navigate } from 'react-router-dom'
 import './modules/common/globals.css';
 import './App.css';
-
+import './modules/common/uie.css';
 import { homeRoutes } from './modules/home/home.routes'
 import { contactRoutes } from './modules/contact/contact.routes'
 import { portfolioRoutes } from './modules/portfolio/portfolio.routes'
