@@ -120,3 +120,15 @@ export default function MarkdownRedefined({ children }: Props) {
       </div>
     )
 }
+
+export function MarkdownCodeViewer({ children }: Props) {
+  return (<MarkdownRedefined>
+    {
+      `
+\`\`\`
+${children}
+\`\`\`
+      `
+    }
+  </MarkdownRedefined>)
+}
