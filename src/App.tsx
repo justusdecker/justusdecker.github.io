@@ -4,7 +4,6 @@ import './App.css';
 import './modules/common/uie.css';
 import { homeRoutes } from './modules/home/home.routes'
 import { contactRoutes } from './modules/contact/contact.routes'
-import { portfolioRoutes } from './modules/portfolio/portfolio.routes'
 import ErrorPage from './modules/error/error.routes'
 import { datenschutzRoutes } from './modules/datenschutz/datenschutz.routes'
 import { cvRoutes } from './modules/cv/cv.routes'
@@ -20,7 +19,6 @@ const router = createHashRouter([
   },
   homeRoutes,
   contactRoutes,
-  portfolioRoutes,
   datenschutzRoutes,
   cvRoutes,
   certificatesRoutes,
