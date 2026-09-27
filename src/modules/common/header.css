@@ -84,6 +84,11 @@
     position: relative;
     padding-bottom: 1%;
 }
+#head img {
+  width: 128px;
+  height: 128px;
+  padding: 2rem;
+}
 
 #head * {
     text-shadow: var(--shadow);
