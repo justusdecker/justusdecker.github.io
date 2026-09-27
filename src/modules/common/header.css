@@ -73,7 +73,18 @@
 
 #profile {
     height: 10em;
-    padding: 1%;
+    border-radius: 10px;
+}
+
+#profile-about-me {
+  display: flex;
+  gap: 2em;
+}
+
+#profile-about-me p {
+  font-size: larger;
+  font-weight: 700;
+  
 }
 
 #head {
