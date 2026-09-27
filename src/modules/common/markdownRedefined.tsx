@@ -3,8 +3,7 @@ import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
-import './markdown-alerts.css';
-import './markdown-body.css'
+import './markdown.css'
 import React, { useRef, type ReactNode, type ReactElement } from 'react';
 
 interface Props {

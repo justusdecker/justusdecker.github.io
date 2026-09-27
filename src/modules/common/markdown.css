@@ -1,3 +1,16 @@
+#root {
+    --alert-default-background: #727272;
+    --alert-default-color: #ffffff;
+
+    --alert-background-overwrite: #f0f7ff;
+
+    --note-color: #0969da;
+    --caution-color: #da3a09;
+    --warning-color: #9a6700;
+    --important-color: #8250df;
+
+}
+
 /* Tabellen im gesamten Markdown */
 .markdown-body table {
   border-collapse: collapse;
@@ -108,3 +121,34 @@
         box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
     }
 }
+
+.markdown-alert { 
+    background: var(--alert-default-background); 
+    padding: 0.5rem 1rem; 
+    margin-bottom: 16px; 
+    color: inherit; 
+    border-left: .25em solid var(--alert-default-color); }
+.markdown-alert p { color: var(--alert-default-color); }
+
+.markdown-alert p * { color: var(--alert-default-color); }
+
+.markdown-alert-note { border-left-color: var(--note-color); background: var(--alert-background-overwrite); }
+.markdown-alert-note .alert-title { color: var(--note-color); font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.markdown-alert-note p * { color: var(--note-color); }
+
+.markdown-alert-caution { border-left-color: var(--caution-color); background: var(--alert-background-overwrite); }
+.markdown-alert-caution .alert-title { color: var(--caution-color); font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.markdown-alert-caution p * { color: var(--caution-color); }
+
+.markdown-alert-important { border-left-color: var(--important-color); background: var(--alert-background-overwrite); }
+.markdown-alert-important .alert-title { color: var(--important-color); font-weight: 600; }
+.markdown-alert-important p * { color: var(--important-color); }
+
+.markdown-alert-warning { border-left-color: var(--warning-color); background: var(--alert-background-overwrite); }
+.markdown-alert-warning .alert-title { color: var(--warning-color); font-weight: 600; }
+.markdown-alert-warning p * { color: var(--caution-color); }
+
+.markdown-alert-warning p { color:var(--warning-color); }
+.markdown-alert-note p { color:var(--note-color); }
+.markdown-alert-important p { color:var(--important-color); }
+.markdown-alert-caution p { color:var(--caution-color); }
