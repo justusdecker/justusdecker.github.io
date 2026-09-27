@@ -14,6 +14,7 @@ import { BackgroundShader } from '../components/BackgroundShader';
 import { Toolkit } from '../tools/tools';
 
 import { SkillsCarousel } from './skills';
+import SocialLinks from '../common/code/SocialLinks';
 
 
 
@@ -49,9 +50,7 @@ const HomeComponent = () => {
       
         
       <Canvas>
-        <PortfolioIndex category='art'></PortfolioIndex>
-        <PortfolioIndex category='craft'></PortfolioIndex>
-        <PortfolioIndex category='dev'></PortfolioIndex>
+        <PortfolioIndex></PortfolioIndex>
       </Canvas>
       
       <Canvas>
@@ -59,6 +58,7 @@ const HomeComponent = () => {
         <CertificateOverview />
       </Canvas>
       <Toolkit/>
+      <SocialLinks></SocialLinks>
     </>
   );
 };
