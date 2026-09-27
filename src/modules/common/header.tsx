@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from 'react-router-dom';
 import './header.css';
 import { GitHubAvatarV4 } from "./constants";
 const Header: React.FC = () => {
@@ -9,31 +8,6 @@ const Header: React.FC = () => {
       <div id="head-text">
         <h1>Justus Decker</h1>
         <h2>Handwerker & Techniker</h2>
-
-        <nav className="nav-bar">
-          <NavLink 
-            to="/" 
-            className={({ isActive }) => (isActive ? 'active' : '')}
-          >
-            Start
-          </NavLink>
-          
-
-          
-          <div className="dropdown">
-            <span className="dropbtn">Über ▾</span>
-            <div className="dropdown-content">
-              <NavLink to="/contact">Kontakt</NavLink>
-              <NavLink to="/cv">CV</NavLink>
-              <NavLink to="/certificates">Zertifikate</NavLink>
-            </div>
-          </div>
-          <NavLink 
-            to="/tools"
-          >
-            Tools
-          </NavLink>
-        </nav>
       </div>
     </header>
   );
