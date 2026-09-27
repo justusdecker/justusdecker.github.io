@@ -74,6 +74,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  scrollbar-width: thin;
+  /* (Firefox unterstützt leider kein transparentes Weiß direkt im Track, 
+     aber der Daumen passt sich an) */
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
 }
 
 .carousel-experience-text {
@@ -96,22 +100,6 @@
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Bedienknöpfe */
-.carousel-btn {
-  padding: 8px 16px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  border: none;
-  font-size: 0.875rem;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.carousel-btn:hover {
-  background: rgba(255, 255, 255, 0.25);
-}
-
 /* Indikatoren (Punkte) */
 .carousel-dots {
   display: flex;
@@ -131,4 +119,45 @@
   background: #3b82f6;
   width: 20px;
   border-radius: 4px;
+}
+
+.no-carousel-overflow {
+    overflow-y: auto;
+    max-height: 35em;
+    height: 35em;
+    box-sizing: border-box;
+}
+
+.no-carousel-overflow-low {
+    overflow-y: auto;
+    max-height: 15em;
+    height: 15em;
+    box-sizing: border-box;
+}
+
+/* --- Webkit-Browser (Chrome, Edge, Safari) --- */
+.carousel-text-box::-webkit-scrollbar,
+.no-carousel-overflow::-webkit-scrollbar {
+  width: 8px; /* Etwas breiter, damit die Border gut zur Geltung kommt */
+}
+
+.carousel-text-box::-webkit-scrollbar-track,
+.no-carousel-overflow::-webkit-scrollbar-track {
+  background: transparent; /* Track bleibt komplett transparent */
+}
+
+.carousel-text-box::-webkit-scrollbar-thumb,
+.no-carousel-overflow::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.25); /* Transparentes Weiß */
+  border-radius: 10px; /* Abgerundete Ecken */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Ganz leichte, halbdurchsichtige Border */
+  background-clip: padding-box; /* Verhindert, dass der Hintergrund unter der Border durchscheint */
+  transition: background-color 0.2s ease;
+}
+
+/* Daumen wird beim Hover etwas deutlicher (weißlicher) */
+.carousel-text-box::-webkit-scrollbar-thumb:hover,
+.no-carousel-overflow::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }

@@ -94,7 +94,7 @@ export const SkillsCarousel: React.FC = () => {
               <h2 className="carousel-experience-text">
                 {getExperience(currentLang.icon)}
               </h2>
-              <div className="carousel-fileloader-wrapper">
+              <div className="carousel-fileloader-wrapper no-carousel-overflow-low">
                 <FileLoader url={`${GitHubRawBaseUrl}webpage-data/main/home/${currentLang.id}`}/>
               </div>
             </div>
@@ -105,7 +105,7 @@ export const SkillsCarousel: React.FC = () => {
 
       {/* Bedienknöpfe (Vor & Zurück) + Indikatoren */}
       <div className="carousel-controls">
-        <button onClick={handlePrev} className="carousel-btn">
+        <button onClick={handlePrev} className="btn">
           &larr; Zurück
         </button>
 
@@ -118,7 +118,7 @@ export const SkillsCarousel: React.FC = () => {
           ))}
         </div>
 
-        <button onClick={handleNext} className="carousel-btn">
+        <button onClick={handleNext} className="btn">
           Weiter &rarr;
         </button>
       </div>
