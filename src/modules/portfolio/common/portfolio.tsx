@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import type { PortfolioMetadata } from "./portfolio.types";
 
 import '../../common/listed-items-blog-style.css'
 import MarkdownRedefined from "../../common/markdownRedefined";
@@ -37,60 +36,165 @@ function PortfolioDetail(attr: { category: string, id: string }) {
       <div className="portfolio-detail "><MarkdownRedefined>{content}</MarkdownRedefined></div>
   );
 }
-const POSTS_PER_PAGE = 1;
 
-export default function PortfolioIndex({ category }: { category: string }) {
+
+// Passe das Interface an deine echte JSON-Struktur der Portfolios an
+interface PortfolioMetadata {
+  id: string;
+  title: string;
+  icon?: string;
+  url?: string; // Falls in der JSON die direkte URL steht
+  category: string;
+  [key: string]: any;
+}
+
+export default function PortfolioIndex() {
   const [posts, setPosts] = useState<PortfolioMetadata[]>([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  
+  const [loading, setLoading] = useState<boolean>(true);
+
+  // 1. Portfolios von den 3 Kategorien zusammenfügen
   useEffect(() => {
-    fetch(`https://raw.githubusercontent.com/justusdecker/webpage-data/main/portfolio/${category}/index.json`)
-      .then((res) => res.json())
-      .then((data) => setPosts(data));
-  }, [category]);
-  console.log(posts)
+    const categories = ['dev', 'craft', 'art'];
 
-  const categorys_en = ['dev', 'craft', 'art'];
-  const categorys_de = ['Software', 'Handwerk', 'Kunst']
-  const cat_id = categorys_en.indexOf(category);
-  const category_head = categorys_de[cat_id];
+    Promise.all(
+      categories.map((cat) =>
+        fetch(`https://raw.githubusercontent.com/justusdecker/webpage-data/main/portfolio/${cat}/index.json`)
+          .then((res) => {
+            if (!res.ok) throw new Error(`Fehler beim Laden von ${cat}`);
+            return res.json();
+          })
+          .catch((err) => {
+            console.error(err);
+            return [];
+          }).then((data: any[]) => {
+            // Füge jedem Element in diesem Array die Kategorie hinzu
+            
+            return data.map((item) => ({
+              ...item,
+              category: cat,
+            }));
+          })
+      )
+      
+    ).then((results) => {
+      const allPosts = results.flat();
+      setPosts(allPosts);
+      setLoading(false);
+    });
+  }, []);
 
-  const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
-  const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
-  const filteredPosts = posts.slice(startIndex, startIndex + POSTS_PER_PAGE);
+  if (loading) {
+    return <p>Lade Portfolios...</p>;
+  }
+
+  if (!posts || posts.length === 0) {
+    return <p>Keine Portfolios gefunden.</p>;
+  }
+
+  return <PortfolioCarousel portfolios={posts} />;
+}
+
+// 2. Das angepasste Carousel (Skill-Abhängigkeiten entfernt)
+interface PortfolioCarouselProps {
+  portfolios: PortfolioMetadata[];
+}
+
+export const PortfolioCarousel: React.FC<PortfolioCarouselProps> = ({ portfolios }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [progress, setProgress] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const intervalTime = 60000; // 15 Sekunden pro Element
+
+  const handleNext = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % portfolios.length);
+      setIsAnimating(false);
+    }, 400);
+  };
+
+  const handlePrev = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + portfolios.length) % portfolios.length);
+      setIsAnimating(false);
+    }, 400);
+  };
+
+  useEffect(() => {
+    setProgress(0);
+    const startTime = Date.now();
+    const updateInterval = 50;
+
+    const timer = setInterval(() => {
+      const elapsed = Date.now() - startTime;
+      const currentProgress = Math.min((elapsed / intervalTime) * 100, 100);
+      setProgress(currentProgress);
+
+      if (currentProgress >= 100) {
+        clearInterval(timer);
+        handleNext();
+      }
+    }, updateInterval);
+
+    return () => clearInterval(timer);
+  }, [currentIndex, portfolios.length]);
+
+  if (!portfolios || portfolios.length === 0) return null;
+
+  const currentPortfolio = portfolios[currentIndex];
 
   return (
-    <div className="portfolio-list">
-      <h1>Portfolio: {category_head} Übersicht</h1>
+    <div className="portfolio-carousel-container">
       
-        {filteredPosts.map((post) => (
-            <div className='tile-entry'>
-            <div key={post.id}>
-                <h2>{post.title}</h2>
-                <p>{post.timespan}</p>
-                <PortfolioDetail category={category} id={post.id}/>
+      {/* Fortschrittsbalken ganz oben */}
+      <div className="carousel-progress-bar-wrapper">
+        <div 
+          className="carousel-progress-bar-fill" 
+          style={{ width: `${progress}%` }}
+        />
+      </div>
+
+      {/* Hauptinhaltsbereich */}
+      <div className="carousel-content-area">
+        <div className={`experience carousel-slide ${isAnimating ? 'slide-out' : 'slide-in'}`}>
+          <span className={`left-rot carousel-inner-span`}>
+            
+            <div className="carousel-text-box">
+              <div className="carousel-fileloader-wrapper no-carousel-overflow">
+                {/* Passe den Pfad an, je nachdem wo deine Portfolio-Inhalte auf GitHub liegen */}
+                <PortfolioDetail category={currentPortfolio.category} id={currentPortfolio.id}/>
+              </div>
             </div>
-            </div>
-        ))}
-      <div className="pagination">
-        <button 
-          disabled={currentPage === 1} 
-          onClick={() => setCurrentPage(prev => prev - 1)}
-          className='neo-btn'
-        >
-          Zurück
+
+          </span>
+        </div>
+      </div>
+
+      {/* Bedienknöpfe (Vor & Zurück) + Indikatoren */}
+      <div className="carousel-controls">
+        <button onClick={handlePrev} className="btn">
+          &larr; Zurück
         </button>
-        
-        <span style={{paddingLeft:"1rem", paddingRight:"1rem"}}>Seite {currentPage} von {totalPages || 1}</span>
-        
-        <button 
-          disabled={currentPage >= totalPages} 
-          onClick={() => setCurrentPage(prev => prev + 1)}
-          className='neo-btn'
-        >
-          Weiter
+
+        <div className="carousel-dots">
+          {portfolios.map((_, idx) => (
+            <span
+              key={idx}
+              className={`carousel-dot ${idx === currentIndex ? 'active' : ''}`}
+            />
+          ))}
+        </div>
+
+        <button onClick={handleNext} className="btn">
+          Weiter &rarr;
         </button>
       </div>
+
     </div>
   );
-}
+};
