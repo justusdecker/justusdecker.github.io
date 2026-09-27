@@ -16,7 +16,7 @@ export default function SocialLinks() {
     },
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/justusdecker', // Passe deinen Link an
+      url: 'https://linkedin.com/in/justus-decker', // Passe deinen Link an
       // Typisches LinkedIn-Blau
       color: '#0a66c2',
       icon: (
@@ -29,13 +29,24 @@ export default function SocialLinks() {
     },
     {
       name: 'Mail',
-      url: 'mailto:deine.email@example.com', // Passe deine Mail-Adresse an
+      url: 'mailto:justus.d2025@gmail.com', // Passe deine Mail-Adresse an
       // Ein frisches E-Mail-Rot/Orange oder Türkis
       color: '#ea4335',
       icon: (
         <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
           <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+      ),
+    },
+    {
+      name: 'Wakatime',
+      url: 'https://wakatime.com/@justus_decker', // Passe deinen Wakatime-Link an
+      color: '#498aff', // Das typische Wakatime-Blau
+      icon: (
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
         </svg>
       ),
     },
