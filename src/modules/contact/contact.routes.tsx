@@ -1,6 +1,7 @@
 import { type RouteObject } from 'react-router-dom';
 import Header from '../common/header';
 import '../common/listed-items-blog-style.css';
+import { EmailAdress, LinkedInUrl } from '../common/constants';
 export const contactRoutes: RouteObject = {
     path: "/contact",
     element: (
@@ -18,8 +19,8 @@ export const contactRoutes: RouteObject = {
                         <span>26723 Emden</span><br /><br />
                     </div>
                     <strong>Kontakt:</strong>
-                    <p><a href="mailto:justus.d2025@gmail.com">justus.d2025@gmail.com</a></p>
-                    <p><a href="https://www.linkedin.com/in/justus-decker/">LinkedIn</a></p>
+                    <p><a href="mailto:justus.d2025@gmail.com">{EmailAdress}</a></p>
+                    <p><a href={LinkedInUrl}>LinkedIn</a></p>
                 </div>
                 
             </section>
