@@ -6,7 +6,6 @@ import './home.css';
 import '../common/msgbox.css';
 import '../common/loading.css';
 import { AboutMeText } from '../common/constants';
-import { MsgBox } from '../common/msgbox';
 import PortfolioIndex from '../portfolio/common/portfolio';
 import { Canvas } from '../common/code/canvas';
 import { CertificateOverview } from '../certificates/certificates';
@@ -27,10 +26,7 @@ const HomeComponent = () => {
       <Header />
 
       <BackgroundShader></BackgroundShader>
-      
-      <MsgBox type='build'>
-        <p>Aktuell wird hier noch umgebaut, daher sind einige Seiten möglicherweise unvollständig oder nicht erreichbar! </p>
-      </MsgBox>
+
       <Canvas>
         <div id="profile-about-me">
         <img 
