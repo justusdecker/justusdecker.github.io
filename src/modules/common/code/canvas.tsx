@@ -2,7 +2,7 @@ import '../styles/canvas.css';
 
 export function Canvas({children}: {children: React.ReactNode}) {
     return (
-        <div className="canvas">
+        <div className="canvas card">
             {children}
         </div>
     )
