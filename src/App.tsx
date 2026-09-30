@@ -9,6 +9,7 @@ import { datenschutzRoutes } from './modules/datenschutz/datenschutz.routes'
 import { cvRoutes } from './modules/cv/cv.routes'
 import { certificatesRoutes } from './modules/certificates/certificates.routes'
 import { toolsRoutes } from './modules/tools/tools.routes';
+import { portfolioRoutes } from './modules/portfolio/common/portfolio.routes';
 
 
 const router = createHashRouter([
@@ -22,7 +23,8 @@ const router = createHashRouter([
   datenschutzRoutes,
   cvRoutes,
   certificatesRoutes,
-  toolsRoutes
+  toolsRoutes,
+  portfolioRoutes
 ]);
 
 function App() {
