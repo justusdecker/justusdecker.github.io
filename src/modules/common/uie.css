@@ -16,3 +16,18 @@
 .btn:active {
   background: #defff8;
 }
+
+
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: var(--accent-hover);
+    color: black;
+    transform: translateY(-2px);
+}
