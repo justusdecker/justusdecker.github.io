@@ -1,18 +1,13 @@
 import { type RouteObject } from 'react-router-dom';
 
-import Header from '../common/header';
 import '../common/listed-items-blog-style.css';
 import './home.css';
 import '../common/msgbox.css';
 import '../common/loading.css';
 import { AboutMeText } from '../common/constants';
-import PortfolioIndex from '../portfolio/common/portfolio';
 import { Canvas } from '../common/code/canvas';
-import { CertificateOverview } from '../certificates/certificates';
 import { BackgroundShader } from '../components/BackgroundShader';
 import { Toolkit } from '../tools/tools';
-
-import { SkillsCarousel } from './skills';
 import SocialLinks from '../common/code/SocialLinks';
 
 
@@ -23,7 +18,7 @@ const HomeComponent = () => {
   
   return (
     <>
-      <Header />
+
 
       <BackgroundShader></BackgroundShader>
 
@@ -40,19 +35,14 @@ const HomeComponent = () => {
       </Canvas>
           
       <Canvas>
-        <SkillsCarousel/>
+        <div>
+            <p>Sie sind Recruiter?</p>
+            <div className='contact-card-div'>
+                <a href="#/portfolio" className="btn contact-card-div-a">Hier entlang</a>
+            </div>
+        </div>
       </Canvas>
-
       
-        
-      <Canvas>
-        <PortfolioIndex></PortfolioIndex>
-      </Canvas>
-      
-      <Canvas>
-        
-        <CertificateOverview />
-      </Canvas>
       <Toolkit/>
       <SocialLinks></SocialLinks>
     </>
