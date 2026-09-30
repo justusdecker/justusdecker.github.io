@@ -69,8 +69,10 @@ const PortfolioContainer = () => {
         </section>
 
         <section id="cv">
+            
             <h2>Lebenslauf</h2>
             <div className="grid-2">
+                
                 <div>
                     <h3>Beruflicher & Schulischer Werdegang</h3>
                     
@@ -414,7 +416,7 @@ const PortfolioContainer = () => {
                 <h3>Direkt Kontakt aufnehmen</h3>
                 <p>Schreiben Sie mir eine E-Mail oder rufen Sie mich an für alle weiteren Details.</p>
                 <div className='contact-card-div'>
-                    <a href="mailto:deine-email@example.com" className="btn contact-card-div-a">E-Mail senden</a>
+                    <a href="mailto:justus.d2025@gmail.com" className="btn contact-card-div-a">E-Mail senden</a>
                 </div>
                 <p className='contact-card-p'>Telefonnummer und Kontaktdaten im E-Mail-Anhang bzw. Lebenslauf.</p>
             </div>
