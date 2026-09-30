@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest';
-import { toolsRoutes } from './tools.routes';
+import { portfolioRoutes } from './portfolio.routes';
 
-const endpoint = '/tools';
-const routes = toolsRoutes;
+const endpoint = '/portfolio';
+const routes = portfolioRoutes;
 
 describe(`GET ${endpoint}`, () => {
   it(`Enpoint (${endpoint}) - register check`, () => {
