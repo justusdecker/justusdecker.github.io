@@ -5,7 +5,7 @@ import { type RouteObject } from 'react-router-dom';
 import { BackgroundShader } from '../../components/BackgroundShader';
 import SocialLinks from '../../common/code/SocialLinks';
 import './portfolio.css';
-const PortfolioHeader = () => {
+export const PortfolioHeader = () => {
     return (
         <header>
         <div className="nav-container">
