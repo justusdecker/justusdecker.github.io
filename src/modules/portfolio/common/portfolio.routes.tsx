@@ -5,6 +5,7 @@ import { type RouteObject } from 'react-router-dom';
 import { BackgroundShader } from '../../components/BackgroundShader';
 import SocialLinks from '../../common/code/SocialLinks';
 import './portfolio.css';
+import { scrollToSection } from '../../common/code/sections';
 export const PortfolioHeader = () => {
     return (
         <header>
@@ -12,12 +13,12 @@ export const PortfolioHeader = () => {
             <a href="#" className="logo">⚡ <span>Justus Decker</span></a>
             <nav>
                 <ul>
-                    <li><a href="#/#about">Über mich</a></li>
-                    <li><a href="/#cv">Lebenslauf</a></li>
-                    <li><a href="/#internships">Praktika</a></li>
-                    <li><a href="/#projects">Projekte</a></li>
-                    <li><a href="/#documents">Dokumente</a></li>
-                    <li><a href="/#contact">Kontakt</a></li>
+                    <li><a onClick={() => scrollToSection('about')}>Über mich</a></li>
+                    <li><a onClick={() => scrollToSection('cv')}>Lebenslauf</a></li>
+                    <li><a onClick={() => scrollToSection('internships')}>Praktika</a></li>
+                    <li><a onClick={() => scrollToSection('projects')}>Projekte</a></li>
+                    <li><a onClick={() => scrollToSection('documents')}>Dokumente</a></li>
+                    <li><a onClick={() => scrollToSection('contact')}>Kontakt</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,7 +31,10 @@ const PortfolioContainer = () => {
         <div className="container">
 
         <section id="about" className="hero">
-            <img src="https://avatars.githubusercontent.com/u/200506279?v=4" alt="" className='avatar'/>
+            <div id="img-cropper">
+                <img src="https://avatars.githubusercontent.com/u/200506279?v=4" alt="" className='avatar'/>
+            
+            </div>
             <h1>Umschulung zum Elektroniker für Betriebstechnik</h1>
             <p>Willkommen auf meiner digitalen Bewerbungsseite. Als zielstrebiger Umschüler verbinde ich fundiertes handwerkliches Geschick mit analytischem Denken und modernen IT-Kompetenzen (TypeScript, React, Vite).</p>
 
