@@ -14,13 +14,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 footer {
-    
     text-align: center;
     width: 100%;
 }
 
-footer:hover p {
-  color: black;
+footer p {
+  color: white;
 }
 
 .footer-div {
