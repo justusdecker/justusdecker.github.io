@@ -1,0 +1,43 @@
+#profile {
+    height: 10em;
+    border-radius: 10px;
+}
+
+#profile-about-me {
+  display: flex;
+  gap: 2em;
+}
+
+
+#profile-about-me summary {
+    font-size: larger;
+    font-weight: 700;
+    
+}
+
+#profile-about-me p {
+    font-size: small;
+    font-weight: 700;
+    
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #profile-about-me {
+        flex-direction: column;
+        
+    }
+    #profile-about-me img {
+        width: 100%;
+        object-fit: cover;
+        object-position: 0% 20%;
+        height: 100%;
+    }
+    #profile-about-me #pam-img-crop {
+        border-radius: 10px;
+        overflow: hidden;
+        height: 15em;
+        
+        
+    }
+
+}
