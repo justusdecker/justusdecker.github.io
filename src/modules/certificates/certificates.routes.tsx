@@ -1,10 +1,11 @@
 
 import { type RouteObject, Outlet } from 'react-router-dom';
-import Header from '../common/header';
+
 
 
 import './certificates.css';
 import { CertificateOverview } from './certificates';
+import { Header } from '../common/code/header';
 
 export const certificatesRoutes: RouteObject = {
     path: "/certificates",
