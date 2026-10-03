@@ -21,3 +21,9 @@ dialog img {
     max-width: 90vw;
     max-height: 90vh;
 }
+
+.card-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
