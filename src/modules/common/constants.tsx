@@ -6,11 +6,11 @@ export const LinkedInUrl: string = "https://www.linkedin.com/in/justus-decker/";
 // Information about me:
 
 export const AboutMeText: string = `
-Hallo meine Name ist Justus, 
-ich bin leidenschaftlicher Programmierer, Zeichner, Musiker und Handwerker.
-Diese Fertigkeiten nutze ich unter anderem um die Technik hinter einem Programm / Geräten zu verstehen, 
-zum verbessern / planen eines Projekts - siehe Visualisierung
-Oder einfach nur als Zeitverteib.
+Hallo, mein Name ist Justus. Ich bin leidenschaftlicher Programmierer, Zeichner, Musiker und Handwerker.
+
+Diese facettenreichen Fertigkeiten greifen bei mir Hand in Hand: Ich nutze sie, um die tieferliegende Technik hinter Programmen und physischen Geräten zu durchdringen, komplexe Projekte von der Pike auf zu planen und umzusetzen – wie etwa durch detailreiche Visualisierungen – oder schlichtweg, um meiner Kreativität Raum zu geben.
+
+Ob beim Coden moderner Webanwendungen, dem Entwerfen von Konzepten auf dem Papier, dem Tüfteln an elektronischen Systemen oder beim handwerklichen Werken: Für mich schließt sich hier der Kreis aus Logik und Ästhetik.
 `;
 
 export const StoryText = `
