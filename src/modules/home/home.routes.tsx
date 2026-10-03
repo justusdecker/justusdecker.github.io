@@ -1,14 +1,14 @@
-import { type RouteObject } from 'react-router-dom';
-
+import type { RouteObject } from 'react-router-dom';
 import '../common/listed-items-blog-style.css';
 import './home.css';
 import '../common/msgbox.css';
 import '../common/loading.css';
-import { AboutMeText } from '../common/constants';
+import { AboutMeText, StoryText } from '../common/constants';
 import { BackgroundShader } from '../components/BackgroundShader';
-import { Toolkit } from '../tools/tools';
 import SocialLinks from '../common/code/SocialLinks';
-import { PortfolioHeader } from '../portfolio/common/portfolio.routes';
+import { Header } from '../common/code/header';
+import '../common/about_me_profile.css';
+
 
 
 
@@ -20,34 +20,35 @@ const HomeComponent = () => {
 
 
       <BackgroundShader></BackgroundShader>
-      <PortfolioHeader></PortfolioHeader>
+      <Header/>
       <div className='card'>
         <div id="profile-about-me">
-        <img 
-        id="profile" 
-        src={'./avatar_temp.jpeg'}
-        alt="Justus Decker Profilbild"
-        
-      />
+        <div id="pam-img-crop">
+          <img 
+          id="profile" 
+          src={'./avatar_temp.jpeg'}
+          alt="Justus Decker Profilbild"/>
+        </div>
       <div>
         {AboutMeText.split('\n').map((e, index) => (
-          e.trim() !== "" && <p key={index}>{e}</p>
-        ))}
+              e.trim() !== "" && <p key={index}>{e}</p>
+            ))}
+        <details>
+          <summary>
+              Hintergrundstory
+          </summary>
+          <p>
+
+            {StoryText.split('\n').map((e, index) => (
+              e.trim() !== "" && <p key={index}>{e}</p>
+            ))}
+          </p>
+        </details>
       </div>
+      
       
       </div>
       </div>
-          
-      <div className='card'>
-        <div>
-            <p>Sie sind Recruiter?</p>
-            <div className='contact-card-div'>
-                <a href="#/portfolio" className="btn contact-card-div-a">Hier entlang</a>
-            </div>
-        </div>
-      </div>
-      
-      <Toolkit/>
       <SocialLinks></SocialLinks>
     </>
   );
