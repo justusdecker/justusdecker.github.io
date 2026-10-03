@@ -1,8 +1,9 @@
 import { type RouteObject } from 'react-router-dom';
-import Header from '../common/header';
+
 import '../common/listed-items-blog-style.css'
 import { useState } from 'react';
 import MarkdownRedefined from '../common/markdownRedefined';
+import { Header } from '../common/code/header';
 
 
 function Datenschutz() {
