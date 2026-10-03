@@ -182,6 +182,8 @@ p {
     border-radius: 8px;
     padding: 1.5rem;
     transition: var(--transition);
+    margin: 1rem auto 2rem auto;
+    max-width: var(--content-width-max);
 }
 
 .card:hover {
