@@ -1,5 +1,5 @@
 import { useEffect, useState, type ReactNode } from "react";
-import Header from "./header";
+import { Header } from "./code/header";
 
 // 1. Wir definieren ein Interface für die Props (Argumente) der Komponente
 interface LoadingComponentProps {
