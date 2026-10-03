@@ -5,24 +5,23 @@ import './home.css';
 import '../common/msgbox.css';
 import '../common/loading.css';
 import { AboutMeText } from '../common/constants';
-import { Canvas } from '../common/code/canvas';
 import { BackgroundShader } from '../components/BackgroundShader';
 import { Toolkit } from '../tools/tools';
 import SocialLinks from '../common/code/SocialLinks';
+import { PortfolioHeader } from '../portfolio/common/portfolio.routes';
 
 
 
 
 const HomeComponent = () => {
-
   
   return (
     <>
 
 
       <BackgroundShader></BackgroundShader>
-
-      <Canvas>
+      <PortfolioHeader></PortfolioHeader>
+      <div className='card'>
         <div id="profile-about-me">
         <img 
         id="profile" 
@@ -30,18 +29,23 @@ const HomeComponent = () => {
         alt="Justus Decker Profilbild"
         
       />
-      <p>{AboutMeText}</p>
+      <div>
+        {AboutMeText.split('\n').map((e, index) => (
+          e.trim() !== "" && <p key={index}>{e}</p>
+        ))}
       </div>
-      </Canvas>
+      
+      </div>
+      </div>
           
-      <Canvas>
+      <div className='card'>
         <div>
             <p>Sie sind Recruiter?</p>
             <div className='contact-card-div'>
                 <a href="#/portfolio" className="btn contact-card-div-a">Hier entlang</a>
             </div>
         </div>
-      </Canvas>
+      </div>
       
       <Toolkit/>
       <SocialLinks></SocialLinks>
