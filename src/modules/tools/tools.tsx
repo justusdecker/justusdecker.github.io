@@ -1,25 +1,26 @@
 import { Link } from "react-router-dom";
 import './tools.css'
-import { Canvas } from "../common/code/canvas";
 const tools = [
     {name: 'markdown-writer', title: 'Markdown Writer'}
 ]
 
 export function Toolkit() {
     return (
-        <Canvas>
-            <div className="tools-list">
+        <div className="card">
+            <div className="">
                 <h1>Tools</h1>
                 {
                     tools?.map((obj) => (
-                        <Link to={`/tools/${obj.name}`}>
+                        <div className='contact-card-div'>
+                        <Link className="btn contact-card-div-a" to={`/tools/${obj.name}`}>
                             <span>
                                 {obj.title}
                             </span>
                         </Link>
+                        </div>
                     ) )
                 }
             </div>
-        </Canvas>
+        </div>
     )
 }
