@@ -1,0 +1,3 @@
+[submodule "src/games/tictactoe"]
+	path = src/games/tictactoe
+	url = https://github.com/justusdecker/TicTacToeInJavaScript.git
