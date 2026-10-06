@@ -1,3 +1,6 @@
 [submodule "src/games/tictactoe"]
 	path = src/games/tictactoe
 	url = https://github.com/justusdecker/TicTacToeInJavaScript.git
+[submodule "src/modules/tools/markdown-writer"]
+	path = src/modules/tools/markdown-writer
+	url = https://github.com/justusdecker/MarkdownWriter.git
