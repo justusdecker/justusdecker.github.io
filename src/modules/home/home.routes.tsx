@@ -3,11 +3,11 @@ import '../common/listed-items-blog-style.css';
 import './home.css';
 import '../common/msgbox.css';
 import '../common/loading.css';
-import { AboutMeText, StoryText } from '../common/constants';
 import { BackgroundShader } from '../components/BackgroundShader';
 import SocialLinks from '../common/code/SocialLinks';
 import { Header } from '../common/code/header';
 import '../common/about_me_profile.css';
+import { AboutMeText, StoryText } from '../../data/aboutme';
 
 
 

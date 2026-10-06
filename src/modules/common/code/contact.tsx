@@ -1,6 +1,7 @@
 import { type RouteObject } from 'react-router-dom';
 import '../common/listed-items-blog-style.css';
-import { EmailAdress, LinkedInUrl } from '../../common/constants';
+import { EmailAdress, LinkedInUrl } from '../../../data/aboutme';
+
 export const contactRoutes: RouteObject = {
     path: "/contact",
     element: (
