@@ -1,3 +1,6 @@
 [submodule "src/modules/tools/markdown-writer"]
 	path = src/modules/tools/markdown-writer
 	url = https://github.com/justusdecker/MarkdownWriter.git
+[submodule "src/data"]
+	path = src/data
+	url = https://github.com/justusdecker/webpage-data.git
