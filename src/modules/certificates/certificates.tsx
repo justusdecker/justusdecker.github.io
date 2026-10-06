@@ -1,5 +1,6 @@
+import { GitHubRawBaseUrl } from '../../data/aboutme';
 import '../common/listed-items-blog-style.css'
-import { GitHubRawBaseUrl } from "../common/constants";
+
 import { useRef } from "react";
 
 const certificates = {
