@@ -3,5 +3,40 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+
+    /* --- DEINE STYLEGUIDE-REGELN (Strikter Modus) --- */
+    
+    // Aktiviert alle strengen Typ-Prüfungsoptionen auf einmal
+    "strict": true,
+
+    // Verbietet explizit den Typ 'any' (löst einen Fehler aus, wenn implizit oder explizit 'any' genutzt wird)
+    "noImplicitAny": true,
+
+    // Verhindert, dass Funktionen Pfade haben, die nichts zurückgeben (außer sie sind explizit void)
+    "noImplicitReturns": true,
+
+    // Prüft, ob Schalter in Switch-Cases vergessen wurden
+    "noFallthroughCasesInSwitch": true,
+
+    // Verbietet ungenutzte lokale Variablen (hilft, den Code sauber zu halten)
+    "noUnusedLocals": true,
+
+    // Verbietet ungenutzte Funktionsparameter
+    "noUnusedParameters": true,
+
+    /* --- Modul- & Bundler-Einstellungen für Vite & React --- */
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true, // Wichtig: tsc soll nur prüfen, Vite baut das Projekt
+    "jsx": "react-jsx"
+  },
 }
