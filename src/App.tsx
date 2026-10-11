@@ -1,7 +1,7 @@
 import { createHashRouter, RouterProvider, Navigate } from 'react-router-dom'
 import './modules/common/globals.css';
 import './App.css';
-import './modules/common/uie.css';
+import './modules/common/styles/button.css';
 import { homeRoutes } from './modules/home/home.routes'
 import ErrorPage from './modules/error/error.routes'
 import { datenschutzRoutes } from './modules/datenschutz/datenschutz.routes'

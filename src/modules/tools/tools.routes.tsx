@@ -2,7 +2,7 @@
 import { type RouteObject, Outlet } from 'react-router-dom';
 
 import { MarkdownWriter } from './markdown-writer/markdown-writer.tsx';
-import { Header } from '../common/code/header.tsx';
+import { Header } from '../common/code/Header.tsx';
 import { BackgroundShader } from '../components/BackgroundShader.tsx';
 import { Toolkit } from './tools.tsx';
 import { WorkoutIntervalTimer } from './workout-interval-timer/workout_interval_timer.tsx';

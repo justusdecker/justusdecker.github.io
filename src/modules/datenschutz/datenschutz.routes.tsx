@@ -3,7 +3,7 @@ import { type RouteObject } from 'react-router-dom';
 import '../common/listed-items-blog-style.css'
 import { useState } from 'react';
 import MarkdownRedefined from '../common/markdownRedefined';
-import { Header } from '../common/code/header';
+import { Header } from '../common/code/Header';
 
 
 function Datenschutz() {
