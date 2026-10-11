@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import 'katex/dist/katex.min.css';
-import MarkdownRedefined from './markdownRedefined';
-import { GitHubRawBaseUrl } from '../../data/aboutme';
+import MarkdownRedefined from '../markdownRedefined';
+import { GitHubRawBaseUrl } from '../../../data/aboutme';
 
 export function MarkdownLoader({ p_url }: {p_url: string}) {
   const [c_is_loading, useSetIsLoading] = useState(true);
