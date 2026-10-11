@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Header } from "./Header";
+import { Header } from "./header";
 import type { LoadingComponentProps } from "../types/load-component.types";
 
 export const LoadingComponent = ({ p_time_out, p_children }: LoadingComponentProps) => {
