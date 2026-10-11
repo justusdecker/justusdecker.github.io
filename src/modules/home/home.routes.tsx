@@ -5,7 +5,7 @@ import '../common/msgbox.css';
 import '../common/loading.css';
 import { BackgroundShader } from '../components/BackgroundShader';
 import SocialLinks from '../common/code/SocialLinks';
-import { Header } from '../common/code/header';
+import { Header } from '../common/code/Header';
 import '../common/about_me_profile.css';
 import { AboutMeText, StoryText } from '../../data/aboutme';
 

@@ -18,7 +18,10 @@ export function MarkdownLoader({ p_url }: {p_url: string}) {
       .then((t_text) => useSetContent(t_text))
       .catch((t_err) => {
         useSetContent(`# Fehler\nDer Artikel konnte nicht geladen werden: ${t_err.message}`)
-        console.log(`MarkdownLoader cannot fetch: ${p_url} -> ${t_err.message}`);
+        console.log(`
+          
+          
+           cannot fetch: ${p_url} -> ${t_err.message}`);
       })
       .finally(() => useSetIsLoading(false));
 
