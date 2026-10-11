@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import './tools.css'
 const tools = [
-    {name: 'markdown-writer', title: 'Markdown Writer'}
+    {name: 'markdown-writer', title: 'Markdown Writer'},
+    {name: 'wit', title: 'Workout Interval Timer'}
 ]
 
 export function Toolkit() {

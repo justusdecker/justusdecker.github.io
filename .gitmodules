@@ -4,3 +4,6 @@
 [submodule "src/data"]
 	path = src/data
 	url = https://github.com/justusdecker/webpage-data.git
+[submodule "src/modules/tools/workout-interval-timer"]
+	path = src/modules/tools/workout-interval-timer
+	url = https://github.com/justusdecker/workout-timer.git
