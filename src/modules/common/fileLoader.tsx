@@ -1,24 +1,24 @@
 import { useState, useEffect } from 'react';
 import 'katex/dist/katex.min.css';
-export function FileLoader({ url }: {url: string}) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [content, setContent] = useState<string>('');
-    console.log(url);
+export function FileLoader({ p_url }: {p_url: string}) {
+  const [c_is_loading, useSetIsLoading] = useState(true);
+  const [c_content, useSetContent] = useState<string>('');
+    console.log(p_url);
   useEffect(() => {
-    if (!url) return;
+    if (!p_url) return;
     
-    fetch(url)
-      .then((res) => {
-        if (!res.ok) throw new Error("Artikel nicht gefunden");
-        return res.text();
+    fetch(p_url)
+      .then((l_res) => {
+        if (!l_res.ok) throw new Error("Artikel nicht gefunden");
+        return l_res.text();
       })
-      .then((text) => setContent(text))
-      .catch((err) => setContent(`# Fehler\nDer Artikel konnte nicht geladen werden: ${err.message}`))
-      .finally(() => setIsLoading(false));
+      .then((text) => useSetContent(text))
+      .catch((t_err) => useSetContent(`# Fehler\nDer Artikel konnte nicht geladen werden: ${t_err.message}`))
+      .finally(() => useSetIsLoading(false));
 
-  }, [url]);
+  }, [p_url]);
 
-  if (isLoading) {
+  if (c_is_loading) {
     return (
       <>
         <div className="loading-container">
@@ -30,7 +30,7 @@ export function FileLoader({ url }: {url: string}) {
   }
   return (
     <>
-    {content}
+    {c_content}
     </>
   );
 }
