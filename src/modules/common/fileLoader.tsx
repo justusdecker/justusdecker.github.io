@@ -12,7 +12,7 @@ export function FileLoader({ p_url }: {p_url: string}) {
         if (!l_res.ok) throw new Error("Artikel nicht gefunden");
         return l_res.text();
       })
-      .then((text) => useSetContent(text))
+      .then((t_text) => useSetContent(t_text))
       .catch((t_err) => useSetContent(`# Fehler\nDer Artikel konnte nicht geladen werden: ${t_err.message}`))
       .finally(() => useSetIsLoading(false));
 

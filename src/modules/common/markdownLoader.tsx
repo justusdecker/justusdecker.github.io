@@ -2,25 +2,29 @@ import { useState, useEffect } from 'react';
 import 'katex/dist/katex.min.css';
 import MarkdownRedefined from './markdownRedefined';
 import { GitHubRawBaseUrl } from '../../data/aboutme';
-export function MarkdownLoader({ url }: {url: string}) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [content, setContent] = useState<string>('');
-    console.log(url);
+
+export function MarkdownLoader({ p_url }: {p_url: string}) {
+  const [c_is_loading, useSetIsLoading] = useState(true);
+  const [c_content, useSetContent] = useState<string>('');
+  
   useEffect(() => {
-    if (!url) return;
+    if (!p_url) return;
     
-    fetch(url)
-      .then((res) => {
-        if (!res.ok) throw new Error("Artikel nicht gefunden");
-        return res.text();
+    fetch(p_url)
+      .then((l_res) => {
+        if (!l_res.ok) throw new Error("Artikel nicht gefunden");
+        return l_res.text();
       })
-      .then((text) => setContent(text))
-      .catch((err) => setContent(`# Fehler\nDer Artikel konnte nicht geladen werden: ${err.message}`))
-      .finally(() => setIsLoading(false));
+      .then((t_text) => useSetContent(t_text))
+      .catch((t_err) => {
+        useSetContent(`# Fehler\nDer Artikel konnte nicht geladen werden: ${t_err.message}`)
+        console.log(`MarkdownLoader cannot fetch: ${p_url} -> ${t_err.message}`);
+      })
+      .finally(() => useSetIsLoading(false));
 
-  }, [url]);
+  }, [p_url]);
 
-  if (isLoading) {
+  if (c_is_loading) {
     return (
       <>
         <div className="loading-container">
@@ -31,46 +35,20 @@ export function MarkdownLoader({ url }: {url: string}) {
     );
   }
   return (
-      <MarkdownRedefined>{content}</MarkdownRedefined>
+      <MarkdownRedefined>{c_content}</MarkdownRedefined>
   );
 }
 
-/* 
-
-function MarkdownBuilder({ shortUrl }: { shortUrl: string}) {
-    
-  const posts = MarkdownGetJsonIndex({shortUrl});
-    
-  if (shortUrl) {
-    return (
-      <div className="portfolio-list">
-        <h1>Portfolio Übersicht</h1>
-        {posts.map((post) => (
-          <div key={post.id} className="topic">
-            <Link to={`/portfolio/${post.id}`}>
-              <h2>{post.title}</h2>
-              <p>{post.timespan}</p>
-            </Link>
-            <MarkdownLoader url={`https://raw.githubusercontent.com/justusdecker/webpage-data/main/portfolio/dev/${post.id}.md`} />;
-          </div>
-        ))}
-      </div>
-    );
-  }
-}
-*/
-
-
-export function MarkdownGetJsonIndex({ shortUrl }: { shortUrl: string }) {
-  const [posts, setPosts] = useState<any[]>([]);
+export function MarkdownGetJsonIndex({ p_short_url }: { p_short_url: string }) {
+  const [c_posts, setPosts] = useState<any[]>([]);
     
   useEffect(() => {
-    fetch(`${GitHubRawBaseUrl}${shortUrl}`)
-      .then((res) => res.json())
-      .then((data) => setPosts(data))
-      .catch((err) => console.error(err));
-  }, [`${GitHubRawBaseUrl}${shortUrl}`]);
+    fetch(`${GitHubRawBaseUrl}${p_short_url}`)
+      .then((t_res) => t_res.json())
+      .then((t_data) => setPosts(t_data))
+      .catch((t_err) => console.error(t_err));
+  }, [`${GitHubRawBaseUrl}${p_short_url}`]);
 
-  return posts;
+  return c_posts;
 
 }
